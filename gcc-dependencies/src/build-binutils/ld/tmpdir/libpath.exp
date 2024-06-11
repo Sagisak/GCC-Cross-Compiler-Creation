@@ -1,0 +1,1 @@
+set libpath "=/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/lib =/usr/local/lib =/lib =/usr/lib"
