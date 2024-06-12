@@ -5,6 +5,6 @@ I need the tools to help relay communication between some machines. The majority
 
 https://wiki.osdev.org/Expanded_Main_Page
 
-Some help of understanding of terminologies are by searching the internet or asking high-tech AI, like chatGPT, for extra explanation of the
+Some help understanding of terminologies are by searching the internet or asking high-tech AI, like chatGPT, for extra explanation of the
 creation.
 
