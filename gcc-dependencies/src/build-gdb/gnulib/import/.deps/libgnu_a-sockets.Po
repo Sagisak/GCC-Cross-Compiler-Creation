@@ -1,0 +1,6 @@
+libgnu_a-sockets.o: ../../gdb-14.2/gnulib/import/sockets.c \
+ /usr/include/stdc-predef.h ../config.h \
+ ../../gdb-14.2/gnulib/import/sockets.h
+/usr/include/stdc-predef.h:
+../config.h:
+../../gdb-14.2/gnulib/import/sockets.h:

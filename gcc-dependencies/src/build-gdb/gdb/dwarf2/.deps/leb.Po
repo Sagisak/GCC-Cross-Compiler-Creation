@@ -1,0 +1,110 @@
+dwarf2/leb.o: ../gdb-14.2/gdb/dwarf2/leb.c ../gdb-14.2/gdb/defs.h \
+ ../gdb-14.2/gdb/../gdbsupport/common-defs.h ../gdbsupport/config.h \
+ ../gnulib/config.h ../gnulib/import/stdio.h ../gnulib/import/stdlib.h \
+ ../gnulib/import/string.h ../gdb-14.2/gdb/../include/ansidecl.h \
+ ../gdb-14.2/gdb/../include/libiberty.h \
+ ../gdb-14.2/gdb/../include/ansidecl.h \
+ ../gdb-14.2/gdb/../gnulib/import/pathmax.h ../gnulib/import/unistd.h \
+ ../gnulib/import/limits.h ../gdb-14.2/gdb/../include/gdb/signals.h \
+ ../gdb-14.2/gdb/../include/gdb/signals.def \
+ ../gdb-14.2/gdb/../gdbsupport/gdb_locale.h ../gnulib/import/locale.h \
+ ../gdb-14.2/gdb/../gdbsupport/ptid.h \
+ ../gdb-14.2/gdb/../gdbsupport/common-types.h ../gnulib/import/inttypes.h \
+ ../gdb-14.2/gdb/../gdbsupport/common-types.h \
+ ../gdb-14.2/gdb/../gdbsupport/common-utils.h \
+ ../gdb-14.2/gdb/../gdbsupport/byte-vector.h \
+ ../gdb-14.2/gdb/../gdbsupport/def-vector.h \
+ ../gdb-14.2/gdb/../gdbsupport/default-init-alloc.h \
+ ../gdb-14.2/gdb/../gdbsupport/gdb_unique_ptr.h \
+ ../gdb-14.2/gdb/../gdbsupport/gdb-xfree.h \
+ ../gdb-14.2/gdb/../gdbsupport/poison.h \
+ ../gdb-14.2/gdb/../gdbsupport/traits.h \
+ ../gdb-14.2/gdb/../include/obstack.h \
+ ../gdb-14.2/gdb/../gdbsupport/array-view.h \
+ ../gdb-14.2/gdb/../gdbsupport/gdb_assert.h \
+ ../gdb-14.2/gdb/../gdbsupport/errors.h \
+ ../gdb-14.2/gdb/../gdbsupport/poison.h \
+ ../gdb-14.2/gdb/../gdbsupport/gdb_string_view.h \
+ ../gdb-14.2/gdb/../include/hashtab.h \
+ ../gdb-14.2/gdb/../gdbsupport/gdb_assert.h \
+ ../gdb-14.2/gdb/../gdbsupport/print-utils.h \
+ ../gdb-14.2/gdb/../gdbsupport/common-debug.h \
+ ../gdb-14.2/gdb/../gdbsupport/gdb_optional.h \
+ ../gdb-14.2/gdb/../gdbsupport/traits.h \
+ ../gdb-14.2/gdb/../gdbsupport/preprocessor.h \
+ ../gdb-14.2/gdb/../gdbsupport/cleanups.h \
+ ../gdb-14.2/gdb/../gdbsupport/common-exceptions.h \
+ ../gdb-14.2/gdb/../gdbsupport/underlying.h config.h ../bfd/bfd.h \
+ ../gdb-14.2/gdb/../include/symcat.h \
+ ../gdb-14.2/gdb/../include/diagnostics.h ../gnulib/import/sys/stat.h \
+ ../gnulib/import/fcntl.h ../gdb-14.2/gdb/gdb_wchar.h \
+ ../gnulib/import/wctype.h ../gdb-14.2/gdb/ui-file.h \
+ ../gdb-14.2/gdb/ui-style.h ../gdb-14.2/gdb/../gdbsupport/host-defs.h \
+ ../gdb-14.2/gdb/../gdbsupport/enum-flags.h \
+ ../gdb-14.2/gdb/../include/fopen-bin.h ../gdb-14.2/gdb/utils.h \
+ ../gdb-14.2/gdb/exceptions.h ../gdb-14.2/gdb/ui-out.h \
+ ../gdb-14.2/gdb/../gdbsupport/scoped_restore.h \
+ ../gdb-14.2/gdb/dwarf2/leb.h
+../gdb-14.2/gdb/defs.h:
+../gdb-14.2/gdb/../gdbsupport/common-defs.h:
+../gdbsupport/config.h:
+../gnulib/config.h:
+../gnulib/import/stdio.h:
+../gnulib/import/stdlib.h:
+../gnulib/import/string.h:
+../gdb-14.2/gdb/../include/ansidecl.h:
+../gdb-14.2/gdb/../include/libiberty.h:
+../gdb-14.2/gdb/../include/ansidecl.h:
+../gdb-14.2/gdb/../gnulib/import/pathmax.h:
+../gnulib/import/unistd.h:
+../gnulib/import/limits.h:
+../gdb-14.2/gdb/../include/gdb/signals.h:
+../gdb-14.2/gdb/../include/gdb/signals.def:
+../gdb-14.2/gdb/../gdbsupport/gdb_locale.h:
+../gnulib/import/locale.h:
+../gdb-14.2/gdb/../gdbsupport/ptid.h:
+../gdb-14.2/gdb/../gdbsupport/common-types.h:
+../gnulib/import/inttypes.h:
+../gdb-14.2/gdb/../gdbsupport/common-types.h:
+../gdb-14.2/gdb/../gdbsupport/common-utils.h:
+../gdb-14.2/gdb/../gdbsupport/byte-vector.h:
+../gdb-14.2/gdb/../gdbsupport/def-vector.h:
+../gdb-14.2/gdb/../gdbsupport/default-init-alloc.h:
+../gdb-14.2/gdb/../gdbsupport/gdb_unique_ptr.h:
+../gdb-14.2/gdb/../gdbsupport/gdb-xfree.h:
+../gdb-14.2/gdb/../gdbsupport/poison.h:
+../gdb-14.2/gdb/../gdbsupport/traits.h:
+../gdb-14.2/gdb/../include/obstack.h:
+../gdb-14.2/gdb/../gdbsupport/array-view.h:
+../gdb-14.2/gdb/../gdbsupport/gdb_assert.h:
+../gdb-14.2/gdb/../gdbsupport/errors.h:
+../gdb-14.2/gdb/../gdbsupport/poison.h:
+../gdb-14.2/gdb/../gdbsupport/gdb_string_view.h:
+../gdb-14.2/gdb/../include/hashtab.h:
+../gdb-14.2/gdb/../gdbsupport/gdb_assert.h:
+../gdb-14.2/gdb/../gdbsupport/print-utils.h:
+../gdb-14.2/gdb/../gdbsupport/common-debug.h:
+../gdb-14.2/gdb/../gdbsupport/gdb_optional.h:
+../gdb-14.2/gdb/../gdbsupport/traits.h:
+../gdb-14.2/gdb/../gdbsupport/preprocessor.h:
+../gdb-14.2/gdb/../gdbsupport/cleanups.h:
+../gdb-14.2/gdb/../gdbsupport/common-exceptions.h:
+../gdb-14.2/gdb/../gdbsupport/underlying.h:
+config.h:
+../bfd/bfd.h:
+../gdb-14.2/gdb/../include/symcat.h:
+../gdb-14.2/gdb/../include/diagnostics.h:
+../gnulib/import/sys/stat.h:
+../gnulib/import/fcntl.h:
+../gdb-14.2/gdb/gdb_wchar.h:
+../gnulib/import/wctype.h:
+../gdb-14.2/gdb/ui-file.h:
+../gdb-14.2/gdb/ui-style.h:
+../gdb-14.2/gdb/../gdbsupport/host-defs.h:
+../gdb-14.2/gdb/../gdbsupport/enum-flags.h:
+../gdb-14.2/gdb/../include/fopen-bin.h:
+../gdb-14.2/gdb/utils.h:
+../gdb-14.2/gdb/exceptions.h:
+../gdb-14.2/gdb/ui-out.h:
+../gdb-14.2/gdb/../gdbsupport/scoped_restore.h:
+../gdb-14.2/gdb/dwarf2/leb.h:

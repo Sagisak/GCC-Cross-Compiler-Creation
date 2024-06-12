@@ -1,0 +1,2 @@
+xml-builtin.o: xml-builtin.c ../gdb-14.2/gdb/xml-builtin.h
+../gdb-14.2/gdb/xml-builtin.h:
