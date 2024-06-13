@@ -19,12 +19,12 @@
 
 # Invoke as, ld or nm from the build tree.
 
-ORIGINAL_AS_FOR_TARGET="/usr/bin/as"
-ORIGINAL_LD_FOR_TARGET="/usr/bin/ld"
-ORIGINAL_LD_BFD_FOR_TARGET="/usr/bin/ld.bfd"
-ORIGINAL_LD_GOLD_FOR_TARGET="/usr/bin/ld.gold"
-ORIGINAL_PLUGIN_LD_FOR_TARGET="/usr/bin/ld"
-ORIGINAL_NM_FOR_TARGET="/usr/bin/nm"
+ORIGINAL_AS_FOR_TARGET="/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/as"
+ORIGINAL_LD_FOR_TARGET="/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/ld"
+ORIGINAL_LD_BFD_FOR_TARGET="/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/ld.bfd"
+ORIGINAL_LD_GOLD_FOR_TARGET="/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/ld.gold"
+ORIGINAL_PLUGIN_LD_FOR_TARGET="/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/ld"
+ORIGINAL_NM_FOR_TARGET="/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/nm"
 ORIGINAL_DSYMUTIL_FOR_TARGET=""
 exeext=
 fast_install=needless

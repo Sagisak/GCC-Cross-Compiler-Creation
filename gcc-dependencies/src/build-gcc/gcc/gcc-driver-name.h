@@ -1,1 +1,1 @@
-#define GCC_DRIVER_NAME "x86_64-pc-linux-gnu-gcc-14.1.0"
+#define GCC_DRIVER_NAME "i686-elf-gcc-14.1.0"

@@ -26,7 +26,7 @@
 # This is the default target.
 # Set by autoconf to "all.internal" for a native build, or
 # "all.cross" to build a cross compiler.
-all: all.internal
+all: all.cross
 
 # Depend on this to specify a phony target portably.
 force:
@@ -59,16 +59,16 @@ build_os=linux-gnu
 host=x86_64-pc-linux-gnu
 host_noncanonical=x86_64-pc-linux-gnu
 host_os=linux-gnu
-target=x86_64-pc-linux-gnu
-target_noncanonical:=x86_64-pc-linux-gnu
+target=i686-pc-elf
+target_noncanonical:=i686-elf
 
 # Normally identical to target_noncanonical, except for compilers built
 # as accelerator targets.
-real_target_noncanonical:=x86_64-pc-linux-gnu
+real_target_noncanonical:=i686-elf
 accel_dir_suffix = 
 
 # Sed command to transform gcc to installed name.
-program_transform_name := s,y,y,
+program_transform_name := s&^&i686-elf-&
 
 # -----------------------------
 # Directories used during build
@@ -93,7 +93,7 @@ objdir := $(shell pwd)
 
 host_subdir=.
 build_subdir=build-x86_64-pc-linux-gnu
-target_subdir=x86_64-pc-linux-gnu
+target_subdir=i686-elf
 build_libsubdir=build-x86_64-pc-linux-gnu
 
 # Top build directory for the "Cygnus tree", relative to $(top_builddir).
@@ -128,7 +128,7 @@ vpath %.texi $(gcc_docdir)/include
 
 # Extra flags to pass to indicate cross compilation, which
 # might be used or tested by Make-lang fragments.
-CROSS=
+CROSS=-DCROSS_DIRECTORY_STRUCTURE
 
 # Variables that exist for you to override.
 # See below for how to change them for certain systems.
@@ -265,7 +265,7 @@ CPPFLAGS =
 
 AWK = mawk
 CC = gcc
-CXX = g++ -std=c++11
+CXX = g++
 BISON = bison
 BISONFLAGS =
 FLEX = flex
@@ -425,7 +425,7 @@ ISLINC =
 enable_lto = yes
 
 # Compiler and flags needed for plugin support
-PLUGINCC = g++ -std=c++11
+PLUGINCC = g++
 PLUGINCFLAGS = -g    
 
 # Libs and linker options needed for plugin support
@@ -450,7 +450,7 @@ CODYINC = -I$(srcdir)/../libcody
 NETLIBS = 
 
 # Where to find decNumber
-enable_decimal_float = bid
+enable_decimal_float = dpd
 DECNUM = $(srcdir)/../libdecnumber
 DECNUMFMT = $(srcdir)/../libdecnumber/$(enable_decimal_float)
 DECNUMINC = -I$(DECNUM) -I$(DECNUMFMT) -I../libdecnumber
@@ -518,7 +518,7 @@ AR_FLAGS_FOR_TARGET =
 AR_CREATE_FOR_TARGET = $(AR_FOR_TARGET) $(AR_FLAGS_FOR_TARGET) rc
 AR_EXTRACT_FOR_TARGET = $(AR_FOR_TARGET) $(AR_FLAGS_FOR_TARGET) x
 LIPO_FOR_TARGET = lipo
-ORIGINAL_AS_FOR_TARGET = /usr/bin/as
+ORIGINAL_AS_FOR_TARGET = /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/as
 RANLIB_FOR_TARGET := $(shell \
   if [ -f $(objdir)/../binutils/ranlib ] ; then \
     echo $(objdir)/../binutils/ranlib ; \
@@ -529,8 +529,8 @@ RANLIB_FOR_TARGET := $(shell \
        t='$(program_transform_name)'; echo ranlib | sed -e "$$t" ; \
     fi; \
   fi)
-ORIGINAL_LD_FOR_TARGET = /usr/bin/ld
-ORIGINAL_NM_FOR_TARGET = /usr/bin/nm
+ORIGINAL_LD_FOR_TARGET = /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/ld
+ORIGINAL_NM_FOR_TARGET = /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/nm
 NM_FOR_TARGET = ./nm
 STRIP_FOR_TARGET := $(shell \
   if [ -f $(objdir)/../binutils/strip-new ] ; then \
@@ -573,10 +573,10 @@ endif
 # The sed idiom for this is to repeat the search-and-replace until it doesn't match, using :a ... ta.
 # Use single quotes here to avoid nested double- and backquotes, this
 # macro is also used in a double-quoted context.
-SYSTEM_HEADER_DIR = `echo $(NATIVE_SYSTEM_HEADER_DIR) | sed -e :a -e 's,[^/]*/\.\.\/,,' -e ta`
+SYSTEM_HEADER_DIR = `echo $(CROSS_SYSTEM_HEADER_DIR) | sed -e :a -e 's,[^/]*/\.\.\/,,' -e ta`
 
 # Path to the system headers on the build machine.
-BUILD_SYSTEM_HEADER_DIR = `echo $(NATIVE_SYSTEM_HEADER_DIR) | sed -e :a -e 's,[^/]*/\.\.\/,,' -e ta`
+BUILD_SYSTEM_HEADER_DIR = `echo $(CROSS_SYSTEM_HEADER_DIR) | sed -e :a -e 's,[^/]*/\.\.\/,,' -e ta`
 
 # Control whether to run fixincludes.
 STMP_FIXINC = stmp-fixinc
@@ -590,9 +590,9 @@ TARGET_SYSTEM_ROOT =
 TARGET_SYSTEM_ROOT_DEFINE = 
 
 xmake_file= $(srcdir)/config/i386/x-i386 $(srcdir)/config/x-linux
-tmake_file= $(srcdir)/config/t-slibgcc $(srcdir)/config/t-linux $(srcdir)/config/t-glibc $(srcdir)/config/i386/t-linux64 $(srcdir)/config/i386/t-pmm_malloc $(srcdir)/config/i386/t-i386 $(srcdir)/config/i386/t-linux $(srcdir)/config/i386/t-gnu-property
+tmake_file= $(srcdir)/config/i386/t-gmm_malloc $(srcdir)/config/i386/t-i386
 TM_ENDIAN_CONFIG=
-TM_MULTILIB_CONFIG=m64,m32
+TM_MULTILIB_CONFIG=
 TM_MULTILIB_EXCEPTIONS_CONFIG=
 out_file=$(srcdir)/config/i386/i386.cc
 out_object_file=i386.o
@@ -600,11 +600,11 @@ common_out_file=$(srcdir)/common/config/i386/i386-common.cc
 common_out_object_file=i386-common.o
 EXTRA_GTYPE_DEPS=
 md_file=$(srcdir)/common.md $(srcdir)/config/i386/i386.md
-tm_file_list=options.h $(srcdir)/config/vxworks-dummy.h $(srcdir)/config/i386/biarch64.h $(srcdir)/config/i386/i386.h $(srcdir)/config/i386/unix.h $(srcdir)/config/i386/att.h $(srcdir)/config/elfos.h $(srcdir)/config/gnu-user.h $(srcdir)/config/glibc-stdint.h $(srcdir)/config/i386/x86-64.h $(srcdir)/config/i386/gnu-user-common.h $(srcdir)/config/i386/gnu-user64.h $(srcdir)/config/linux.h $(srcdir)/config/linux-android.h $(srcdir)/config/i386/linux-common.h $(srcdir)/config/i386/linux64.h $(srcdir)/config/initfini-array.h $(srcdir)/defaults.h
-tm_include_list=options.h insn-constants.h config/vxworks-dummy.h config/i386/biarch64.h config/i386/i386.h config/i386/unix.h config/i386/att.h config/elfos.h config/gnu-user.h config/glibc-stdint.h config/i386/x86-64.h config/i386/gnu-user-common.h config/i386/gnu-user64.h config/linux.h config/linux-android.h config/i386/linux-common.h config/i386/linux64.h config/initfini-array.h defaults.h
-tm_defines= LIBC_GLIBC=1 LIBC_UCLIBC=2 LIBC_BIONIC=3 LIBC_MUSL=4 DEFAULT_LIBC=LIBC_GLIBC ANDROID_DEFAULT=0 HEAP_TRAMPOLINES_INIT=0
-tm_p_file_list= $(srcdir)/config/i386/i386-protos.h $(srcdir)/config/linux-protos.h tm-preds.h
-tm_p_include_list= config/i386/i386-protos.h config/linux-protos.h tm-preds.h
+tm_file_list=options.h $(srcdir)/config/vxworks-dummy.h $(srcdir)/config/i386/i386.h $(srcdir)/config/i386/unix.h $(srcdir)/config/i386/att.h $(srcdir)/config/elfos.h $(srcdir)/config/newlib-stdint.h $(srcdir)/config/i386/i386elf.h $(srcdir)/config/initfini-array.h $(srcdir)/defaults.h
+tm_include_list=options.h insn-constants.h config/vxworks-dummy.h config/i386/i386.h config/i386/unix.h config/i386/att.h config/elfos.h config/newlib-stdint.h config/i386/i386elf.h config/initfini-array.h defaults.h
+tm_defines= LIBC_GLIBC=1 LIBC_UCLIBC=2 LIBC_BIONIC=3 LIBC_MUSL=4 HEAP_TRAMPOLINES_INIT=0 USE_IX86_FRAME_POINTER=1
+tm_p_file_list= $(srcdir)/config/i386/i386-protos.h tm-preds.h
+tm_p_include_list= config/i386/i386-protos.h tm-preds.h
 tm_d_file_list= $(srcdir)/config/i386/i386-d.h
 tm_d_include_list= config/i386/i386-d.h
 tm_rust_file_list= $(srcdir)/config/i386/i386-rust.h
@@ -626,11 +626,11 @@ lang_tree_files= ../gcc-14.1.0/gcc/ada/gcc-interface/ada-tree.def ../gcc-14.1.0/
 target_cpu_default=
 OBJC_BOEHM_GC=
 extra_modes_file=$(srcdir)/config/i386/i386-modes.def
-extra_opt_files= $(srcdir)/config/fused-madd.opt $(srcdir)/config/i386/i386.opt $(srcdir)/config/gnu-user.opt $(srcdir)/config/linux.opt $(srcdir)/config/linux-android.opt
+extra_opt_files= $(srcdir)/config/fused-madd.opt $(srcdir)/config/i386/i386.opt
 host_hook_obj=host-linux.o
 
 # Multiarch support
-enable_multiarch = auto
+enable_multiarch = no
 with_cpu = generic
 with_float = 
 ifeq ($(enable_multiarch),yes)
@@ -650,7 +650,7 @@ endif
 
 # Common prefix for installation directories.
 # NOTE: This directory must exist when you start installation.
-prefix = 
+prefix = /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross
 # Directory in which to put localized header files. On the systems with
 # gcc as the native cc, `local_prefix' may not be `prefix' which is
 # `/usr'.
@@ -722,10 +722,10 @@ gcc_tooldir = $(libsubdir)/$(libsubdir_to_prefix)$(target_noncanonical)
 # Since gcc_tooldir does not exist at build-time, use -B$(build_tooldir)/bin/
 build_tooldir = $(exec_prefix)/$(target_noncanonical)
 # Directory in which the compiler finds target-independent g++ includes.
-gcc_gxx_include_dir = $(libsubdir)/$(libsubdir_to_prefix)include/c++/$(version)
+gcc_gxx_include_dir = $(libsubdir)/$(libsubdir_to_prefix)i686-elf/include/c++/$(version)
 gcc_gxx_include_dir_add_sysroot = 0
 # Directory in which the compiler finds libc++ includes.
-gcc_gxx_libcxx_include_dir = $(libsubdir)/$(libsubdir_to_prefix)include/c++/v1
+gcc_gxx_libcxx_include_dir = $(libsubdir)/$(libsubdir_to_prefix)i686-elf/include/c++/v1
 gcc_gxx_libcxx_include_dir_add_sysroot = 0
 # Directory to search for site-specific includes.
 local_includedir = $(local_prefix)/include
@@ -777,7 +777,7 @@ GGC_LIB=
 
 # "true" if the target C library headers are unavailable; "false"
 # otherwise.
-inhibit_libc = false
+inhibit_libc = true
 ifeq ($(inhibit_libc),true)
 INHIBIT_LIBC_CFLAGS = -Dinhibit_libc
 endif
@@ -789,7 +789,7 @@ EXTRA_PROGRAMS =
 
 # List of extra object files that should be compiled and linked with
 # compiler proper (cc1, cc1obj, cc1plus).
-EXTRA_OBJS =  x86-tune-sched.o x86-tune-sched-bd.o x86-tune-sched-atom.o x86-tune-sched-core.o i386-options.o i386-builtins.o i386-expand.o i386-features.o linux.o gnu-property.o
+EXTRA_OBJS =  x86-tune-sched.o x86-tune-sched-bd.o x86-tune-sched-atom.o x86-tune-sched-core.o i386-options.o i386-builtins.o i386-expand.o i386-features.o
 
 # List of extra object files that should be compiled and linked with
 # the gcc driver.
@@ -799,7 +799,7 @@ EXTRA_GCC_OBJS =driver-i386.o
 EXTRA_GCC_LIBS = 
 
 # List of additional header files to install.
-EXTRA_HEADERS = $(srcdir)/config/i386/cpuid.h $(srcdir)/config/i386/mmintrin.h $(srcdir)/config/i386/mm3dnow.h $(srcdir)/config/i386/xmmintrin.h $(srcdir)/config/i386/emmintrin.h $(srcdir)/config/i386/pmmintrin.h $(srcdir)/config/i386/tmmintrin.h $(srcdir)/config/i386/ammintrin.h $(srcdir)/config/i386/smmintrin.h $(srcdir)/config/i386/nmmintrin.h $(srcdir)/config/i386/bmmintrin.h $(srcdir)/config/i386/fma4intrin.h $(srcdir)/config/i386/wmmintrin.h $(srcdir)/config/i386/immintrin.h $(srcdir)/config/i386/x86intrin.h $(srcdir)/config/i386/avxintrin.h $(srcdir)/config/i386/xopintrin.h $(srcdir)/config/i386/ia32intrin.h $(srcdir)/config/i386/cross-stdarg.h $(srcdir)/config/i386/lwpintrin.h $(srcdir)/config/i386/popcntintrin.h $(srcdir)/config/i386/lzcntintrin.h $(srcdir)/config/i386/bmiintrin.h $(srcdir)/config/i386/bmi2intrin.h $(srcdir)/config/i386/tbmintrin.h $(srcdir)/config/i386/avx2intrin.h $(srcdir)/config/i386/avx512fintrin.h $(srcdir)/config/i386/fmaintrin.h $(srcdir)/config/i386/f16cintrin.h $(srcdir)/config/i386/rtmintrin.h $(srcdir)/config/i386/xtestintrin.h $(srcdir)/config/i386/rdseedintrin.h $(srcdir)/config/i386/prfchwintrin.h $(srcdir)/config/i386/adxintrin.h $(srcdir)/config/i386/fxsrintrin.h $(srcdir)/config/i386/xsaveintrin.h $(srcdir)/config/i386/xsaveoptintrin.h $(srcdir)/config/i386/avx512cdintrin.h $(srcdir)/config/i386/avx512erintrin.h $(srcdir)/config/i386/avx512pfintrin.h $(srcdir)/config/i386/shaintrin.h $(srcdir)/config/i386/clflushoptintrin.h $(srcdir)/config/i386/xsavecintrin.h $(srcdir)/config/i386/xsavesintrin.h $(srcdir)/config/i386/avx512dqintrin.h $(srcdir)/config/i386/avx512bwintrin.h $(srcdir)/config/i386/avx512vlintrin.h $(srcdir)/config/i386/avx512vlbwintrin.h $(srcdir)/config/i386/avx512vldqintrin.h $(srcdir)/config/i386/avx512ifmaintrin.h $(srcdir)/config/i386/avx512ifmavlintrin.h $(srcdir)/config/i386/avx512vbmiintrin.h $(srcdir)/config/i386/avx512vbmivlintrin.h $(srcdir)/config/i386/avx5124fmapsintrin.h $(srcdir)/config/i386/avx5124vnniwintrin.h $(srcdir)/config/i386/avx512vpopcntdqintrin.h $(srcdir)/config/i386/clwbintrin.h $(srcdir)/config/i386/mwaitxintrin.h $(srcdir)/config/i386/clzerointrin.h $(srcdir)/config/i386/pkuintrin.h $(srcdir)/config/i386/sgxintrin.h $(srcdir)/config/i386/cetintrin.h $(srcdir)/config/i386/gfniintrin.h $(srcdir)/config/i386/cet.h $(srcdir)/config/i386/avx512vbmi2intrin.h $(srcdir)/config/i386/avx512vbmi2vlintrin.h $(srcdir)/config/i386/avx512vnniintrin.h $(srcdir)/config/i386/avx512vnnivlintrin.h $(srcdir)/config/i386/vaesintrin.h $(srcdir)/config/i386/vpclmulqdqintrin.h $(srcdir)/config/i386/avx512vpopcntdqvlintrin.h $(srcdir)/config/i386/avx512bitalgintrin.h $(srcdir)/config/i386/avx512bitalgvlintrin.h $(srcdir)/config/i386/pconfigintrin.h $(srcdir)/config/i386/wbnoinvdintrin.h $(srcdir)/config/i386/movdirintrin.h $(srcdir)/config/i386/waitpkgintrin.h $(srcdir)/config/i386/cldemoteintrin.h $(srcdir)/config/i386/avx512bf16vlintrin.h $(srcdir)/config/i386/avx512bf16intrin.h $(srcdir)/config/i386/enqcmdintrin.h $(srcdir)/config/i386/serializeintrin.h $(srcdir)/config/i386/avx512vp2intersectintrin.h $(srcdir)/config/i386/avx512vp2intersectvlintrin.h $(srcdir)/config/i386/tsxldtrkintrin.h $(srcdir)/config/i386/amxtileintrin.h $(srcdir)/config/i386/amxint8intrin.h $(srcdir)/config/i386/amxbf16intrin.h $(srcdir)/config/i386/x86gprintrin.h $(srcdir)/config/i386/uintrintrin.h $(srcdir)/config/i386/hresetintrin.h $(srcdir)/config/i386/keylockerintrin.h $(srcdir)/config/i386/avxvnniintrin.h $(srcdir)/config/i386/mwaitintrin.h $(srcdir)/config/i386/avx512fp16intrin.h $(srcdir)/config/i386/avx512fp16vlintrin.h $(srcdir)/config/i386/avxifmaintrin.h $(srcdir)/config/i386/avxvnniint8intrin.h $(srcdir)/config/i386/avxneconvertintrin.h $(srcdir)/config/i386/cmpccxaddintrin.h $(srcdir)/config/i386/amxfp16intrin.h $(srcdir)/config/i386/prfchiintrin.h $(srcdir)/config/i386/raointintrin.h $(srcdir)/config/i386/amxcomplexintrin.h $(srcdir)/config/i386/avxvnniint16intrin.h $(srcdir)/config/i386/sm3intrin.h $(srcdir)/config/i386/sha512intrin.h $(srcdir)/config/i386/sm4intrin.h $(srcdir)/config/i386/usermsrintrin.h
+EXTRA_HEADERS = $(srcdir)/config/i386/cpuid.h $(srcdir)/config/i386/mmintrin.h $(srcdir)/config/i386/mm3dnow.h $(srcdir)/config/i386/xmmintrin.h $(srcdir)/config/i386/emmintrin.h $(srcdir)/config/i386/pmmintrin.h $(srcdir)/config/i386/tmmintrin.h $(srcdir)/config/i386/ammintrin.h $(srcdir)/config/i386/smmintrin.h $(srcdir)/config/i386/nmmintrin.h $(srcdir)/config/i386/bmmintrin.h $(srcdir)/config/i386/fma4intrin.h $(srcdir)/config/i386/wmmintrin.h $(srcdir)/config/i386/immintrin.h $(srcdir)/config/i386/x86intrin.h $(srcdir)/config/i386/avxintrin.h $(srcdir)/config/i386/xopintrin.h $(srcdir)/config/i386/ia32intrin.h $(srcdir)/config/i386/cross-stdarg.h $(srcdir)/config/i386/lwpintrin.h $(srcdir)/config/i386/popcntintrin.h $(srcdir)/config/i386/lzcntintrin.h $(srcdir)/config/i386/bmiintrin.h $(srcdir)/config/i386/bmi2intrin.h $(srcdir)/config/i386/tbmintrin.h $(srcdir)/config/i386/avx2intrin.h $(srcdir)/config/i386/avx512fintrin.h $(srcdir)/config/i386/fmaintrin.h $(srcdir)/config/i386/f16cintrin.h $(srcdir)/config/i386/rtmintrin.h $(srcdir)/config/i386/xtestintrin.h $(srcdir)/config/i386/rdseedintrin.h $(srcdir)/config/i386/prfchwintrin.h $(srcdir)/config/i386/adxintrin.h $(srcdir)/config/i386/fxsrintrin.h $(srcdir)/config/i386/xsaveintrin.h $(srcdir)/config/i386/xsaveoptintrin.h $(srcdir)/config/i386/avx512cdintrin.h $(srcdir)/config/i386/avx512erintrin.h $(srcdir)/config/i386/avx512pfintrin.h $(srcdir)/config/i386/shaintrin.h $(srcdir)/config/i386/clflushoptintrin.h $(srcdir)/config/i386/xsavecintrin.h $(srcdir)/config/i386/xsavesintrin.h $(srcdir)/config/i386/avx512dqintrin.h $(srcdir)/config/i386/avx512bwintrin.h $(srcdir)/config/i386/avx512vlintrin.h $(srcdir)/config/i386/avx512vlbwintrin.h $(srcdir)/config/i386/avx512vldqintrin.h $(srcdir)/config/i386/avx512ifmaintrin.h $(srcdir)/config/i386/avx512ifmavlintrin.h $(srcdir)/config/i386/avx512vbmiintrin.h $(srcdir)/config/i386/avx512vbmivlintrin.h $(srcdir)/config/i386/avx5124fmapsintrin.h $(srcdir)/config/i386/avx5124vnniwintrin.h $(srcdir)/config/i386/avx512vpopcntdqintrin.h $(srcdir)/config/i386/clwbintrin.h $(srcdir)/config/i386/mwaitxintrin.h $(srcdir)/config/i386/clzerointrin.h $(srcdir)/config/i386/pkuintrin.h $(srcdir)/config/i386/sgxintrin.h $(srcdir)/config/i386/cetintrin.h $(srcdir)/config/i386/gfniintrin.h $(srcdir)/config/i386/cet.h $(srcdir)/config/i386/avx512vbmi2intrin.h $(srcdir)/config/i386/avx512vbmi2vlintrin.h $(srcdir)/config/i386/avx512vnniintrin.h $(srcdir)/config/i386/avx512vnnivlintrin.h $(srcdir)/config/i386/vaesintrin.h $(srcdir)/config/i386/vpclmulqdqintrin.h $(srcdir)/config/i386/avx512vpopcntdqvlintrin.h $(srcdir)/config/i386/avx512bitalgintrin.h $(srcdir)/config/i386/avx512bitalgvlintrin.h $(srcdir)/config/i386/pconfigintrin.h $(srcdir)/config/i386/wbnoinvdintrin.h $(srcdir)/config/i386/movdirintrin.h $(srcdir)/config/i386/waitpkgintrin.h $(srcdir)/config/i386/cldemoteintrin.h $(srcdir)/config/i386/avx512bf16vlintrin.h $(srcdir)/config/i386/avx512bf16intrin.h $(srcdir)/config/i386/enqcmdintrin.h $(srcdir)/config/i386/serializeintrin.h $(srcdir)/config/i386/avx512vp2intersectintrin.h $(srcdir)/config/i386/avx512vp2intersectvlintrin.h $(srcdir)/config/i386/tsxldtrkintrin.h $(srcdir)/config/i386/amxtileintrin.h $(srcdir)/config/i386/amxint8intrin.h $(srcdir)/config/i386/amxbf16intrin.h $(srcdir)/config/i386/x86gprintrin.h $(srcdir)/config/i386/uintrintrin.h $(srcdir)/config/i386/hresetintrin.h $(srcdir)/config/i386/keylockerintrin.h $(srcdir)/config/i386/avxvnniintrin.h $(srcdir)/config/i386/mwaitintrin.h $(srcdir)/config/i386/avx512fp16intrin.h $(srcdir)/config/i386/avx512fp16vlintrin.h $(srcdir)/config/i386/avxifmaintrin.h $(srcdir)/config/i386/avxvnniint8intrin.h $(srcdir)/config/i386/avxneconvertintrin.h $(srcdir)/config/i386/cmpccxaddintrin.h $(srcdir)/config/i386/amxfp16intrin.h $(srcdir)/config/i386/prfchiintrin.h $(srcdir)/config/i386/raointintrin.h $(srcdir)/config/i386/amxcomplexintrin.h $(srcdir)/config/i386/avxvnniint16intrin.h $(srcdir)/config/i386/sm3intrin.h $(srcdir)/config/i386/sha512intrin.h $(srcdir)/config/i386/sm4intrin.h $(srcdir)/config/i386/usermsrintrin.h $(srcdir)/ginclude/tgmath.h
 
 # How to handle <stdint.h>.
 USE_GCC_STDINT = wrap
@@ -1086,7 +1086,7 @@ RTL_SSA_H = $(PRETTY_PRINT_H) insn-config.h splay-tree-utils.h \
 # programs built during a bootstrap.
 # autoconf inserts -DCROSS_DIRECTORY_STRUCTURE if we are building a
 # cross compiler which does not use the native headers and libraries.
-INTERNAL_CFLAGS = -DIN_GCC 
+INTERNAL_CFLAGS = -DIN_GCC -DCROSS_DIRECTORY_STRUCTURE
 
 # This is the variable actually used when we compile. If you change this,
 # you probably want to update BUILD_CFLAGS in configure.ac
@@ -1206,8 +1206,8 @@ LANG_CONFIGUREFRAGS  =  $(srcdir)/ada/gcc-interface/config-lang.in $(srcdir)/c/c
 LANG_MAKEFRAGS = $(srcdir)/c/Make-lang.in  $(srcdir)/ada/gcc-interface/Make-lang.in $(srcdir)/cp/Make-lang.in $(srcdir)/d/Make-lang.in $(srcdir)/fortran/Make-lang.in $(srcdir)/go/Make-lang.in $(srcdir)/jit/Make-lang.in $(srcdir)/lto/Make-lang.in $(srcdir)/m2/Make-lang.in $(srcdir)/objc/Make-lang.in $(srcdir)/objcp/Make-lang.in $(srcdir)/rust/Make-lang.in
 
 # Used by gcc/jit/Make-lang.in
-LD_VERSION_SCRIPT_OPTION = --version-script
-LD_SONAME_OPTION = -soname
+LD_VERSION_SCRIPT_OPTION = 
+LD_SONAME_OPTION = 
 #DARWIN_RPATH = @rpath
 DARWIN_RPATH = ${libdir}
 
@@ -1276,19 +1276,19 @@ ALL_OPT_FILES=$(lang_opt_files) $(extra_opt_files)
 ALL_OPT_URL_FILES=$(patsubst %, %.urls, $(ALL_OPT_FILES))
 
 # Target specific, C specific object file
-C_TARGET_OBJS=i386-c.o glibc-c.o
+C_TARGET_OBJS=i386-c.o default-c.o
 
 # Target specific, C++ specific object file
-CXX_TARGET_OBJS=i386-c.o glibc-c.o
+CXX_TARGET_OBJS=i386-c.o default-c.o
 
 # Target specific, D specific object file
-D_TARGET_OBJS=i386-d.o linux-d.o
+D_TARGET_OBJS=i386-d.o default-d.o
 
 # Target specific, Fortran specific object file
 FORTRAN_TARGET_OBJS=
 
 # Target specific, Rust specific object file
-RUST_TARGET_OBJS= i386-rust.o linux-rust.o
+RUST_TARGET_OBJS= i386-rust.o default-rust.o
 
 # Object files for gcc many-languages driver.
 GCC_OBJS = gcc.o gcc-main.o ggc-none.o gcc-urlifier.o options-urls.o
@@ -4270,7 +4270,7 @@ uninstall: lang.uninstall
 # These targets are for the dejagnu testsuites. The file site.exp
 # contains global variables that all the testsuites will use.
 
-target_subdir = x86_64-pc-linux-gnu
+target_subdir = i686-elf
 
 site.exp: ./config.status Makefile
 	@echo "Making a new config file..."

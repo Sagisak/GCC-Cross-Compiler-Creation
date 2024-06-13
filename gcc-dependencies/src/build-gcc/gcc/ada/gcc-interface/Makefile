@@ -137,18 +137,18 @@ hyphen = -
 program_transform_name =
 objdir = .
 
-target_alias=x86_64-pc-linux-gnu
-target=x86_64-pc-linux-gnu
-target_noncanonical=x86_64-pc-linux-gnu
-target_cpu=x86_64
+target_alias=i686-elf
+target=i686-pc-elf
+target_noncanonical=i686-elf
+target_cpu=i686
 target_vendor=pc
-target_os=linux-gnu
+target_os=elf
 host_cpu=x86_64
 host_vendor=pc
 host_os=linux-gnu
 target_cpu_default = 
 xmake_file =  $(srcdir)/config/i386/x-i386 $(srcdir)/config/x-linux
-tmake_file =  $(srcdir)/config/t-slibgcc $(srcdir)/config/t-linux $(srcdir)/config/t-glibc $(srcdir)/config/i386/t-linux64 $(srcdir)/config/i386/t-pmm_malloc $(srcdir)/config/i386/t-i386 $(srcdir)/config/i386/t-linux $(srcdir)/config/i386/t-gnu-property
+tmake_file =  $(srcdir)/config/i386/t-gmm_malloc $(srcdir)/config/i386/t-i386
 #version=`sed -e 's/.*\"\([^ \"]*\)[ \"].*/\1/' < $(srcdir)/version.c`
 #mainversion=`sed -e 's/.*\"\([0-9]*\.[0-9]*\).*/\1/' < $(srcdir)/version.c`
 
@@ -228,7 +228,7 @@ all.indirect: Makefile ../gnat1$(exeext)
 # even break the host/target wall by using it for the library (targext.c).
 # autoconf inserts -DCROSS_DIRECTORY_STRUCTURE if we are building a cross
 # compiler which does not use the native libraries and headers.
-INTERNAL_CFLAGS =  -DIN_GCC
+INTERNAL_CFLAGS = -DCROSS_DIRECTORY_STRUCTURE -DIN_GCC
 
 # This is the variable actually used when we compile.
 ALL_CFLAGS = $(INTERNAL_CFLAGS) $(T_CFLAGS) $(CFLAGS)

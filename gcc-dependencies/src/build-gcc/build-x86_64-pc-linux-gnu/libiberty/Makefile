@@ -22,7 +22,7 @@
 libiberty_topdir = ../../gcc-14.1.0/libiberty/..
 srcdir = ../../gcc-14.1.0/libiberty
 
-prefix = 
+prefix = /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross
 
 exec_prefix = ${prefix}
 bindir = ${exec_prefix}/bin

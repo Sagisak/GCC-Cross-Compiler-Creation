@@ -41,7 +41,7 @@ ac_cv_env_CXXCPP_value=
 ac_cv_env_CXXFLAGS_set=set
 ac_cv_env_CXXFLAGS_value='-g -O2  '
 ac_cv_env_CXX_set=set
-ac_cv_env_CXX_value='g++ -std=c++11'
+ac_cv_env_CXX_value=g++
 ac_cv_env_GMPINC_set=set
 ac_cv_env_GMPINC_value=
 ac_cv_env_GMPLIBS_set=set
@@ -59,9 +59,8 @@ ac_cv_env_build_alias_value=x86_64-pc-linux-gnu
 ac_cv_env_host_alias_set=set
 ac_cv_env_host_alias_value=x86_64-pc-linux-gnu
 ac_cv_env_target_alias_set=set
-ac_cv_env_target_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_target_alias_value=i686-elf
 ac_cv_f_setlkw=${ac_cv_f_setlkw=yes}
-ac_cv_func___cxa_atexit=${ac_cv_func___cxa_atexit=yes}
 ac_cv_func_atoq=${ac_cv_func_atoq=no}
 ac_cv_func_clearerr_unlocked=${ac_cv_func_clearerr_unlocked=yes}
 ac_cv_func_clock=${ac_cv_func_clock=yes}
@@ -161,18 +160,13 @@ ac_cv_path_MSGFMT=${ac_cv_path_MSGFMT=:}
 ac_cv_path_MSGMERGE=${ac_cv_path_MSGMERGE=:}
 ac_cv_path_SED=${ac_cv_path_SED=/usr/bin/sed}
 ac_cv_path_XGETTEXT=${ac_cv_path_XGETTEXT=:}
-ac_cv_path_gcc_cv_as=${ac_cv_path_gcc_cv_as=/usr/bin/as}
-ac_cv_path_gcc_cv_ld=${ac_cv_path_gcc_cv_ld=/usr/bin/ld}
-ac_cv_path_gcc_cv_nm=${ac_cv_path_gcc_cv_nm=/usr/bin/nm}
-ac_cv_path_gcc_cv_objdump=${ac_cv_path_gcc_cv_objdump=/usr/bin/objdump}
-ac_cv_path_gcc_cv_readelf=${ac_cv_path_gcc_cv_readelf=/usr/bin/readelf}
 ac_cv_path_install=${ac_cv_path_install='/usr/bin/install -c'}
 ac_cv_prog_AR=${ac_cv_prog_AR='ar --plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so'}
 ac_cv_prog_AWK=${ac_cv_prog_AWK=mawk}
 ac_cv_prog_BISON=${ac_cv_prog_BISON=bison}
 ac_cv_prog_CC=${ac_cv_prog_CC=gcc}
 ac_cv_prog_CPP=${ac_cv_prog_CPP='gcc -E'}
-ac_cv_prog_CXXCPP=${ac_cv_prog_CXXCPP='g++ -std=c++11 -E'}
+ac_cv_prog_CXXCPP=${ac_cv_prog_CXXCPP='g++ -E'}
 ac_cv_prog_FLEX=${ac_cv_prog_FLEX=flex}
 ac_cv_prog_GDC=${ac_cv_prog_GDC=no}
 ac_cv_prog_MAKEINFO=${ac_cv_prog_MAKEINFO=makeinfo}
@@ -208,7 +202,7 @@ ac_cv_sys_file_offset_bits=${ac_cv_sys_file_offset_bits=no}
 ac_cv_sys_largefile_CC=${ac_cv_sys_largefile_CC=no}
 ac_cv_sys_tiocgwinsz_in_sys_ioctl_h=${ac_cv_sys_tiocgwinsz_in_sys_ioctl_h=yes}
 ac_cv_sys_tiocgwinsz_in_termios_h=${ac_cv_sys_tiocgwinsz_in_termios_h=no}
-ac_cv_target=${ac_cv_target=x86_64-pc-linux-gnu}
+ac_cv_target=${ac_cv_target=i686-pc-elf}
 ac_cv_type_caddr_t=${ac_cv_type_caddr_t=yes}
 ac_cv_type_intmax_t=${ac_cv_type_intmax_t=yes}
 ac_cv_type_intptr_t=${ac_cv_type_intptr_t=yes}
@@ -256,7 +250,7 @@ am_cv_func_iconv_works=${am_cv_func_iconv_works=yes}
 am_cv_langinfo_codeset=${am_cv_langinfo_codeset=yes}
 am_cv_lib_iconv=${am_cv_lib_iconv=no}
 am_cv_val_LC_MESSAGES=${am_cv_val_LC_MESSAGES=yes}
-gcc_cv_as=${gcc_cv_as=/usr/bin/as}
+gcc_cv_as=${gcc_cv_as=/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/as}
 gcc_cv_as_balign_and_p2align=${gcc_cv_as_balign_and_p2align=yes}
 gcc_cv_as_cfi_advance_working=${gcc_cv_as_cfi_advance_working=yes}
 gcc_cv_as_cfi_directive=${gcc_cv_as_cfi_directive=yes}
@@ -267,7 +261,8 @@ gcc_cv_as_comdat_group_group=${gcc_cv_as_comdat_group_group=no}
 gcc_cv_as_comdat_group_percent=${gcc_cv_as_comdat_group_percent=no}
 gcc_cv_as_compress_debug=${gcc_cv_as_compress_debug=1}
 gcc_cv_as_compress_debug_option=${gcc_cv_as_compress_debug_option=--compress-debug-sections}
-gcc_cv_as_debug_line_64_flag=${gcc_cv_as_debug_line_64_flag=yes}
+gcc_cv_as_debug_line_32_flag=${gcc_cv_as_debug_line_32_flag=yes}
+gcc_cv_as_debug_line_64_flag=${gcc_cv_as_debug_line_64_flag=no}
 gcc_cv_as_debug_prefix_map_flag=${gcc_cv_as_debug_prefix_map_flag=yes}
 gcc_cv_as_discriminator=${gcc_cv_as_discriminator=yes}
 gcc_cv_as_dwarf2_debug_line=${gcc_cv_as_dwarf2_debug_line=yes}
@@ -276,7 +271,7 @@ gcc_cv_as_dwarf2_file_buggy=${gcc_cv_as_dwarf2_file_buggy=no}
 gcc_cv_as_dwarf_4_app_flag=${gcc_cv_as_dwarf_4_app_flag=yes}
 gcc_cv_as_dwarf_4_debug_line_flag=${gcc_cv_as_dwarf_4_debug_line_flag=yes}
 gcc_cv_as_eh_frame=${gcc_cv_as_eh_frame=yes}
-gcc_cv_as_flags=${gcc_cv_as_flags=--64}
+gcc_cv_as_flags=${gcc_cv_as_flags=' '}
 gcc_cv_as_gas_srcdir=${gcc_cv_as_gas_srcdir=../gcc-14.1.0/gas}
 gcc_cv_as_gdwarf2_flag=${gcc_cv_as_gdwarf2_flag=yes}
 gcc_cv_as_gdwarf_5_flag=${gcc_cv_as_gdwarf_5_flag=yes}
@@ -390,17 +385,17 @@ gcc_cv_have_decl_vsnprintf=${gcc_cv_have_decl_vsnprintf=yes}
 gcc_cv_header_inttypes_h=${gcc_cv_header_inttypes_h=yes}
 gcc_cv_header_string=${gcc_cv_header_string=yes}
 gcc_cv_header_zstd_h=${gcc_cv_header_zstd_h=no}
-gcc_cv_initfini_array=${gcc_cv_initfini_array=yes}
-gcc_cv_ld=${gcc_cv_ld=/usr/bin/ld}
+gcc_cv_initfini_array=${gcc_cv_initfini_array=no}
+gcc_cv_ld=${gcc_cv_ld=/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/ld}
 gcc_cv_ld_aligned_shf_merge=${gcc_cv_ld_aligned_shf_merge=yes}
 gcc_cv_ld_as_needed=${gcc_cv_ld_as_needed=yes}
 gcc_cv_ld_as_needed_option=${gcc_cv_ld_as_needed_option='--push-state --as-needed'}
 gcc_cv_ld_bfd_srcdir=${gcc_cv_ld_bfd_srcdir=../gcc-14.1.0/bfd}
 gcc_cv_ld_buildid=${gcc_cv_ld_buildid=yes}
 gcc_cv_ld_clearcap=${gcc_cv_ld_clearcap=no}
-gcc_cv_ld_compress_debug=${gcc_cv_ld_compress_debug=1}
+gcc_cv_ld_compress_debug=${gcc_cv_ld_compress_debug=2}
 gcc_cv_ld_compress_debug_option=${gcc_cv_ld_compress_debug_option=--compress-debug-sections}
-gcc_cv_ld_demangle=${gcc_cv_ld_demangle=yes}
+gcc_cv_ld_demangle=${gcc_cv_ld_demangle=no}
 gcc_cv_ld_dynamic_option=${gcc_cv_ld_dynamic_option=-Bdynamic}
 gcc_cv_ld_eh_frame_ciev3=${gcc_cv_ld_eh_frame_ciev3=yes}
 gcc_cv_ld_eh_frame_hdr=${gcc_cv_ld_eh_frame_hdr=yes}
@@ -411,28 +406,28 @@ gcc_cv_ld_gold_srcdir=${gcc_cv_ld_gold_srcdir=../gcc-14.1.0/gold}
 gcc_cv_ld_hidden=${gcc_cv_ld_hidden=yes}
 gcc_cv_ld_no_as_needed_option=${gcc_cv_ld_no_as_needed_option=--pop-state}
 gcc_cv_ld_pie=${gcc_cv_ld_pie=yes}
-gcc_cv_ld_pie_copyreloc=${gcc_cv_ld_pie_copyreloc=yes}
+gcc_cv_ld_pie_copyreloc=${gcc_cv_ld_pie_copyreloc=no}
 gcc_cv_ld_ro_rw_mix=${gcc_cv_ld_ro_rw_mix=read-write}
 gcc_cv_ld_sol2_emulation=${gcc_cv_ld_sol2_emulation=no}
-gcc_cv_ld_soname=${gcc_cv_ld_soname=yes}
+gcc_cv_ld_soname=${gcc_cv_ld_soname=no}
 gcc_cv_ld_static_dynamic=${gcc_cv_ld_static_dynamic=yes}
 gcc_cv_ld_static_option=${gcc_cv_ld_static_option=-Bstatic}
 gcc_cv_ld_sysroot=${gcc_cv_ld_sysroot=yes}
-gcc_cv_ld_version_script=${gcc_cv_ld_version_script=yes}
+gcc_cv_ld_version_script=${gcc_cv_ld_version_script=no}
 gcc_cv_libc_gnustack=${gcc_cv_libc_gnustack=unknown}
 gcc_cv_libc_provides_hwcap_in_tcb=${gcc_cv_libc_provides_hwcap_in_tcb=no}
-gcc_cv_libc_provides_ssp=${gcc_cv_libc_provides_ssp=yes}
+gcc_cv_libc_provides_ssp=${gcc_cv_libc_provides_ssp=no}
 gcc_cv_lto_plugin=${gcc_cv_lto_plugin=2}
 gcc_cv_mkdir_takes_one_arg=${gcc_cv_mkdir_takes_one_arg=no}
-gcc_cv_nm=${gcc_cv_nm=/usr/bin/nm}
+gcc_cv_nm=${gcc_cv_nm=/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/nm}
 gcc_cv_no_pie=${gcc_cv_no_pie=yes}
-gcc_cv_objdump=${gcc_cv_objdump=/usr/bin/objdump}
+gcc_cv_objdump=${gcc_cv_objdump=/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/objdump}
 gcc_cv_otool=${gcc_cv_otool=}
 gcc_cv_prog_LN_S=${gcc_cv_prog_LN_S='ln -s'}
 gcc_cv_prog_cmp_skip=${gcc_cv_prog_cmp_skip=gnucompare}
 gcc_cv_prog_makeinfo_modern=${gcc_cv_prog_makeinfo_modern=yes}
 gcc_cv_prog_python3_modern=${gcc_cv_prog_python3_modern=yes}
-gcc_cv_readelf=${gcc_cv_readelf=/usr/bin/readelf}
+gcc_cv_readelf=${gcc_cv_readelf=/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross/i686-elf/bin/readelf}
 gcc_cv_sys_sdt_h=${gcc_cv_sys_sdt_h=no}
 gcc_cv_target_dl_iterate_phdr=${gcc_cv_target_dl_iterate_phdr=unknown}
 gcc_cv_texi_add_toc_inline_flags=${gcc_cv_texi_add_toc_inline_flags=yes}

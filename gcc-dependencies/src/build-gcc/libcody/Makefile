@@ -3,7 +3,7 @@
 # License: Apache v2.0
 
 srcdir := ../gcc-14.1.0/libcody
-prefix := 
+prefix := /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross
 exec_prefix := ${prefix}
 bindir := ${exec_prefix}/bin
 libdir := ${exec_prefix}/lib
@@ -104,7 +104,7 @@ Makefile: config.status Makefile.in
 endif
 
 config.status: $(srcdir)/configure $(srcdir)/config.h.in
-	if test -x $@; then ./$@ -recheck; else $<  '--srcdir=../gcc-14.1.0/libcody' '--cache-file=./config.cache' '--prefix=' '--disable-nls' '--without-headers' '--enable-multilib' '--enable-languages=c,c++,lto' '--program-transform-name=s,y,y,' '--disable-option-checking' '--build=x86_64-pc-linux-gnu' '--host=x86_64-pc-linux-gnu' '--target=x86_64-pc-linux-gnu' 'build_alias=x86_64-pc-linux-gnu' 'host_alias=x86_64-pc-linux-gnu' 'target_alias=x86_64-pc-linux-gnu' 'CXX=g++ -std=c++11' 'CXXFLAGS=-g -O2  ' 'LDFLAGS=-static-libstdc++ -static-libgcc '; fi
+	if test -x $@; then ./$@ -recheck; else $<  '--srcdir=../gcc-14.1.0/libcody' '--cache-file=./config.cache' '--prefix=/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross' '--disable-nls' '--without-headers' '--enable-languages=c,c++,lto' '--program-transform-name=s&^&i686-elf-&' '--disable-option-checking' '--build=x86_64-pc-linux-gnu' '--host=x86_64-pc-linux-gnu' '--target=i686-elf' 'build_alias=x86_64-pc-linux-gnu' 'host_alias=x86_64-pc-linux-gnu' 'target_alias=i686-elf' 'CXX=g++' 'CXXFLAGS=-g -O2  ' 'LDFLAGS=-static-libstdc++ -static-libgcc '; fi
 
 mostlyclean::
 

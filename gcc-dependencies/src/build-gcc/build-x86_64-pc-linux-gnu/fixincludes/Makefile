@@ -45,8 +45,8 @@ libexecdir = ${exec_prefix}/libexec
 # End of variables for you to override.
 
 # The target that we're configured for.
-target = x86_64-pc-linux-gnu
-target_noncanonical:=x86_64-pc-linux-gnu
+target = i686-pc-elf
+target_noncanonical:=i686-elf
 
 # The version of GCC in this tree
 gcc_version := $(shell cat $(srcdir)/../gcc/BASE-VER)

@@ -3712,8 +3712,6 @@ get_opt_url_suffix (int option_index, unsigned lang_mask)
        return "gcc/x86-Options.html#index-mamx-int8";
      case OPT_mamx_tile:
        return "gcc/x86-Options.html#index-mamx-tile";
-     case OPT_mandroid:
-       return "gcc/GNU_002fLinux-Options.html#index-mandroid";
      case OPT_mapx_features_:
        break;
      case OPT_mapx_inline_asm_use_gpr32:
@@ -3782,8 +3780,6 @@ get_opt_url_suffix (int option_index, unsigned lang_mask)
        return "gcc/x86-Options.html#index-mavxvnniint16";
      case OPT_mavxvnniint8:
        return "gcc/x86-Options.html#index-mavxvnniint8";
-     case OPT_mbionic:
-       return "gcc/GNU_002fLinux-Options.html#index-mbionic";
      case OPT_mbmi:
        return "gcc/x86-Options.html#index-mbmi";
      case OPT_mbmi2:
@@ -3856,8 +3852,6 @@ get_opt_url_suffix (int option_index, unsigned lang_mask)
        return "gcc/x86-Options.html#index-mgeneral-regs-only-2";
      case OPT_mgfni:
        return "gcc/x86-Options.html#index-mgfni";
-     case OPT_mglibc:
-       return "gcc/GNU_002fLinux-Options.html#index-mglibc";
      case OPT_mhard_float:
        return "gcc/x86-Options.html#index-mhard-float-11";
      case OPT_mharden_sls_:
@@ -3922,8 +3916,6 @@ get_opt_url_suffix (int option_index, unsigned lang_mask)
        break;
      case OPT_mms_bitfields:
        return "gcc/x86-Options.html#index-mms-bitfields";
-     case OPT_mmusl:
-       return "gcc/GNU_002fLinux-Options.html#index-mmusl";
      case OPT_mmwait:
        return "gcc/x86-Options.html#index-mmwait";
      case OPT_mmwaitx:
@@ -4076,8 +4068,6 @@ get_opt_url_suffix (int option_index, unsigned lang_mask)
        break;
      case OPT_mtune_:
        return "gcc/x86-Options.html#index-mtune-17";
-     case OPT_muclibc:
-       return "gcc/GNU_002fLinux-Options.html#index-muclibc";
      case OPT_muintr:
        return "gcc/x86-Options.html#index-muintr";
      case OPT_munroll_only_small_loops:
@@ -4160,8 +4150,6 @@ get_opt_url_suffix (int option_index, unsigned lang_mask)
        return "gcc/Link-Options.html#index-pie";
      case OPT_pipe:
        return "gcc/Overall-Options.html#index-pipe";
-     case OPT_posix:
-       break;
      case OPT_print_file_name_:
        return "gcc/Developer-Options.html#index-print-file-name";
      case OPT_print_libgcc_file_name:
@@ -4186,16 +4174,10 @@ get_opt_url_suffix (int option_index, unsigned lang_mask)
        return "gcc/Developer-Options.html#index-print-sysroot-headers-suffix";
      case OPT_print_value:
        break;
-     case OPT_profile:
-       break;
-     case OPT_pthread:
-       break;
      case OPT_quiet:
        break;
      case OPT_r:
        return "gcc/Link-Options.html#index-r";
-     case OPT_rdynamic:
-       return "gcc/Link-Options.html#index-rdynamic";
      case OPT_remap:
        return "gcc/Preprocessor-Options.html#index-remap";
      case OPT_reverse_sort:
@@ -4330,10 +4312,6 @@ get_opt_url_suffix (int option_index, unsigned lang_mask)
        return "gcc/Developer-Options.html#index-time";
      case OPT_time_:
        return "gcc/Developer-Options.html#index-time";
-     case OPT_tno_android_cc:
-       return "gcc/GNU_002fLinux-Options.html#index-tno-android-cc";
-     case OPT_tno_android_ld:
-       return "gcc/GNU_002fLinux-Options.html#index-tno-android-ld";
      case OPT_traditional:
        break;
      case OPT_traditional_cpp:

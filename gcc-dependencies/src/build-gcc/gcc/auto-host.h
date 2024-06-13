@@ -135,13 +135,13 @@
 /* Define to 1 to specify that we are using the BID decimal floating point
    format instead of DPD */
 #ifndef USED_FOR_TARGET
-#define ENABLE_DECIMAL_BID_FORMAT 1
+#define ENABLE_DECIMAL_BID_FORMAT 0
 #endif
 
 
 /* Define to 1 to enable decimal float extension to C. */
 #ifndef USED_FOR_TARGET
-#define ENABLE_DECIMAL_FLOAT 1
+#define ENABLE_DECIMAL_FLOAT 0
 #endif
 
 
@@ -1348,7 +1348,7 @@
 
 /* Define 0/1 if -fhardened is supported */
 #ifndef USED_FOR_TARGET
-#define HAVE_FHARDENED_SUPPORT 1
+#define HAVE_FHARDENED_SUPPORT 0
 #endif
 
 
@@ -1443,7 +1443,7 @@
 
 /* Define if your assembler supports @gnu_unique_object. */
 #ifndef USED_FOR_TARGET
-#define HAVE_GAS_GNU_UNIQUE_OBJECT 1
+/* #undef HAVE_GAS_GNU_UNIQUE_OBJECT */
 #endif
 
 
@@ -1583,19 +1583,19 @@
 
 /* Define to 1 if using GNU as. */
 #ifndef USED_FOR_TARGET
-#define HAVE_GNU_AS 1
+#define HAVE_GNU_AS 0
 #endif
 
 
 /* Define if your system supports gnu indirect functions. */
 #ifndef USED_FOR_TARGET
-#define HAVE_GNU_INDIRECT_FUNCTION 1
+#define HAVE_GNU_INDIRECT_FUNCTION 0
 #endif
 
 
 /* Define to 1 if using GNU ld. */
 #ifndef USED_FOR_TARGET
-#define HAVE_GNU_LD 1
+#define HAVE_GNU_LD 0
 #endif
 
 
@@ -1621,7 +1621,7 @@
 /* Define 0/1 if .init_array/.fini_array sections are available and working.
    */
 #ifndef USED_FOR_TARGET
-#define HAVE_INITFINI_ARRAY_SUPPORT 1
+#define HAVE_INITFINI_ARRAY_SUPPORT 0
 #endif
 
 
@@ -1708,7 +1708,7 @@
 
 /* Define if your linker supports -z bndplt */
 #ifndef USED_FOR_TARGET
-#define HAVE_LD_BNDPLT_SUPPORT 1
+/* #undef HAVE_LD_BNDPLT_SUPPORT */
 #endif
 
 
@@ -1733,13 +1733,13 @@
 
 /* Define to the level of your linker's compressed debug section support. */
 #ifndef USED_FOR_TARGET
-#define HAVE_LD_COMPRESS_DEBUG 1
+#define HAVE_LD_COMPRESS_DEBUG 2
 #endif
 
 
 /* Define if your linker supports --demangle option. */
 #ifndef USED_FOR_TARGET
-#define HAVE_LD_DEMANGLE 1
+/* #undef HAVE_LD_DEMANGLE */
 #endif
 
 
@@ -1805,7 +1805,7 @@
 
 /* Define 0/1 if your linker supports -pie option with copy reloc. */
 #ifndef USED_FOR_TARGET
-#define HAVE_LD_PIE_COPYRELOC 1
+#define HAVE_LD_PIE_COPYRELOC 0
 #endif
 
 
@@ -2438,7 +2438,7 @@
 
 /* Define to PREFIX/include if cpp should also search that directory. */
 #ifndef USED_FOR_TARGET
-#define PREFIX_INCLUDE_DIR "/include"
+/* #undef PREFIX_INCLUDE_DIR */
 #endif
 
 
@@ -2507,13 +2507,13 @@
 
 /* GNU C Library major version number used on the target, or 0. */
 #ifndef USED_FOR_TARGET
-#define TARGET_GLIBC_MAJOR 2
+#define TARGET_GLIBC_MAJOR 0
 #endif
 
 
 /* GNU C Library minor version number used on the target, or 0. */
 #ifndef USED_FOR_TARGET
-#define TARGET_GLIBC_MINOR 35
+#define TARGET_GLIBC_MINOR 0
 #endif
 
 
@@ -2531,7 +2531,7 @@
 
 /* Define if your target C library provides stack protector support */
 #ifndef USED_FOR_TARGET
-#define TARGET_LIBC_PROVIDES_SSP 1
+/* #undef TARGET_LIBC_PROVIDES_SSP */
 #endif
 
 

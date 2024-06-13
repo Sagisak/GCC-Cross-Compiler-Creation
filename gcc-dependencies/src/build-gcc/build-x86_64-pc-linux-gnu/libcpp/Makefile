@@ -34,7 +34,7 @@ CATALOGS = $(patsubst %,po/%,)
 CC = gcc
 CFLAGS = -g -O2
 WARN_CFLAGS = -W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute -Wstrict-prototypes -Wmissing-prototypes -Wold-style-definition -Wc++-compat -pedantic -Wno-long-long 
-CXX = g++ -std=c++11
+CXX = g++
 CXXFLAGS = -g -O2
 WARN_CXXFLAGS = -W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute -pedantic -Wno-long-long 
 CPP = gcc -E
@@ -62,10 +62,10 @@ CET_HOST_FLAGS =
 
 datarootdir = ${prefix}/share
 datadir = ${datarootdir}
-exec_prefix = 
+exec_prefix = /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross
 libdir = ${exec_prefix}/lib
 localedir = $(datadir)/locale
-prefix = 
+prefix = /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross
 
 MSGMERGE = msgmerge
 mkinstalldirs = $(SHELL) $(srcdir)/../mkinstalldirs

@@ -9,20 +9,12 @@ auto-host.h
 ../gcc-14.1.0/gcc/config/i386/stringop.def
 options.h
 ../gcc-14.1.0/gcc/config/vxworks-dummy.h
-../gcc-14.1.0/gcc/config/i386/biarch64.h
 ../gcc-14.1.0/gcc/config/i386/i386.h
 ../gcc-14.1.0/gcc/config/i386/unix.h
 ../gcc-14.1.0/gcc/config/i386/att.h
 ../gcc-14.1.0/gcc/config/elfos.h
-../gcc-14.1.0/gcc/config/gnu-user.h
-../gcc-14.1.0/gcc/config/glibc-stdint.h
-../gcc-14.1.0/gcc/config/i386/x86-64.h
-../gcc-14.1.0/gcc/config/i386/gnu-user-common.h
-../gcc-14.1.0/gcc/config/i386/gnu-user64.h
-../gcc-14.1.0/gcc/config/linux.h
-../gcc-14.1.0/gcc/config/linux-android.h
-../gcc-14.1.0/gcc/config/i386/linux-common.h
-../gcc-14.1.0/gcc/config/i386/linux64.h
+../gcc-14.1.0/gcc/config/newlib-stdint.h
+../gcc-14.1.0/gcc/config/i386/i386elf.h
 ../gcc-14.1.0/gcc/config/initfini-array.h
 ../gcc-14.1.0/gcc/defaults.h
 ../gcc-14.1.0/gcc/../include/hashtab.h
@@ -260,6 +252,15 @@ options.h
 
 
 ../gcc-14.1.0/gcc/m2/gm2-lang.h
+
+
+
+
+
+
+
+
+
 ../gcc-14.1.0/gcc/m2/gm2-gcc/rtegraph.cc
 
 

@@ -3871,8 +3871,6 @@ mamx-int8Target Mask(ISA2_AMX_INT8) Var(ix86_isa_flags2) SaveSupport AMX-INT8 
 mamx-int8UrlSuffix(gcc/x86-Options.html#index-mamx-int8)
 mamx-tileTarget Mask(ISA2_AMX_TILE) Var(ix86_isa_flags2) SaveSupport AMX-TILE built-in functions and code generation.
 mamx-tileUrlSuffix(gcc/x86-Options.html#index-mamx-tile)
-mandroidTarget Mask(ANDROID) Var(flag_android) Init(ANDROID_DEFAULT ? OPTION_MASK_ANDROID : 0)Generate code for the Android platform.
-mandroidUrlSuffix(gcc/GNU_002fLinux-Options.html#index-mandroid)
 mapx-features=Target Undocumented Joined Enum(apx_features) EnumSet Var(ix86_apx_features) Init(apx_none) Save
 mapx-inline-asm-use-gpr32Target Var(ix86_apx_inline_asm_use_gpr32) Init(0)Enable GPR32 in inline asm when APX_F enabled.
 mapx-inline-asm-use-gpr32UrlSuffix(gcc/x86-Options.html#index-mapx-inline-asm-use-gpr32)
@@ -3941,8 +3939,6 @@ mavxvnniint16Target Mask(ISA2_AVXVNNIINT16) Var(ix86_isa_flags2) SaveSupport M
 mavxvnniint16UrlSuffix(gcc/x86-Options.html#index-mavxvnniint16)
 mavxvnniint8Target Mask(ISA2_AVXVNNIINT8) Var(ix86_isa_flags2) SaveSupport MMX, SSE, SSE2, SSE3, SSSE3, SSE4.1, SSE4.2, AVX, AVX2 andAVXVNNIINT8 built-in functions and code generation.
 mavxvnniint8UrlSuffix(gcc/x86-Options.html#index-mavxvnniint8)
-mbionicTarget RejectNegative Var(linux_libc,LIBC_BIONIC) Init(DEFAULT_LIBC) Negative(mglibc)Use Bionic C library.
-mbionicUrlSuffix(gcc/GNU_002fLinux-Options.html#index-mbionic)
 mbmiTarget Mask(ISA_BMI) Var(ix86_isa_flags) SaveSupport BMI built-in functions and code generation.
 mbmiUrlSuffix(gcc/x86-Options.html#index-mbmi)
 mbmi2Target Mask(ISA_BMI2) Var(ix86_isa_flags) SaveSupport BMI2 built-in functions and code generation.
@@ -4014,8 +4010,6 @@ mgeneral-regs-onlyTarget RejectNegative Mask(GENERAL_REGS_ONLY) Var(ix86_target
 mgeneral-regs-onlyUrlSuffix(gcc/x86-Options.html#index-mgeneral-regs-only-2)
 mgfniTarget Mask(ISA_GFNI) Var(ix86_isa_flags) SaveSupport GFNI built-in functions and code generation.
 mgfniUrlSuffix(gcc/x86-Options.html#index-mgfni)
-mglibcTarget RejectNegative Var(linux_libc,LIBC_GLIBC) Negative(muclibc)Use GNU C library.
-mglibcUrlSuffix(gcc/GNU_002fLinux-Options.html#index-mglibc)
 mhard-floatTarget RejectNegative Mask(80387) SaveUse hardware fp.
 mhard-floatUrlSuffix(gcc/x86-Options.html#index-mhard-float-11)
 mharden-sls=Target RejectNegative Joined Enum(harden_sls) Var(ix86_harden_sls) Init(harden_sls_none)Generate code to mitigate against straight line speculation.
@@ -4077,8 +4071,6 @@ mmove-max=UrlSuffix(gcc/x86-Options.html#index-mmove-max)
 mmpxTarget WarnRemovedRemoved in GCC 9.  This switch has no effect.
 mms-bitfieldsTarget Mask(MS_BITFIELD_LAYOUT) SaveUse native (MS) bitfield layout.
 mms-bitfieldsUrlSuffix(gcc/x86-Options.html#index-mms-bitfields)
-mmuslTarget RejectNegative Var(linux_libc,LIBC_MUSL) Negative(mbionic)Use musl C library.
-mmuslUrlSuffix(gcc/GNU_002fLinux-Options.html#index-mmusl)
 mmwaitTarget Mask(ISA2_MWAIT) Var(ix86_isa_flags2) SaveSupport MWAIT and MONITOR built-in functions and code generation.
 mmwaitUrlSuffix(gcc/x86-Options.html#index-mmwait)
 mmwaitxTarget Mask(ISA2_MWAITX) Var(ix86_isa_flags2) SaveSupport MWAITX and MONITORX built-in functions and code generation.
@@ -4228,8 +4220,6 @@ mtsxldtrkUrlSuffix(gcc/x86-Options.html#index-mtsxldtrk)
 mtune-ctrl=Target RejectNegative Joined Var(ix86_tune_ctrl_string)Fine grain control of tune features.
 mtune=Target RejectNegative Negative(mtune=) Joined Var(ix86_tune_string)Schedule code for given CPU.
 mtune=UrlSuffix(gcc/x86-Options.html#index-mtune-17)
-muclibcTarget RejectNegative Var(linux_libc,LIBC_UCLIBC) Negative(mmusl)Use uClibc C library.
-muclibcUrlSuffix(gcc/GNU_002fLinux-Options.html#index-muclibc)
 muintrTarget Mask(ISA2_UINTR) Var(ix86_isa_flags2) SaveSupport UINTR built-in functions and code generation.
 muintrUrlSuffix(gcc/x86-Options.html#index-muintr)
 munroll-only-small-loopsTarget Var(ix86_unroll_only_small_loops) Init(0) SaveEnable conservative small loop unrolling.
@@ -4320,7 +4310,6 @@ pieDriver RejectNegative Negative(no-pie)Create a dynamically linked position 
 pieUrlSuffix(gcc/Link-Options.html#index-pie)
 pipeDriver Var(use_pipes)
 pipeUrlSuffix(gcc/Overall-Options.html#index-pipe)
-posixDriver
 print-file-name=Driver JoinedOrMissing Var(print_file_name)
 print-file-name=UrlSuffix(gcc/Developer-Options.html#index-print-file-name)
 print-libgcc-file-nameDriver
@@ -4344,13 +4333,9 @@ print-sysrootUrlSuffix(gcc/Developer-Options.html#index-print-sysroot)
 print-sysroot-headers-suffixDriver Var(print_sysroot_headers_suffix)
 print-sysroot-headers-suffixUrlSuffix(gcc/Developer-Options.html#index-print-sysroot-headers-suffix)
 print-valueLTODump Var(flag_lto_print_value)Print the initial values of the variables.
-profileDriver
-pthreadDriver
 quietCommon Var(quiet_flag) RejectDriverDo not display functions compiled or elapsed time.
 rDriver
 rUrlSuffix(gcc/Link-Options.html#index-r)
-rdynamicDriver
-rdynamicUrlSuffix(gcc/Link-Options.html#index-rdynamic)
 remapC ObjC C++ ObjC++Remap file names when including files.
 remapUrlSuffix(gcc/Preprocessor-Options.html#index-remap)
 reverse-sortLTODump Var(flag_lto_reverse_sort)Display the symbols in reverse order.
@@ -4478,10 +4463,6 @@ timeDriver Var(report_times)
 timeUrlSuffix(gcc/Developer-Options.html#index-time)
 time=Driver JoinedOrMissing
 time=UrlSuffix(gcc/Developer-Options.html#index-time)
-tno-android-ccDriver
-tno-android-ccUrlSuffix(gcc/GNU_002fLinux-Options.html#index-tno-android-cc)
-tno-android-ldDriver
-tno-android-ldUrlSuffix(gcc/GNU_002fLinux-Options.html#index-tno-android-ld)
 traditionalDriver
 traditional-cppC ObjC C++ ObjC++Enable traditional preprocessing.
 traditional-cppModula-2

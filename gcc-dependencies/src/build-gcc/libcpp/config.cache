@@ -31,7 +31,7 @@ ac_cv_env_CPP_value=
 ac_cv_env_CXXFLAGS_set=set
 ac_cv_env_CXXFLAGS_value='-g -O2  '
 ac_cv_env_CXX_set=set
-ac_cv_env_CXX_value='g++ -std=c++11'
+ac_cv_env_CXX_value=g++
 ac_cv_env_LDFLAGS_set=set
 ac_cv_env_LDFLAGS_value='-static-libstdc++ -static-libgcc '
 ac_cv_env_LIBS_set=
@@ -41,7 +41,7 @@ ac_cv_env_build_alias_value=x86_64-pc-linux-gnu
 ac_cv_env_host_alias_set=set
 ac_cv_env_host_alias_value=x86_64-pc-linux-gnu
 ac_cv_env_target_alias_set=set
-ac_cv_env_target_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_target_alias_value=i686-elf
 ac_cv_func_alloca_works=${ac_cv_func_alloca_works=yes}
 ac_cv_func_clearerr_unlocked=${ac_cv_func_clearerr_unlocked=yes}
 ac_cv_func_feof_unlocked=${ac_cv_func_feof_unlocked=yes}
@@ -124,7 +124,7 @@ ac_cv_sizeof_long=${ac_cv_sizeof_long=8}
 ac_cv_struct_tm=${ac_cv_struct_tm=time.h}
 ac_cv_sys_file_offset_bits=${ac_cv_sys_file_offset_bits=no}
 ac_cv_sys_largefile_CC=${ac_cv_sys_largefile_CC=no}
-ac_cv_target=${ac_cv_target=x86_64-pc-linux-gnu}
+ac_cv_target=${ac_cv_target=i686-pc-elf}
 ac_cv_type_off_t=${ac_cv_type_off_t=yes}
 ac_cv_type_ptrdiff_t=${ac_cv_type_ptrdiff_t=yes}
 ac_cv_type_size_t=${ac_cv_type_size_t=yes}

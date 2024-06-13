@@ -20,7 +20,7 @@ ac_cv_env_CPPFLAGS_value=
 ac_cv_env_CXXFLAGS_set=set
 ac_cv_env_CXXFLAGS_value='-g -O2  '
 ac_cv_env_CXX_set=set
-ac_cv_env_CXX_value='g++ -std=c++11'
+ac_cv_env_CXX_value=g++
 ac_cv_env_LDFLAGS_set=set
 ac_cv_env_LDFLAGS_value='-static-libstdc++ -static-libgcc '
 ac_cv_env_LIBS_set=
@@ -30,7 +30,7 @@ ac_cv_env_build_alias_value=x86_64-pc-linux-gnu
 ac_cv_env_host_alias_set=set
 ac_cv_env_host_alias_value=x86_64-pc-linux-gnu
 ac_cv_env_target_alias_set=set
-ac_cv_env_target_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_target_alias_value=i686-elf
 ac_cv_host=${ac_cv_host=x86_64-pc-linux-gnu}
 ac_cv_objext=${ac_cv_objext=o}
 ac_cv_prog_AR=${ac_cv_prog_AR='ar --plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so'}

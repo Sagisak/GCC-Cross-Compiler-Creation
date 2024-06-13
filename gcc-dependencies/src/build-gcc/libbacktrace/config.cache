@@ -36,7 +36,7 @@ ac_cv_env_build_alias_value=x86_64-pc-linux-gnu
 ac_cv_env_host_alias_set=set
 ac_cv_env_host_alias_value=x86_64-pc-linux-gnu
 ac_cv_env_target_alias_set=set
-ac_cv_env_target_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_target_alias_value=i686-elf
 ac_cv_func__Unwind_Backtrace=${ac_cv_func__Unwind_Backtrace=yes}
 ac_cv_func_clock_gettime=${ac_cv_func_clock_gettime=yes}
 ac_cv_func_dl_iterate_phdr=${ac_cv_func_dl_iterate_phdr=yes}
@@ -97,7 +97,7 @@ ac_cv_prog_make_make_set=${ac_cv_prog_make_make_set=yes}
 ac_cv_safe_to_define___extensions__=${ac_cv_safe_to_define___extensions__=yes}
 ac_cv_sys_file_offset_bits=${ac_cv_sys_file_offset_bits=no}
 ac_cv_sys_largefile_CC=${ac_cv_sys_largefile_CC=no}
-ac_cv_target=${ac_cv_target=x86_64-pc-linux-gnu}
+ac_cv_target=${ac_cv_target=i686-pc-elf}
 ac_cv_type_int_fast32_t=${ac_cv_type_int_fast32_t=yes}
 ac_cv_type_int_least32_t=${ac_cv_type_int_least32_t=yes}
 ac_cv_type_u_int64_t=${ac_cv_type_u_int64_t=no}

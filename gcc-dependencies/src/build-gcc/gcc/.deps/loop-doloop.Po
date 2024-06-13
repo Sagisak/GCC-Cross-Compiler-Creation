@@ -25,22 +25,15 @@ loop-doloop.o: ../gcc-14.1.0/gcc/loop-doloop.cc config.h auto-host.h \
  ../gcc-14.1.0/gcc/flag-types.h ../gcc-14.1.0/gcc/config/i386/i386-opts.h \
  ../gcc-14.1.0/gcc/config/i386/stringop.def insn-constants.h \
  ../gcc-14.1.0/gcc/config/vxworks-dummy.h \
- ../gcc-14.1.0/gcc/config/i386/biarch64.h \
  ../gcc-14.1.0/gcc/config/i386/i386.h \
  ../gcc-14.1.0/gcc/config/i386/x86-tune.def \
  ../gcc-14.1.0/gcc/wide-int-bitmask.h \
  ../gcc-14.1.0/gcc/config/i386/i386-isa.def insn-attr-common.h \
  ../gcc-14.1.0/gcc/common/config/i386/i386-cpuinfo.h \
  ../gcc-14.1.0/gcc/config/i386/unix.h ../gcc-14.1.0/gcc/config/i386/att.h \
- ../gcc-14.1.0/gcc/config/elfos.h ../gcc-14.1.0/gcc/config/gnu-user.h \
- ../gcc-14.1.0/gcc/config/glibc-stdint.h \
- ../gcc-14.1.0/gcc/config/i386/x86-64.h \
- ../gcc-14.1.0/gcc/config/i386/gnu-user-common.h \
- ../gcc-14.1.0/gcc/config/i386/gnu-user64.h \
- ../gcc-14.1.0/gcc/config/linux.h \
- ../gcc-14.1.0/gcc/config/linux-android.h \
- ../gcc-14.1.0/gcc/config/i386/linux-common.h \
- ../gcc-14.1.0/gcc/config/i386/linux64.h \
+ ../gcc-14.1.0/gcc/config/elfos.h \
+ ../gcc-14.1.0/gcc/config/newlib-stdint.h \
+ ../gcc-14.1.0/gcc/config/i386/i386elf.h \
  ../gcc-14.1.0/gcc/config/initfini-array.h insn-flags.h insn-modes.h \
  ../gcc-14.1.0/gcc/defaults.h ../gcc-14.1.0/gcc/function.h \
  ../gcc-14.1.0/gcc/bitmap.h ../gcc-14.1.0/gcc/../include/obstack.h \
@@ -125,7 +118,6 @@ options.h:
 ../gcc-14.1.0/gcc/config/i386/stringop.def:
 insn-constants.h:
 ../gcc-14.1.0/gcc/config/vxworks-dummy.h:
-../gcc-14.1.0/gcc/config/i386/biarch64.h:
 ../gcc-14.1.0/gcc/config/i386/i386.h:
 ../gcc-14.1.0/gcc/config/i386/x86-tune.def:
 ../gcc-14.1.0/gcc/wide-int-bitmask.h:
@@ -135,15 +127,8 @@ insn-attr-common.h:
 ../gcc-14.1.0/gcc/config/i386/unix.h:
 ../gcc-14.1.0/gcc/config/i386/att.h:
 ../gcc-14.1.0/gcc/config/elfos.h:
-../gcc-14.1.0/gcc/config/gnu-user.h:
-../gcc-14.1.0/gcc/config/glibc-stdint.h:
-../gcc-14.1.0/gcc/config/i386/x86-64.h:
-../gcc-14.1.0/gcc/config/i386/gnu-user-common.h:
-../gcc-14.1.0/gcc/config/i386/gnu-user64.h:
-../gcc-14.1.0/gcc/config/linux.h:
-../gcc-14.1.0/gcc/config/linux-android.h:
-../gcc-14.1.0/gcc/config/i386/linux-common.h:
-../gcc-14.1.0/gcc/config/i386/linux64.h:
+../gcc-14.1.0/gcc/config/newlib-stdint.h:
+../gcc-14.1.0/gcc/config/i386/i386elf.h:
 ../gcc-14.1.0/gcc/config/initfini-array.h:
 insn-flags.h:
 insn-modes.h:

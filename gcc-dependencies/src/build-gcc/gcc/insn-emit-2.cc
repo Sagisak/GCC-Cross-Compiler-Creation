@@ -37,1900 +37,6 @@ from the machine description file `md'.  */
 #include "ggc.h"
 #include "target.h"
 
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:27967 */
-rtx
-gen_testui (void)
-{
-  return gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC_VOLATILE (CCCmode,
-	gen_rtvec (1,
-		const0_rtx),
-	74));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:27975 */
-rtx
-gen_senduipi (rtx operand0 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_UNSPEC_VOLATILE (VOIDmode,
-	gen_rtvec (1,
-		operand0),
-	75);
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:27986 */
-rtx
-gen_umwait (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC_VOLATILE (CCCmode,
-	gen_rtvec (2,
-		operand0,
-		operand1),
-	69));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:27995 */
-rtx
-gen_umwait_rex64 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC_VOLATILE (CCCmode,
-	gen_rtvec (3,
-		operand0,
-		operand1,
-		operand2),
-	69));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28005 */
-rtx
-gen_umonitor_si (rtx operand0 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_UNSPEC_VOLATILE (VOIDmode,
-	gen_rtvec (1,
-		operand0),
-	70);
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28005 */
-rtx
-gen_umonitor_di (rtx operand0 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_UNSPEC_VOLATILE (VOIDmode,
-	gen_rtvec (1,
-		operand0),
-	70);
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28013 */
-rtx
-gen_tpause (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC_VOLATILE (CCCmode,
-	gen_rtvec (2,
-		operand0,
-		operand1),
-	71));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28022 */
-rtx
-gen_tpause_rex64 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC_VOLATILE (CCCmode,
-	gen_rtvec (3,
-		operand0,
-		operand1,
-		operand2),
-	71));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28032 */
-rtx
-gen_cldemote (rtx operand0 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_UNSPEC_VOLATILE (VOIDmode,
-	gen_rtvec (1,
-		operand0),
-	76);
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28040 */
-rtx
-gen_speculation_barrier (void)
-{
-  return gen_rtx_UNSPEC_VOLATILE (VOIDmode,
-	gen_rtvec (1,
-		const0_rtx),
-	77);
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28047 */
-rtx
-gen_serialize (void)
-{
-  return gen_rtx_UNSPEC_VOLATILE (VOIDmode,
-	gen_rtvec (1,
-		const0_rtx),
-	81);
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28054 */
-rtx
-gen_patchable_area (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_UNSPEC_VOLATILE (VOIDmode,
-	gen_rtvec (2,
-		operand0,
-		operand1),
-	82);
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28068 */
-rtx
-gen_hreset (rtx operand0 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_UNSPEC_VOLATILE (VOIDmode,
-	gen_rtvec (1,
-		operand0),
-	83);
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28150 */
-rtx
-gen_urdmsr (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC_VOLATILE (DImode,
-	gen_rtvec (1,
-		operand1),
-	85));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28160 */
-rtx
-gen_uwrmsr (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_UNSPEC_VOLATILE (VOIDmode,
-	gen_rtvec (2,
-		operand0,
-		operand1),
-	86);
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28170 */
-rtx
-gen_ldtilecfg (rtx operand0 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_UNSPEC_VOLATILE (VOIDmode,
-	gen_rtvec (1,
-		operand0),
-	87);
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/i386.md:28180 */
-rtx
-gen_sttilecfg (rtx operand0 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC_VOLATILE (XImode,
-	gen_rtvec (1,
-		const0_rtx),
-	88));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:607 */
-rtx
-gen_sse_movntq (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (DImode,
-	gen_rtvec (1,
-		operand1),
-	107));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:846 */
-rtx
-gen_mmx_ieee_maxv2sf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2SFmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	61));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:846 */
-rtx
-gen_mmx_ieee_minv2sf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2SFmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	60));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:858 */
-rtx
-gen_mmx_rcpv2sf2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2SFmode,
-	gen_rtvec (1,
-		operand1),
-	108));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:868 */
-rtx
-gen_mmx_rcpit1v2sf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2SFmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	109));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:879 */
-rtx
-gen_mmx_rcpit2v2sf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2SFmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	110));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:906 */
-rtx
-gen_mmx_rsqrtv2sf2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2SFmode,
-	gen_rtvec (1,
-		operand1),
-	111));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:916 */
-rtx
-gen_mmx_rsqit1v2sf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2SFmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	112));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:992 */
-rtx
-gen_mmx_hsubv2sf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_CONCAT (V2SFmode,
-	gen_rtx_MINUS (SFmode,
-	gen_rtx_VEC_SELECT (SFmode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (1,
-		const0_rtx))),
-	gen_rtx_VEC_SELECT (SFmode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (1,
-		const1_rtx)))),
-	gen_rtx_MINUS (SFmode,
-	gen_rtx_VEC_SELECT (SFmode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (1,
-		const0_rtx))),
-	gen_rtx_VEC_SELECT (SFmode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (1,
-		const1_rtx))))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1120 */
-rtx
-gen_mmx_gtv2sf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_GT (V2SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1130 */
-rtx
-gen_mmx_gev2sf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_GE (V2SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1196 */
-rtx
-gen_sse4_1_insertps_v2sf (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2SFmode,
-	gen_rtvec (3,
-		operand2,
-		operand1,
-		operand3),
-	49));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1196 */
-rtx
-gen_sse4_1_insertps_v2si (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2SImode,
-	gen_rtvec (3,
-		operand2,
-		operand1,
-		operand3),
-	49));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1252 */
-rtx
-gen_mmx_blendvps (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2SFmode,
-	gen_rtvec (3,
-		operand1,
-		operand2,
-		operand3),
-	50));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1294 */
-rtx
-gen_andv2sf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_AND (V2SFmode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1294 */
-rtx
-gen_iorv2sf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_IOR (V2SFmode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1294 */
-rtx
-gen_xorv2sf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_XOR (V2SFmode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1496 */
-rtx
-gen_mmx_fix_truncv2sfv2si2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_FIX (V2SImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1537 */
-rtx
-gen_mmx_floatv2siv2sf2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_FLOAT (V2SFmode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1546 */
-rtx
-gen_mmx_pf2iw (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (V2SImode,
-	gen_rtx_SS_TRUNCATE (V2HImode,
-	gen_rtx_FIX (V2SImode,
-	operand1))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1558 */
-rtx
-gen_mmx_pi2fw (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_FLOAT (V2SFmode,
-	gen_rtx_SIGN_EXTEND (V2SImode,
-	gen_rtx_TRUNCATE (V2HImode,
-	operand1))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:1576 */
-rtx
-gen_mmx_pswapdv2sf2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V2SFmode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const1_rtx,
-		const0_rtx))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2440 */
-rtx
-gen_andv2hf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_AND (V2HFmode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2440 */
-rtx
-gen_iorv2hf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_IOR (V2HFmode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2440 */
-rtx
-gen_xorv2hf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_XOR (V2HFmode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2440 */
-rtx
-gen_andv4hf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_AND (V4HFmode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2440 */
-rtx
-gen_iorv4hf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_IOR (V4HFmode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2440 */
-rtx
-gen_xorv4hf3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_XOR (V4HFmode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2872 */
-rtx
-gen_negv2qi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		gen_rtx_SET (operand0,
-	gen_rtx_NEG (V2QImode,
-	operand1)),
-		gen_hard_reg_clobber (CCmode, 17)));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2965 */
-rtx
-gen_addv4qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_PLUS (V4QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2965 */
-rtx
-gen_subv4qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_MINUS (V4QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2965 */
-rtx
-gen_addv2hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_PLUS (V2HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2965 */
-rtx
-gen_subv2hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_MINUS (V2HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2978 */
-rtx
-gen_addv2qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		gen_rtx_SET (operand0,
-	gen_rtx_PLUS (V2QImode,
-	operand1,
-	operand2)),
-		gen_hard_reg_clobber (CCmode, 17)));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:2978 */
-rtx
-gen_subv2qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		gen_rtx_SET (operand0,
-	gen_rtx_MINUS (V2QImode,
-	operand1,
-	operand2)),
-		gen_hard_reg_clobber (CCmode, 17)));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3083 */
-rtx
-gen_mulv2si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_MULT (V2SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3128 */
-rtx
-gen_mulv2hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_MULT (V2HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3242 */
-rtx
-gen_smulv2hi3_highpart (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V2HImode,
-	gen_rtx_LSHIFTRT (V2SImode,
-	gen_rtx_MULT (V2SImode,
-	gen_rtx_SIGN_EXTEND (V2SImode,
-	operand1),
-	gen_rtx_SIGN_EXTEND (V2SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)])));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3242 */
-rtx
-gen_umulv2hi3_highpart (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V2HImode,
-	gen_rtx_LSHIFTRT (V2SImode,
-	gen_rtx_MULT (V2SImode,
-	gen_rtx_ZERO_EXTEND (V2SImode,
-	operand1),
-	gen_rtx_ZERO_EXTEND (V2SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)])));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3390 */
-rtx
-gen_smaxv8qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SMAX (V8QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3390 */
-rtx
-gen_sminv8qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SMIN (V8QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3390 */
-rtx
-gen_smaxv2si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SMAX (V2SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3390 */
-rtx
-gen_sminv2si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SMIN (V2SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3439 */
-rtx
-gen_smaxv4qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SMAX (V4QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3439 */
-rtx
-gen_sminv4qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SMIN (V4QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3439 */
-rtx
-gen_smaxv2qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SMAX (V2QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3439 */
-rtx
-gen_sminv2qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SMIN (V2QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3455 */
-rtx
-gen_smaxv2hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SMAX (V2HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3455 */
-rtx
-gen_sminv2hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SMIN (V2HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3468 */
-rtx
-gen_umaxv4hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UMAX (V4HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3468 */
-rtx
-gen_uminv4hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UMIN (V4HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3468 */
-rtx
-gen_umaxv2si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UMAX (V2SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3468 */
-rtx
-gen_uminv2si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UMIN (V2SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3517 */
-rtx
-gen_umaxv4qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UMAX (V4QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3517 */
-rtx
-gen_uminv4qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UMIN (V4QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3517 */
-rtx
-gen_umaxv2qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UMAX (V2QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3517 */
-rtx
-gen_uminv2qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UMIN (V2QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3530 */
-rtx
-gen_umaxv2hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UMAX (V2HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3530 */
-rtx
-gen_uminv2hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UMIN (V2HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3546 */
-rtx
-gen_ssse3_absv8qi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ABS (V8QImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3546 */
-rtx
-gen_ssse3_absv4hi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ABS (V4HImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3546 */
-rtx
-gen_ssse3_absv2si2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ABS (V2SImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3567 */
-rtx
-gen_absv4qi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ABS (V4QImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3567 */
-rtx
-gen_absv2qi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ABS (V2QImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3567 */
-rtx
-gen_absv2hi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ABS (V2HImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3585 */
-rtx
-gen_mmx_ashrv4hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ASHIFTRT (V4HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3585 */
-rtx
-gen_mmx_ashrv2si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ASHIFTRT (V2SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3611 */
-rtx
-gen_mmx_ashlv4hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ASHIFT (V4HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3611 */
-rtx
-gen_mmx_lshrv4hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_LSHIFTRT (V4HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3611 */
-rtx
-gen_mmx_ashlv2si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ASHIFT (V2SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3611 */
-rtx
-gen_mmx_lshrv2si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_LSHIFTRT (V2SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3611 */
-rtx
-gen_mmx_ashlv1di3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ASHIFT (V1DImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3611 */
-rtx
-gen_mmx_lshrv1di3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_LSHIFTRT (V1DImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3637 */
-rtx
-gen_mmx_ashlv1si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ASHIFT (V1SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3637 */
-rtx
-gen_mmx_lshrv1si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_LSHIFTRT (V1SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3654 */
-rtx
-gen_ashlv2hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ASHIFT (V2HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3654 */
-rtx
-gen_lshrv2hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_LSHIFTRT (V2HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3654 */
-rtx
-gen_ashrv2hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ASHIFTRT (V2HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3693 */
-rtx
-gen_ashlv2qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		gen_rtx_SET (operand0,
-	gen_rtx_ASHIFT (V2QImode,
-	operand1,
-	operand2)),
-		gen_hard_reg_clobber (CCmode, 17)));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3693 */
-rtx
-gen_lshrv2qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		gen_rtx_SET (operand0,
-	gen_rtx_LSHIFTRT (V2QImode,
-	operand1,
-	operand2)),
-		gen_hard_reg_clobber (CCmode, 17)));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3693 */
-rtx
-gen_ashrv2qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		gen_rtx_SET (operand0,
-	gen_rtx_ASHIFTRT (V2QImode,
-	operand1,
-	operand2)),
-		gen_hard_reg_clobber (CCmode, 17)));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3857 */
-rtx
-gen_mmx_gtv8qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_GT (V8QImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3857 */
-rtx
-gen_mmx_gtv4hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_GT (V4HImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:3857 */
-rtx
-gen_mmx_gtv2si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_GT (V2SImode,
-	operand1,
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4063 */
-rtx
-gen_mmx_pblendvb_v8qi (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V8QImode,
-	gen_rtvec (3,
-		operand1,
-		operand2,
-		operand3),
-	50));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4139 */
-rtx
-gen_mmx_pblendvb_v4qi (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V4QImode,
-	gen_rtvec (3,
-		operand1,
-		operand2,
-		operand3),
-	50));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4139 */
-rtx
-gen_mmx_pblendvb_v2qi (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2QImode,
-	gen_rtvec (3,
-		operand1,
-		operand2,
-		operand3),
-	50));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4139 */
-rtx
-gen_mmx_pblendvb_v2hi (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V2HImode,
-	gen_rtvec (3,
-		operand1,
-		operand2,
-		operand3),
-	50));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4261 */
-rtx
-gen_mmx_ppermv64 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V8QImode,
-	gen_rtvec (3,
-		operand1,
-		operand2,
-		operand3),
-	52));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4273 */
-rtx
-gen_mmx_ppermv32 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V4QImode,
-	gen_rtvec (3,
-		operand1,
-		operand2,
-		operand3),
-	52));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4299 */
-rtx
-gen_one_cmplv4qi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_NOT (V4QImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4299 */
-rtx
-gen_one_cmplv2qi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_NOT (V2QImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4299 */
-rtx
-gen_one_cmplv2hi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_NOT (V2HImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4336 */
-rtx
-gen_mmx_andnotv8qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_AND (V8QImode,
-	gen_rtx_NOT (V8QImode,
-	operand1),
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4336 */
-rtx
-gen_mmx_andnotv4hi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_AND (V4HImode,
-	gen_rtx_NOT (V4HImode,
-	operand1),
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4336 */
-rtx
-gen_mmx_andnotv2si3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_AND (V2SImode,
-	gen_rtx_NOT (V2SImode,
-	operand1),
-	operand2));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4513 */
-rtx
-gen_mmx_packsswb (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_CONCAT (V8QImode,
-	gen_rtx_SS_TRUNCATE (V4QImode,
-	operand1),
-	gen_rtx_SS_TRUNCATE (V4QImode,
-	operand2)));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4535 */
-rtx
-gen_mmx_packuswb (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V8QImode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	56));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4554 */
-rtx
-gen_mmx_packssdw (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_CONCAT (V4HImode,
-	gen_rtx_SS_TRUNCATE (V2HImode,
-	operand1),
-	gen_rtx_SS_TRUNCATE (V2HImode,
-	operand2)));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4574 */
-rtx
-gen_mmx_packusdw (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V4HImode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	56));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4589 */
-rtx
-gen_mmx_punpckhbw (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V8QImode,
-	gen_rtx_VEC_CONCAT (V16QImode,
-	operand1,
-	operand2),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (12)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (5)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (13)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (14)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (7)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (15)]))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4612 */
-rtx
-gen_mmx_punpckhbw_low (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V4QImode,
-	gen_rtx_VEC_CONCAT (V8QImode,
-	operand1,
-	operand2),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (3)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (7)]))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4629 */
-rtx
-gen_mmx_punpcklbw (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V8QImode,
-	gen_rtx_VEC_CONCAT (V16QImode,
-	operand1,
-	operand2),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (8)],
-		const1_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (9)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (10)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (3)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (11)]))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4652 */
-rtx
-gen_mmx_punpcklbw_low (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V4QImode,
-	gen_rtx_VEC_CONCAT (V8QImode,
-	operand1,
-	operand2),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const1_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (5)]))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4669 */
-rtx
-gen_mmx_punpckhwd (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V4HImode,
-	gen_rtx_VEC_CONCAT (V8HImode,
-	operand1,
-	operand2),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (3)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (7)]))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4690 */
-rtx
-gen_mmx_punpcklwd (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V4HImode,
-	gen_rtx_VEC_CONCAT (V8HImode,
-	operand1,
-	operand2),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const1_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (5)]))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4711 */
-rtx
-gen_mmx_punpckhdq (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V2SImode,
-	gen_rtx_VEC_CONCAT (V4SImode,
-	operand1,
-	operand2),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const1_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (3)]))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4732 */
-rtx
-gen_mmx_punpckldq (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V2SImode,
-	gen_rtx_VEC_CONCAT (V4SImode,
-	operand1,
-	operand2),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)]))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4753 */
-rtx
-gen_sse4_1_sign_extendv4qiv4hi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (V4HImode,
-	gen_rtx_VEC_SELECT (V4QImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const1_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (3)])))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4753 */
-rtx
-gen_sse4_1_zero_extendv4qiv4hi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (V4HImode,
-	gen_rtx_VEC_SELECT (V4QImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const1_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (3)])))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4786 */
-rtx
-gen_sse4_1_sign_extendv2hiv2si2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (V2SImode,
-	gen_rtx_VEC_SELECT (V2HImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const1_rtx)))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4786 */
-rtx
-gen_sse4_1_zero_extendv2hiv2si2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (V2SImode,
-	gen_rtx_VEC_SELECT (V2HImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const1_rtx)))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4818 */
-rtx
-gen_sse4_1_sign_extendv2qiv2si2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (V2SImode,
-	gen_rtx_VEC_SELECT (V2QImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const1_rtx)))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4818 */
-rtx
-gen_sse4_1_zero_extendv2qiv2si2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (V2SImode,
-	gen_rtx_VEC_SELECT (V2QImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const1_rtx)))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4844 */
-rtx
-gen_sse4_1_sign_extendv2qiv2hi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (V2HImode,
-	gen_rtx_VEC_SELECT (V2QImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const1_rtx)))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4844 */
-rtx
-gen_sse4_1_zero_extendv2qiv2hi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (V2HImode,
-	gen_rtx_VEC_SELECT (V2QImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const1_rtx)))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4876 */
-rtx
-gen_truncv2hiv2qi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V2QImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4887 */
-rtx
-gen_truncv2siv2qi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V2QImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:4887 */
-rtx
-gen_truncv2siv2hi2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V2HImode,
-	operand1));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:5204 */
-rtx
-gen_mmx_pshufbv8qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V8QImode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	51));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:5222 */
-rtx
-gen_mmx_pshufbv4qi3 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (V4QImode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	51));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:5256 */
-rtx
-gen_mmx_pshufwv4hf_1 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED,
-	rtx operand4 ATTRIBUTE_UNUSED,
-	rtx operand5 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V4HFmode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		operand2,
-		operand3,
-		operand4,
-		operand5))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:5256 */
-rtx
-gen_mmx_pshufwv4bf_1 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED,
-	rtx operand4 ATTRIBUTE_UNUSED,
-	rtx operand5 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V4BFmode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		operand2,
-		operand3,
-		operand4,
-		operand5))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:5256 */
-rtx
-gen_mmx_pshufwv4hi_1 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED,
-	rtx operand2 ATTRIBUTE_UNUSED,
-	rtx operand3 ATTRIBUTE_UNUSED,
-	rtx operand4 ATTRIBUTE_UNUSED,
-	rtx operand5 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V4HImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		operand2,
-		operand3,
-		operand4,
-		operand5))));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/mmx.md:5359 */
-rtx
-gen_mmx_pswapdv2si2 (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_VEC_SELECT (V2SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const1_rtx,
-		const0_rtx))));
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/mmx.md:6124 */
 rtx
 gen_uavgv4qi3_ceil (rtx operand0 ATTRIBUTE_UNUSED,
@@ -2748,18 +854,6 @@ gen_sse2_movntisi (rtx operand0 ATTRIBUTE_UNUSED,
 {
   return gen_rtx_SET (operand0,
 	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	113));
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:1903 */
-rtx
-gen_sse2_movntidi (rtx operand0 ATTRIBUTE_UNUSED,
-	rtx operand1 ATTRIBUTE_UNUSED)
-{
-  return gen_rtx_SET (operand0,
-	gen_rtx_UNSPEC (DImode,
 	gen_rtvec (1,
 		operand1),
 	113));
@@ -15967,5 +14061,3834 @@ gen_fma_fmsubadd_v8df_maskz_1_round (rtx operand0 ATTRIBUTE_UNUSED,
 	operand5),
 		operand6),
 	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6082 */
+rtx
+gen_fma_fmsubadd_v4df_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4DFmode,
+	gen_rtx_UNSPEC (V4DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V4DFmode,
+	operand3)),
+	129),
+	operand4,
+	operand5));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6082 */
+rtx
+gen_fma_fmsubadd_v2df_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V2DFmode,
+	operand3)),
+	129),
+	operand4,
+	operand5));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512bw_fmsubadd_v32hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V32HFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512bw_fmsubadd_v32hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V32HFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512vl_fmsubadd_v16hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V16HFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512vl_fmsubadd_v16hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V16HFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512fp16_fmsubadd_v8hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8HFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512fp16_fmsubadd_v8hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8HFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512f_fmsubadd_v16sf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V16SFmode,
+	gen_rtx_UNSPEC (V16SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V16SFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512f_fmsubadd_v16sf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V16SFmode,
+	gen_rtx_UNSPEC (V16SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V16SFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512vl_fmsubadd_v8sf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8SFmode,
+	gen_rtx_UNSPEC (V8SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8SFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512vl_fmsubadd_v8sf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8SFmode,
+	gen_rtx_UNSPEC (V8SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8SFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512vl_fmsubadd_v4sf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V4SFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512vl_fmsubadd_v4sf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V4SFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512f_fmsubadd_v8df_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8DFmode,
+	gen_rtx_UNSPEC (V8DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8DFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512f_fmsubadd_v8df_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8DFmode,
+	gen_rtx_UNSPEC (V8DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8DFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512vl_fmsubadd_v4df_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4DFmode,
+	gen_rtx_UNSPEC (V4DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V4DFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512vl_fmsubadd_v4df_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V4DFmode,
+	gen_rtx_UNSPEC (V4DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V4DFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512vl_fmsubadd_v2df_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V2DFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6099 */
+rtx
+gen_avx512vl_fmsubadd_v2df_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V2DFmode,
+	operand3)),
+	129),
+	operand1,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512bw_fmsubadd_v32hf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V32HFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512bw_fmsubadd_v32hf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V32HFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512vl_fmsubadd_v16hf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V16HFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512vl_fmsubadd_v16hf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V16HFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512fp16_fmsubadd_v8hf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8HFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512fp16_fmsubadd_v8hf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8HFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512f_fmsubadd_v16sf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V16SFmode,
+	gen_rtx_UNSPEC (V16SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V16SFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512f_fmsubadd_v16sf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V16SFmode,
+	gen_rtx_UNSPEC (V16SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V16SFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512vl_fmsubadd_v8sf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8SFmode,
+	gen_rtx_UNSPEC (V8SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8SFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512vl_fmsubadd_v8sf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8SFmode,
+	gen_rtx_UNSPEC (V8SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8SFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512vl_fmsubadd_v4sf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V4SFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512vl_fmsubadd_v4sf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V4SFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512f_fmsubadd_v8df_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8DFmode,
+	gen_rtx_UNSPEC (V8DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8DFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512f_fmsubadd_v8df_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8DFmode,
+	gen_rtx_UNSPEC (V8DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V8DFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512vl_fmsubadd_v4df_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4DFmode,
+	gen_rtx_UNSPEC (V4DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V4DFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512vl_fmsubadd_v4df_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V4DFmode,
+	gen_rtx_UNSPEC (V4DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V4DFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512vl_fmsubadd_v2df_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V2DFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6118 */
+rtx
+gen_avx512vl_fmsubadd_v2df_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		gen_rtx_NEG (V2DFmode,
+	operand3)),
+	129),
+	operand3,
+	operand4),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6258 */
+rtx
+gen_avx512f_vmfmadd_v8hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6258 */
+rtx
+gen_avx512f_vmfmadd_v8hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6258 */
+rtx
+gen_avx512f_vmfmadd_v4sf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6258 */
+rtx
+gen_avx512f_vmfmadd_v4sf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6258 */
+rtx
+gen_avx512f_vmfmadd_v2df_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6258 */
+rtx
+gen_avx512f_vmfmadd_v2df_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6278 */
+rtx
+gen_avx512f_vmfmadd_v8hf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6278 */
+rtx
+gen_avx512f_vmfmadd_v8hf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6278 */
+rtx
+gen_avx512f_vmfmadd_v4sf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6278 */
+rtx
+gen_avx512f_vmfmadd_v4sf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6278 */
+rtx
+gen_avx512f_vmfmadd_v2df_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6278 */
+rtx
+gen_avx512f_vmfmadd_v2df_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6310 */
+rtx
+gen_avx512f_vmfmadd_v8hf_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6310 */
+rtx
+gen_avx512f_vmfmadd_v8hf_maskz_1_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED,
+	rtx operand6 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx),
+		operand6),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6310 */
+rtx
+gen_avx512f_vmfmadd_v4sf_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6310 */
+rtx
+gen_avx512f_vmfmadd_v4sf_maskz_1_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED,
+	rtx operand6 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx),
+		operand6),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6310 */
+rtx
+gen_avx512f_vmfmadd_v2df_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6310 */
+rtx
+gen_avx512f_vmfmadd_v2df_maskz_1_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED,
+	rtx operand6 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	operand1,
+	operand2,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx),
+		operand6),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6351 */
+rtx
+gen_avx512f_vmfmsub_v8hf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	operand1,
+	operand2,
+	gen_rtx_NEG (V8HFmode,
+	operand3)),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6351 */
+rtx
+gen_avx512f_vmfmsub_v8hf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	operand1,
+	operand2,
+	gen_rtx_NEG (V8HFmode,
+	operand3)),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6351 */
+rtx
+gen_avx512f_vmfmsub_v4sf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	operand1,
+	operand2,
+	gen_rtx_NEG (V4SFmode,
+	operand3)),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6351 */
+rtx
+gen_avx512f_vmfmsub_v4sf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	operand1,
+	operand2,
+	gen_rtx_NEG (V4SFmode,
+	operand3)),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6351 */
+rtx
+gen_avx512f_vmfmsub_v2df_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	operand1,
+	operand2,
+	gen_rtx_NEG (V2DFmode,
+	operand3)),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6351 */
+rtx
+gen_avx512f_vmfmsub_v2df_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	operand1,
+	operand2,
+	gen_rtx_NEG (V2DFmode,
+	operand3)),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6391 */
+rtx
+gen_avx512f_vmfnmadd_v8hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	gen_rtx_NEG (V8HFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6391 */
+rtx
+gen_avx512f_vmfnmadd_v8hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	gen_rtx_NEG (V8HFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6391 */
+rtx
+gen_avx512f_vmfnmadd_v4sf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	gen_rtx_NEG (V4SFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6391 */
+rtx
+gen_avx512f_vmfnmadd_v4sf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	gen_rtx_NEG (V4SFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6391 */
+rtx
+gen_avx512f_vmfnmadd_v2df_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	gen_rtx_NEG (V2DFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6391 */
+rtx
+gen_avx512f_vmfnmadd_v2df_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	gen_rtx_NEG (V2DFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand1,
+	operand4),
+	operand1,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6412 */
+rtx
+gen_avx512f_vmfnmadd_v8hf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	gen_rtx_NEG (V8HFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6412 */
+rtx
+gen_avx512f_vmfnmadd_v8hf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	gen_rtx_NEG (V8HFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6412 */
+rtx
+gen_avx512f_vmfnmadd_v4sf_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	gen_rtx_NEG (V4SFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6412 */
+rtx
+gen_avx512f_vmfnmadd_v4sf_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	gen_rtx_NEG (V4SFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6412 */
+rtx
+gen_avx512f_vmfnmadd_v2df_mask3 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	gen_rtx_NEG (V2DFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6412 */
+rtx
+gen_avx512f_vmfnmadd_v2df_mask3_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	gen_rtx_NEG (V2DFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand3,
+	operand4),
+	operand3,
+	const1_rtx),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6445 */
+rtx
+gen_avx512f_vmfnmadd_v8hf_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	gen_rtx_NEG (V8HFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6445 */
+rtx
+gen_avx512f_vmfnmadd_v8hf_maskz_1_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED,
+	rtx operand6 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_FMA (V8HFmode,
+	gen_rtx_NEG (V8HFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx),
+		operand6),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6445 */
+rtx
+gen_avx512f_vmfnmadd_v4sf_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	gen_rtx_NEG (V4SFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6445 */
+rtx
+gen_avx512f_vmfnmadd_v4sf_maskz_1_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED,
+	rtx operand6 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_VEC_MERGE (V4SFmode,
+	gen_rtx_FMA (V4SFmode,
+	gen_rtx_NEG (V4SFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx),
+		operand6),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6445 */
+rtx
+gen_avx512f_vmfnmadd_v2df_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	gen_rtx_NEG (V2DFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6445 */
+rtx
+gen_avx512f_vmfnmadd_v2df_maskz_1_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED,
+	rtx operand6 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V2DFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_VEC_MERGE (V2DFmode,
+	gen_rtx_FMA (V2DFmode,
+	gen_rtx_NEG (V2DFmode,
+	operand2),
+	operand1,
+	operand3),
+	operand4,
+	operand5),
+	operand1,
+	const1_rtx),
+		operand6),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fmaddc_v32hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fmaddc_v32hf_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+		operand4),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fmaddc_v32hf_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand4,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand5),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fmaddc_v32hf_maskz_1_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED,
+	rtx operand6 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand4,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand5),
+	226)),
+		operand6),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fcmaddc_v32hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fcmaddc_v32hf_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+		operand4),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fcmaddc_v32hf_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand4,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand5),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fcmaddc_v32hf_maskz_1_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED,
+	rtx operand6 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand4,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand5),
+	226)),
+		operand6),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fmaddc_v16hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fmaddc_v16hf_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand4,
+	gen_rtx_UNSPEC (HImode,
+	gen_rtvec (1,
+		operand5),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fcmaddc_v16hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fcmaddc_v16hf_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand4,
+	gen_rtx_UNSPEC (HImode,
+	gen_rtvec (1,
+		operand5),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fmaddc_v8hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fmaddc_v8hf_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand4,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand5),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fcmaddc_v8hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6752 */
+rtx
+gen_fma_fcmaddc_v8hf_maskz_1 (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand4,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand5),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6765 */
+rtx
+gen_fma_v32hf_fadd_fmul (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+	operand3));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6765 */
+rtx
+gen_fma_v16hf_fadd_fmul (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+	operand3));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6765 */
+rtx
+gen_fma_v8hf_fadd_fmul (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+	operand3));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6782 */
+rtx
+gen_fma_v32hf_fadd_fcmul (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+	operand3));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6782 */
+rtx
+gen_fma_v16hf_fadd_fcmul (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+	operand3));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6782 */
+rtx
+gen_fma_v8hf_fadd_fcmul (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+	operand3));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6799 */
+rtx
+gen_fma_fmaddc_v32hf_fma_zero (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6799 */
+rtx
+gen_fma_fcmaddc_v32hf_fma_zero (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6799 */
+rtx
+gen_fma_fmaddc_v16hf_fma_zero (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6799 */
+rtx
+gen_fma_fcmaddc_v16hf_fma_zero (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6799 */
+rtx
+gen_fma_fmaddc_v8hf_fma_zero (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6799 */
+rtx
+gen_fma_fcmaddc_v8hf_fma_zero (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_PLUS (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand4));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6817 */
+rtx
+gen_fma_fmaddc_v16sf_pair (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	221));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6817 */
+rtx
+gen_fma_fcmaddc_v16sf_pair (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	223));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6817 */
+rtx
+gen_fma_fmaddc_v8sf_pair (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	221));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6817 */
+rtx
+gen_fma_fcmaddc_v8sf_pair (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	223));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6817 */
+rtx
+gen_fma_fmaddc_v4sf_pair (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	221));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6817 */
+rtx
+gen_fma_fcmaddc_v4sf_pair (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V4SFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	223));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6830 */
+rtx
+gen_fma_v32hf_fmaddc_bcst (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		gen_rtx_SUBREG (V32HFmode,
+	operand2,
+	0),
+		operand3),
+	220));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6830 */
+rtx
+gen_fma_v16hf_fmaddc_bcst (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		gen_rtx_SUBREG (V16HFmode,
+	operand2,
+	0),
+		operand3),
+	220));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6830 */
+rtx
+gen_fma_v8hf_fmaddc_bcst (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		gen_rtx_SUBREG (V8HFmode,
+	operand2,
+	0),
+		operand3),
+	220));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6857 */
+rtx
+gen_fma_v32hf_fcmaddc_bcst (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		gen_rtx_SUBREG (V32HFmode,
+	operand2,
+	0),
+		operand3),
+	222));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6857 */
+rtx
+gen_fma_v16hf_fcmaddc_bcst (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		gen_rtx_SUBREG (V16HFmode,
+	operand2,
+	0),
+		operand3),
+	222));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6857 */
+rtx
+gen_fma_v8hf_fcmaddc_bcst (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		gen_rtx_SUBREG (V8HFmode,
+	operand2,
+	0),
+		operand3),
+	222));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6885 */
+rtx
+gen_avx512bw_fmaddc_v32hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand1,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6885 */
+rtx
+gen_avx512bw_fmaddc_v32hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand1,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6885 */
+rtx
+gen_avx512bw_fcmaddc_v32hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand1,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6885 */
+rtx
+gen_avx512bw_fcmaddc_v32hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand1,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6885 */
+rtx
+gen_avx512vl_fmaddc_v16hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand1,
+	gen_rtx_UNSPEC (HImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6885 */
+rtx
+gen_avx512vl_fcmaddc_v16hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand1,
+	gen_rtx_UNSPEC (HImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6885 */
+rtx
+gen_avx512fp16_fmaddc_v8hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand1,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6885 */
+rtx
+gen_avx512fp16_fcmaddc_v8hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand1,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512bw_fmulc_v32hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512bw_fmulc_v32hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+	operand3,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512bw_fmulc_v32hf_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+		operand3),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512bw_fmulc_v32hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+	operand3,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512bw_fcmulc_v32hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512bw_fcmulc_v32hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+	operand3,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512bw_fcmulc_v32hf_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+		operand3),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512bw_fcmulc_v32hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V32HFmode,
+	gen_rtx_UNSPEC (V32HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+	operand3,
+	gen_rtx_UNSPEC (SImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512vl_fmulc_v16hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512vl_fmulc_v16hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+	operand3,
+	gen_rtx_UNSPEC (HImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512vl_fcmulc_v16hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512vl_fcmulc_v16hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V16HFmode,
+	gen_rtx_UNSPEC (V16HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+	operand3,
+	gen_rtx_UNSPEC (HImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512fp16_fmulc_v8hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512fp16_fmulc_v8hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+	operand3,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512fp16_fcmulc_v8hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:6911 */
+rtx
+gen_avx512fp16_fcmulc_v8hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+	operand3,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7076 */
+rtx
+gen_avx512fp16_fma_fmaddcsh_v8hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7076 */
+rtx
+gen_avx512fp16_fma_fmaddcsh_v8hf_maskz (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand4,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand5),
+	226)),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7076 */
+rtx
+gen_avx512fp16_fma_fmaddcsh_v8hf_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]),
+		operand4),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7076 */
+rtx
+gen_avx512fp16_fma_fmaddcsh_v8hf_maskz_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED,
+	rtx operand6 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand4,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand5),
+	226)),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]),
+		operand6),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7076 */
+rtx
+gen_avx512fp16_fma_fcmaddcsh_v8hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7076 */
+rtx
+gen_avx512fp16_fma_fcmaddcsh_v8hf_maskz (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand4,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand5),
+	226)),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7076 */
+rtx
+gen_avx512fp16_fma_fcmaddcsh_v8hf_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]),
+		operand4),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7076 */
+rtx
+gen_avx512fp16_fma_fcmaddcsh_v8hf_maskz_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED,
+	rtx operand6 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand4,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand5),
+	226)),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]),
+		operand6),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7092 */
+rtx
+gen_avx512fp16_fmaddcsh_v8hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand1,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7092 */
+rtx
+gen_avx512fp16_fmaddcsh_v8hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	220),
+	operand1,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7092 */
+rtx
+gen_avx512fp16_fcmaddcsh_v8hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand1,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7092 */
+rtx
+gen_avx512fp16_fcmaddcsh_v8hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (3,
+		operand1,
+		operand2,
+		operand3),
+	222),
+	operand1,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+	operand2,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7112 */
+rtx
+gen_avx512fp16_fmulcsh_v8hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+	operand1,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7112 */
+rtx
+gen_avx512fp16_fmulcsh_v8hf_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+	operand1,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]),
+		operand3),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7112 */
+rtx
+gen_avx512fp16_fmulcsh_v8hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+	operand3,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+	operand1,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7112 */
+rtx
+gen_avx512fp16_fmulcsh_v8hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	224),
+	operand3,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+	operand1,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7112 */
+rtx
+gen_avx512fp16_fcmulcsh_v8hf (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+	operand1,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7112 */
+rtx
+gen_avx512fp16_fcmulcsh_v8hf_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+	operand1,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]),
+		operand3),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7112 */
+rtx
+gen_avx512fp16_fcmulcsh_v8hf_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+	operand3,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+	operand1,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7112 */
+rtx
+gen_avx512fp16_fcmulcsh_v8hf_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED,
+	rtx operand5 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_VEC_MERGE (V8HFmode,
+	gen_rtx_UNSPEC (V8HFmode,
+	gen_rtvec (2,
+		operand1,
+		operand2),
+	225),
+	operand3,
+	gen_rtx_UNSPEC (QImode,
+	gen_rtvec (1,
+		operand4),
+	226)),
+	operand1,
+	const_int_rtx[MAX_SAVED_CONST_INT + (3)]),
+		operand5),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7214 */
+rtx
+gen_avx512fp16_vcvtph2uw_v32hi (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (1,
+		operand1),
+	152));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7214 */
+rtx
+gen_avx512fp16_vcvtph2uw_v32hi_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (2,
+		gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (1,
+		operand1),
+	152),
+		operand2),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7214 */
+rtx
+gen_avx512fp16_vcvtph2uw_v32hi_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V32HImode,
+	gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (1,
+		operand1),
+	152),
+	operand2,
+	operand3));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7214 */
+rtx
+gen_avx512fp16_vcvtph2uw_v32hi_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V32HImode,
+	gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (1,
+		operand1),
+	152),
+	operand2,
+	operand3),
+		operand4),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7214 */
+rtx
+gen_avx512fp16_vcvtph2w_v32hi (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (1,
+		operand1),
+	45));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7214 */
+rtx
+gen_avx512fp16_vcvtph2w_v32hi_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (2,
+		gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (1,
+		operand1),
+	45),
+		operand2),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7214 */
+rtx
+gen_avx512fp16_vcvtph2w_v32hi_mask (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_VEC_MERGE (V32HImode,
+	gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (1,
+		operand1),
+	45),
+	operand2,
+	operand3));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7214 */
+rtx
+gen_avx512fp16_vcvtph2w_v32hi_mask_round (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED,
+	rtx operand2 ATTRIBUTE_UNUSED,
+	rtx operand3 ATTRIBUTE_UNUSED,
+	rtx operand4 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (2,
+		gen_rtx_VEC_MERGE (V32HImode,
+	gen_rtx_UNSPEC (V32HImode,
+	gen_rtvec (1,
+		operand1),
+	45),
+	operand2,
+	operand3),
+		operand4),
+	172));
+}
+
+/* ../gcc-14.1.0/gcc/config/i386/sse.md:7214 */
+rtx
+gen_avx512fp16_vcvtph2udq_v16si (rtx operand0 ATTRIBUTE_UNUSED,
+	rtx operand1 ATTRIBUTE_UNUSED)
+{
+  return gen_rtx_SET (operand0,
+	gen_rtx_UNSPEC (V16SImode,
+	gen_rtvec (1,
+		operand1),
+	152));
 }
 

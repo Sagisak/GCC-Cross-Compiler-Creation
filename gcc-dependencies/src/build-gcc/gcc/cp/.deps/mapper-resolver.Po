@@ -1,0 +1,23 @@
+cp/mapper-resolver.o: ../gcc-14.1.0/gcc/cp/mapper-resolver.cc config.h \
+ auto-host.h ../gcc-14.1.0/gcc/../include/ansidecl.h \
+ ../gcc-14.1.0/gcc/system.h ../gcc-14.1.0/gcc/../include/safe-ctype.h \
+ ../gcc-14.1.0/gcc/../include/filenames.h \
+ ../gcc-14.1.0/gcc/../include/hashtab.h \
+ ../gcc-14.1.0/gcc/../include/ansidecl.h \
+ ../gcc-14.1.0/gcc/../include/libiberty.h ../gcc-14.1.0/gcc/hwint.h \
+ ../gcc-14.1.0/gcc/cp/../../c++tools/resolver.cc \
+ ../gcc-14.1.0/gcc/cp/../../c++tools/resolver.h \
+ ../gcc-14.1.0/gcc/../libcody/cody.hh
+config.h:
+auto-host.h:
+../gcc-14.1.0/gcc/../include/ansidecl.h:
+../gcc-14.1.0/gcc/system.h:
+../gcc-14.1.0/gcc/../include/safe-ctype.h:
+../gcc-14.1.0/gcc/../include/filenames.h:
+../gcc-14.1.0/gcc/../include/hashtab.h:
+../gcc-14.1.0/gcc/../include/ansidecl.h:
+../gcc-14.1.0/gcc/../include/libiberty.h:
+../gcc-14.1.0/gcc/hwint.h:
+../gcc-14.1.0/gcc/cp/../../c++tools/resolver.cc:
+../gcc-14.1.0/gcc/cp/../../c++tools/resolver.h:
+../gcc-14.1.0/gcc/../libcody/cody.hh:

@@ -49,14 +49,14 @@ NOLTO_FLAGS = -fno-lto
 
 datarootdir = ${prefix}/share
 datadir = ${datarootdir}
-exec_prefix = 
+exec_prefix = /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross
 libdir = ${exec_prefix}/lib
 localedir = $(datadir)/locale
-prefix = 
+prefix = /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/cross
 
-ADDITIONAL_OBJS =  $(bid_OBJS)
+ADDITIONAL_OBJS = 
 
-enable_decimal_float= bid
+enable_decimal_float= dpd
 
 INCLUDES = -I$(srcdir) -I.
 

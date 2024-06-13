@@ -16820,8 +16820,6 @@ cl_optimization_compare (gcc_options *ptr1, gcc_options *ptr2)
     internal_error ("%<global_options%> are modified in local context");
   if (ptr1->x_ix86_isa_flags2 != ptr2->x_ix86_isa_flags2)
     internal_error ("%<global_options%> are modified in local context");
-  if (ptr1->x_flag_android != ptr2->x_flag_android)
-    internal_error ("%<global_options%> are modified in local context");
   if (ptr1->x_ix86_apx_features != ptr2->x_ix86_apx_features)
     internal_error ("%<global_options%> are modified in local context");
   if (ptr1->x_ix86_apx_inline_asm_use_gpr32 != ptr2->x_ix86_apx_inline_asm_use_gpr32)
@@ -16831,8 +16829,6 @@ cl_optimization_compare (gcc_options *ptr1, gcc_options *ptr2)
           || strcmp (ptr1->x_ix86_arch_string, ptr2->x_ix86_arch_string)))
     internal_error ("%<global_options%> are modified in local context");
   if (ptr1->x_ix86_asm_dialect != ptr2->x_ix86_asm_dialect)
-    internal_error ("%<global_options%> are modified in local context");
-  if (ptr1->x_linux_libc != ptr2->x_linux_libc)
     internal_error ("%<global_options%> are modified in local context");
   if (ptr1->x_ix86_branch_cost != ptr2->x_ix86_branch_cost)
     internal_error ("%<global_options%> are modified in local context");

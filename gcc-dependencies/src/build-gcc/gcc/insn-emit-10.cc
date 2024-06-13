@@ -37,2127 +37,6 @@ from the machine description file `md'.  */
 #include "ggc.h"
 #include "target.h"
 
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15555 */
-rtx
-gen_mulv16hi3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15560 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V16HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_MULT (V16HImode,
-	operand1,
-	operand2)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15555 */
-rtx
-gen_mulv16hi3_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15560 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V16HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V16HImode,
-	gen_rtx_MULT (V16HImode,
-	operand1,
-	operand2),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15555 */
-rtx
-gen_mulv8hi3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15560 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_MULT (V8HImode,
-	operand1,
-	operand2)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15555 */
-rtx
-gen_mulv8hi3_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15560 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V8HImode,
-	gen_rtx_MULT (V8HImode,
-	operand1,
-	operand2),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_smulv32hi3_highpart (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V32HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V32HImode,
-	gen_rtx_LSHIFTRT (V32SImode,
-	gen_rtx_MULT (V32SImode,
-	gen_rtx_SIGN_EXTEND (V32SImode,
-	operand1),
-	gen_rtx_SIGN_EXTEND (V32SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)]))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_smulv32hi3_highpart_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V32HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V32HImode,
-	gen_rtx_TRUNCATE (V32HImode,
-	gen_rtx_LSHIFTRT (V32SImode,
-	gen_rtx_MULT (V32SImode,
-	gen_rtx_SIGN_EXTEND (V32SImode,
-	operand1),
-	gen_rtx_SIGN_EXTEND (V32SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)])),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_umulv32hi3_highpart (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V32HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V32HImode,
-	gen_rtx_LSHIFTRT (V32SImode,
-	gen_rtx_MULT (V32SImode,
-	gen_rtx_ZERO_EXTEND (V32SImode,
-	operand1),
-	gen_rtx_ZERO_EXTEND (V32SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)]))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_umulv32hi3_highpart_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V32HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V32HImode,
-	gen_rtx_TRUNCATE (V32HImode,
-	gen_rtx_LSHIFTRT (V32SImode,
-	gen_rtx_MULT (V32SImode,
-	gen_rtx_ZERO_EXTEND (V32SImode,
-	operand1),
-	gen_rtx_ZERO_EXTEND (V32SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)])),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_smulv16hi3_highpart (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V16HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V16HImode,
-	gen_rtx_LSHIFTRT (V16SImode,
-	gen_rtx_MULT (V16SImode,
-	gen_rtx_SIGN_EXTEND (V16SImode,
-	operand1),
-	gen_rtx_SIGN_EXTEND (V16SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)]))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_smulv16hi3_highpart_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V16HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V16HImode,
-	gen_rtx_TRUNCATE (V16HImode,
-	gen_rtx_LSHIFTRT (V16SImode,
-	gen_rtx_MULT (V16SImode,
-	gen_rtx_SIGN_EXTEND (V16SImode,
-	operand1),
-	gen_rtx_SIGN_EXTEND (V16SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)])),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_umulv16hi3_highpart (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V16HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V16HImode,
-	gen_rtx_LSHIFTRT (V16SImode,
-	gen_rtx_MULT (V16SImode,
-	gen_rtx_ZERO_EXTEND (V16SImode,
-	operand1),
-	gen_rtx_ZERO_EXTEND (V16SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)]))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_umulv16hi3_highpart_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V16HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V16HImode,
-	gen_rtx_TRUNCATE (V16HImode,
-	gen_rtx_LSHIFTRT (V16SImode,
-	gen_rtx_MULT (V16SImode,
-	gen_rtx_ZERO_EXTEND (V16SImode,
-	operand1),
-	gen_rtx_ZERO_EXTEND (V16SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)])),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_smulv8hi3_highpart (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V8HImode,
-	gen_rtx_LSHIFTRT (V8SImode,
-	gen_rtx_MULT (V8SImode,
-	gen_rtx_SIGN_EXTEND (V8SImode,
-	operand1),
-	gen_rtx_SIGN_EXTEND (V8SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)]))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_smulv8hi3_highpart_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V8HImode,
-	gen_rtx_TRUNCATE (V8HImode,
-	gen_rtx_LSHIFTRT (V8SImode,
-	gen_rtx_MULT (V8SImode,
-	gen_rtx_SIGN_EXTEND (V8SImode,
-	operand1),
-	gen_rtx_SIGN_EXTEND (V8SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)])),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_umulv8hi3_highpart (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V8HImode,
-	gen_rtx_LSHIFTRT (V8SImode,
-	gen_rtx_MULT (V8SImode,
-	gen_rtx_ZERO_EXTEND (V8SImode,
-	operand1),
-	gen_rtx_ZERO_EXTEND (V8SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)]))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15577 */
-rtx
-gen_umulv8hi3_highpart_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15589 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V8HImode,
-	gen_rtx_TRUNCATE (V8HImode,
-	gen_rtx_LSHIFTRT (V8SImode,
-	gen_rtx_MULT (V8SImode,
-	gen_rtx_ZERO_EXTEND (V8SImode,
-	operand1),
-	gen_rtx_ZERO_EXTEND (V8SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (16)])),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15612 */
-rtx
-gen_vec_widen_umult_even_v16si (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15630 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V16SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_MULT (V8DImode,
-	gen_rtx_ZERO_EXTEND (V8DImode,
-	gen_rtx_VEC_SELECT (V8SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (8)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (10)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (12)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (14)])))),
-	gen_rtx_ZERO_EXTEND (V8DImode,
-	gen_rtx_VEC_SELECT (V8SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (8)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (10)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (12)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (14)])))))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15612 */
-rtx
-gen_vec_widen_umult_even_v16si_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15630 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V16SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V8DImode,
-	gen_rtx_MULT (V8DImode,
-	gen_rtx_ZERO_EXTEND (V8DImode,
-	gen_rtx_VEC_SELECT (V8SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (8)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (10)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (12)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (14)])))),
-	gen_rtx_ZERO_EXTEND (V8DImode,
-	gen_rtx_VEC_SELECT (V8SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (8)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (10)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (12)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (14)]))))),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15656 */
-rtx
-gen_vec_widen_umult_even_v8si (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15670 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_MULT (V4DImode,
-	gen_rtx_ZERO_EXTEND (V4DImode,
-	gen_rtx_VEC_SELECT (V4SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)])))),
-	gen_rtx_ZERO_EXTEND (V4DImode,
-	gen_rtx_VEC_SELECT (V4SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)])))))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15656 */
-rtx
-gen_vec_widen_umult_even_v8si_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15670 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V4DImode,
-	gen_rtx_MULT (V4DImode,
-	gen_rtx_ZERO_EXTEND (V4DImode,
-	gen_rtx_VEC_SELECT (V4SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)])))),
-	gen_rtx_ZERO_EXTEND (V4DImode,
-	gen_rtx_VEC_SELECT (V4SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)]))))),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15692 */
-rtx
-gen_vec_widen_umult_even_v4si (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15704 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V4SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_MULT (V2DImode,
-	gen_rtx_ZERO_EXTEND (V2DImode,
-	gen_rtx_VEC_SELECT (V2SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)])))),
-	gen_rtx_ZERO_EXTEND (V2DImode,
-	gen_rtx_VEC_SELECT (V2SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)])))))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15692 */
-rtx
-gen_vec_widen_umult_even_v4si_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15704 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V4SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V2DImode,
-	gen_rtx_MULT (V2DImode,
-	gen_rtx_ZERO_EXTEND (V2DImode,
-	gen_rtx_VEC_SELECT (V2SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)])))),
-	gen_rtx_ZERO_EXTEND (V2DImode,
-	gen_rtx_VEC_SELECT (V2SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)]))))),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15728 */
-rtx
-gen_vec_widen_smult_even_v16si (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15746 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V16SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_MULT (V8DImode,
-	gen_rtx_SIGN_EXTEND (V8DImode,
-	gen_rtx_VEC_SELECT (V8SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (8)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (10)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (12)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (14)])))),
-	gen_rtx_SIGN_EXTEND (V8DImode,
-	gen_rtx_VEC_SELECT (V8SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (8)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (10)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (12)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (14)])))))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15728 */
-rtx
-gen_vec_widen_smult_even_v16si_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15746 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V16SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V8DImode,
-	gen_rtx_MULT (V8DImode,
-	gen_rtx_SIGN_EXTEND (V8DImode,
-	gen_rtx_VEC_SELECT (V8SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (8)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (10)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (12)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (14)])))),
-	gen_rtx_SIGN_EXTEND (V8DImode,
-	gen_rtx_VEC_SELECT (V8SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (8)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (10)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (12)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (14)]))))),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15772 */
-rtx
-gen_vec_widen_smult_even_v8si (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15786 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_MULT (V4DImode,
-	gen_rtx_SIGN_EXTEND (V4DImode,
-	gen_rtx_VEC_SELECT (V4SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)])))),
-	gen_rtx_SIGN_EXTEND (V4DImode,
-	gen_rtx_VEC_SELECT (V4SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)])))))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15772 */
-rtx
-gen_vec_widen_smult_even_v8si_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15786 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V4DImode,
-	gen_rtx_MULT (V4DImode,
-	gen_rtx_SIGN_EXTEND (V4DImode,
-	gen_rtx_VEC_SELECT (V4SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)])))),
-	gen_rtx_SIGN_EXTEND (V4DImode,
-	gen_rtx_VEC_SELECT (V4SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)]))))),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15808 */
-rtx
-gen_sse4_1_mulv2siv2di3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15820 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V4SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_MULT (V2DImode,
-	gen_rtx_SIGN_EXTEND (V2DImode,
-	gen_rtx_VEC_SELECT (V2SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)])))),
-	gen_rtx_SIGN_EXTEND (V2DImode,
-	gen_rtx_VEC_SELECT (V2SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)])))))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15808 */
-rtx
-gen_sse4_1_mulv2siv2di3_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15820 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V4SImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V2DImode,
-	gen_rtx_MULT (V2DImode,
-	gen_rtx_SIGN_EXTEND (V2DImode,
-	gen_rtx_VEC_SELECT (V2SImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)])))),
-	gen_rtx_SIGN_EXTEND (V2DImode,
-	gen_rtx_VEC_SELECT (V2SImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (2,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)]))))),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15858 */
-rtx
-gen_avx2_pmaddwd (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15890 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V16HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_PLUS (V8SImode,
-	gen_rtx_MULT (V8SImode,
-	gen_rtx_SIGN_EXTEND (V8SImode,
-	gen_rtx_VEC_SELECT (V8HImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (8)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (10)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (12)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (14)])))),
-	gen_rtx_SIGN_EXTEND (V8SImode,
-	gen_rtx_VEC_SELECT (V8HImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (8)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (10)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (12)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (14)]))))),
-	gen_rtx_MULT (V8SImode,
-	gen_rtx_SIGN_EXTEND (V8SImode,
-	gen_rtx_VEC_SELECT (V8HImode,
-	copy_rtx (operand1),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const1_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (3)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (5)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (7)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (9)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (11)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (13)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (15)])))),
-	gen_rtx_SIGN_EXTEND (V8SImode,
-	gen_rtx_VEC_SELECT (V8HImode,
-	copy_rtx (operand2),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (8,
-		const1_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (3)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (5)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (7)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (9)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (11)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (13)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (15)]))))))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15929 */
-rtx
-gen_sse2_pmaddwd (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15953 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8HImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_PLUS (V4SImode,
-	gen_rtx_MULT (V4SImode,
-	gen_rtx_SIGN_EXTEND (V4SImode,
-	gen_rtx_VEC_SELECT (V4HImode,
-	operand1,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)])))),
-	gen_rtx_SIGN_EXTEND (V4SImode,
-	gen_rtx_VEC_SELECT (V4HImode,
-	operand2,
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const0_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (2)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (4)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (6)]))))),
-	gen_rtx_MULT (V4SImode,
-	gen_rtx_SIGN_EXTEND (V4SImode,
-	gen_rtx_VEC_SELECT (V4HImode,
-	copy_rtx (operand1),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const1_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (3)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (5)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (7)])))),
-	gen_rtx_SIGN_EXTEND (V4SImode,
-	gen_rtx_VEC_SELECT (V4HImode,
-	copy_rtx (operand2),
-	gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (4,
-		const1_rtx,
-		const_int_rtx[MAX_SAVED_CONST_INT + (3)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (5)],
-		const_int_rtx[MAX_SAVED_CONST_INT + (7)]))))))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15989 */
-rtx
-gen_cond_mulv8di (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL _Pragma ("GCC error \"cond_mulv8di cannot FAIL\"") (void)0
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15998 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  emit_insn (gen_avx512dq_mulv8di3_mask (operands[0],
-					   operands[2],
-					   operands[3],
-					   operands[4],
-					   operands[1]));
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V8DImode,
-	gen_rtx_MULT (V8DImode,
-	operand2,
-	operand3),
-	operand4,
-	operand1)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15989 */
-rtx
-gen_cond_mulv4di (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL _Pragma ("GCC error \"cond_mulv4di cannot FAIL\"") (void)0
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15998 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  emit_insn (gen_avx512dq_mulv4di3_mask (operands[0],
-					   operands[2],
-					   operands[3],
-					   operands[4],
-					   operands[1]));
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V4DImode,
-	gen_rtx_MULT (V4DImode,
-	operand2,
-	operand3),
-	operand4,
-	operand1)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:15989 */
-rtx
-gen_cond_mulv2di (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL _Pragma ("GCC error \"cond_mulv2di cannot FAIL\"") (void)0
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 15998 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  emit_insn (gen_avx512dq_mulv2di3_mask (operands[0],
-					   operands[2],
-					   operands[3],
-					   operands[4],
-					   operands[1]));
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V2DImode,
-	gen_rtx_MULT (V2DImode,
-	operand2,
-	operand3),
-	operand4,
-	operand1)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16007 */
-rtx
-gen_avx512dq_mulv8di3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16013 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8DImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_MULT (V8DImode,
-	operand1,
-	operand2)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16007 */
-rtx
-gen_avx512dq_mulv8di3_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16013 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V8DImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V8DImode,
-	gen_rtx_MULT (V8DImode,
-	operand1,
-	operand2),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16007 */
-rtx
-gen_avx512dq_mulv4di3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16013 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V4DImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_MULT (V4DImode,
-	operand1,
-	operand2)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16007 */
-rtx
-gen_avx512dq_mulv4di3_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16013 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V4DImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V4DImode,
-	gen_rtx_MULT (V4DImode,
-	operand1,
-	operand2),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16007 */
-rtx
-gen_avx512dq_mulv2di3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16013 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V2DImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_MULT (V2DImode,
-	operand1,
-	operand2)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16007 */
-rtx
-gen_avx512dq_mulv2di3_mask (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16013 "../gcc-14.1.0/gcc/config/i386/sse.md"
-ix86_fixup_binary_operands_no_copy (MULT, V2DImode, operands);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V2DImode,
-	gen_rtx_MULT (V2DImode,
-	operand1,
-	operand2),
-	operand3,
-	operand4)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16034 */
-rtx
-gen_cond_mulv16si (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL _Pragma ("GCC error \"cond_mulv16si cannot FAIL\"") (void)0
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16043 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  emit_insn (gen_mulv16si3_mask (operands[0],
-				  operands[2],
-				  operands[3],
-				  operands[4],
-				  operands[1]));
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V16SImode,
-	gen_rtx_MULT (V16SImode,
-	operand2,
-	operand3),
-	operand4,
-	operand1)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16034 */
-rtx
-gen_cond_mulv8si (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL _Pragma ("GCC error \"cond_mulv8si cannot FAIL\"") (void)0
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16043 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  emit_insn (gen_mulv8si3_mask (operands[0],
-				  operands[2],
-				  operands[3],
-				  operands[4],
-				  operands[1]));
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V8SImode,
-	gen_rtx_MULT (V8SImode,
-	operand2,
-	operand3),
-	operand4,
-	operand1)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16034 */
-rtx
-gen_cond_mulv4si (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL _Pragma ("GCC error \"cond_mulv4si cannot FAIL\"") (void)0
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16043 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  emit_insn (gen_mulv4si3_mask (operands[0],
-				  operands[2],
-				  operands[3],
-				  operands[4],
-				  operands[1]));
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_MERGE (V4SImode,
-	gen_rtx_MULT (V4SImode,
-	operand2,
-	operand3),
-	operand4,
-	operand1)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16052 */
 rtx
 gen_mulv16si3 (rtx operand0,
@@ -4647,9 +2526,9 @@ gen_ashrv4di3 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16487 */
-extern rtx_insn *gen_split_2883 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2708 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2883 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2708 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -4657,7 +2536,7 @@ gen_split_2883 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2883 (sse.md:16487)\n");
+    fprintf (dump_file, "Splitting with gen_split_2708 (sse.md:16487)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -4683,9 +2562,9 @@ operands[3] = XVECEXP (operands[2], 0, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16487 */
-extern rtx_insn *gen_split_2884 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2709 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2884 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2709 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -4693,7 +2572,7 @@ gen_split_2884 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2884 (sse.md:16487)\n");
+    fprintf (dump_file, "Splitting with gen_split_2709 (sse.md:16487)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -4719,9 +2598,9 @@ operands[3] = XVECEXP (operands[2], 0, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16487 */
-extern rtx_insn *gen_split_2885 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2710 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2885 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2710 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -4729,7 +2608,7 @@ gen_split_2885 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2885 (sse.md:16487)\n");
+    fprintf (dump_file, "Splitting with gen_split_2710 (sse.md:16487)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -4755,9 +2634,9 @@ operands[3] = XVECEXP (operands[2], 0, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16487 */
-extern rtx_insn *gen_split_2886 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2711 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2886 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2711 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -4765,7 +2644,7 @@ gen_split_2886 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2886 (sse.md:16487)\n");
+    fprintf (dump_file, "Splitting with gen_split_2711 (sse.md:16487)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -4791,9 +2670,9 @@ operands[3] = XVECEXP (operands[2], 0, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16487 */
-extern rtx_insn *gen_split_2887 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2712 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2887 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2712 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -4801,7 +2680,7 @@ gen_split_2887 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2887 (sse.md:16487)\n");
+    fprintf (dump_file, "Splitting with gen_split_2712 (sse.md:16487)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -4827,9 +2706,9 @@ operands[3] = XVECEXP (operands[2], 0, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16487 */
-extern rtx_insn *gen_split_2888 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2713 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2888 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2713 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -4837,7 +2716,7 @@ gen_split_2888 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2888 (sse.md:16487)\n");
+    fprintf (dump_file, "Splitting with gen_split_2713 (sse.md:16487)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -4863,9 +2742,9 @@ operands[3] = XVECEXP (operands[2], 0, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16487 */
-extern rtx_insn *gen_split_2889 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2714 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2889 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2714 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -4873,7 +2752,7 @@ gen_split_2889 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2889 (sse.md:16487)\n");
+    fprintf (dump_file, "Splitting with gen_split_2714 (sse.md:16487)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -4899,9 +2778,9 @@ operands[3] = XVECEXP (operands[2], 0, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16487 */
-extern rtx_insn *gen_split_2890 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2715 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2890 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2715 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -4909,7 +2788,7 @@ gen_split_2890 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2890 (sse.md:16487)\n");
+    fprintf (dump_file, "Splitting with gen_split_2715 (sse.md:16487)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -4935,9 +2814,9 @@ operands[3] = XVECEXP (operands[2], 0, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16487 */
-extern rtx_insn *gen_split_2891 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2716 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2891 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2716 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -4945,7 +2824,7 @@ gen_split_2891 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2891 (sse.md:16487)\n");
+    fprintf (dump_file, "Splitting with gen_split_2716 (sse.md:16487)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -5658,212 +3537,17 @@ gen_vec_shr_v2df (rtx operand0,
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16532 */
-rtx
-gen_ashlv1ti3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16538 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  if (!CONST_INT_P (operands[2]))
-    {
-      ix86_expand_v1ti_shift (ASHIFT, operands);
-      DONE;
-    }
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ASHIFT (V1TImode,
-	operand1,
-	operand2)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16546 */
-extern rtx_insn *gen_split_2892 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_2892 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
-{
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2892 (sse.md:16546)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16556 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  ix86_expand_v1ti_shift (ASHIFT, operands);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-  emit_insn (const0_rtx);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16561 */
-rtx
-gen_lshrv1ti3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16567 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  if (!CONST_INT_P (operands[2]))
-    {
-      ix86_expand_v1ti_shift (LSHIFTRT, operands);
-      DONE;
-    }
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_LSHIFTRT (V1TImode,
-	operand1,
-	operand2)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16575 */
-extern rtx_insn *gen_split_2893 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_2893 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
-{
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2893 (sse.md:16575)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16585 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  ix86_expand_v1ti_shift (LSHIFTRT, operands);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-  emit_insn (const0_rtx);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16590 */
-rtx
-gen_ashrv1ti3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16596 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  if (!CONST_INT_P (operands[2]))
-    {
-      ix86_expand_v1ti_ashiftrt (operands);
-      DONE;
-    }
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ASHIFTRT (V1TImode,
-	operand1,
-	operand2)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16605 */
-extern rtx_insn *gen_split_2894 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_2894 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
-{
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2894 (sse.md:16605)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16615 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  ix86_expand_v1ti_ashiftrt (operands);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-  emit_insn (const0_rtx);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16620 */
-extern rtx_insn *gen_split_2895 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2717 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2895 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2717 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2895 (sse.md:16620)\n");
+    fprintf (dump_file, "Splitting with gen_split_2717 (sse.md:16620)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -5881,16 +3565,16 @@ gen_split_2895 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16620 */
-extern rtx_insn *gen_split_2896 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2718 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2896 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2718 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2896 (sse.md:16620)\n");
+    fprintf (dump_file, "Splitting with gen_split_2718 (sse.md:16620)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -5908,16 +3592,16 @@ gen_split_2896 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16620 */
-extern rtx_insn *gen_split_2897 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2719 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2897 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2719 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2897 (sse.md:16620)\n");
+    fprintf (dump_file, "Splitting with gen_split_2719 (sse.md:16620)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -5935,16 +3619,16 @@ gen_split_2897 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16620 */
-extern rtx_insn *gen_split_2898 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2720 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2898 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2720 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2898 (sse.md:16620)\n");
+    fprintf (dump_file, "Splitting with gen_split_2720 (sse.md:16620)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -5962,16 +3646,16 @@ gen_split_2898 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16620 */
-extern rtx_insn *gen_split_2899 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2721 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2899 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2721 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2899 (sse.md:16620)\n");
+    fprintf (dump_file, "Splitting with gen_split_2721 (sse.md:16620)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -5989,16 +3673,16 @@ gen_split_2899 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:16620 */
-extern rtx_insn *gen_split_2900 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2722 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2900 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2722 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2900 (sse.md:16620)\n");
+    fprintf (dump_file, "Splitting with gen_split_2722 (sse.md:16620)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -6010,136 +3694,6 @@ gen_split_2900 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 	gen_rtx_ASHIFTRT (V2DImode,
 	operand1,
 	operand2)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16632 */
-rtx
-gen_rotlv1ti3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16638 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  if (!CONST_INT_P (operands[2]))
-    {
-      ix86_expand_v1ti_rotate (ROTATE, operands);
-      DONE;
-    }
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ROTATE (V1TImode,
-	operand1,
-	operand2)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16646 */
-extern rtx_insn *gen_split_2901 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_2901 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
-{
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2901 (sse.md:16646)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16656 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  ix86_expand_v1ti_rotate (ROTATE, operands);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-  emit_insn (const0_rtx);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16661 */
-rtx
-gen_rotrv1ti3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[3];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16667 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  if (!CONST_INT_P (operands[2]))
-    {
-      ix86_expand_v1ti_rotate (ROTATERT, operands);
-      DONE;
-    }
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ROTATERT (V1TImode,
-	operand1,
-	operand2)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:16675 */
-extern rtx_insn *gen_split_2902 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_2902 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
-{
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2902 (sse.md:16675)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 16685 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  ix86_expand_v1ti_rotate (ROTATERT, operands);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-  emit_insn (const0_rtx);
   _val = get_insns ();
   end_sequence ();
   return _val;
@@ -12320,13 +9874,13 @@ gen_uminv4si3 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17044 */
-extern rtx_insn *gen_split_2903 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2723 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2903 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2723 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2903 (sse.md:17044)\n");
+    fprintf (dump_file, "Splitting with gen_split_2723 (sse.md:17044)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12348,13 +9902,13 @@ gen_split_2903 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17044 */
-extern rtx_insn *gen_split_2904 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2724 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2904 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2724 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2904 (sse.md:17044)\n");
+    fprintf (dump_file, "Splitting with gen_split_2724 (sse.md:17044)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12376,13 +9930,13 @@ gen_split_2904 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17044 */
-extern rtx_insn *gen_split_2905 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2725 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2905 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2725 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2905 (sse.md:17044)\n");
+    fprintf (dump_file, "Splitting with gen_split_2725 (sse.md:17044)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12404,13 +9958,13 @@ gen_split_2905 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17044 */
-extern rtx_insn *gen_split_2906 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2726 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2906 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2726 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2906 (sse.md:17044)\n");
+    fprintf (dump_file, "Splitting with gen_split_2726 (sse.md:17044)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12432,13 +9986,13 @@ gen_split_2906 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17044 */
-extern rtx_insn *gen_split_2907 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2727 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2907 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2727 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2907 (sse.md:17044)\n");
+    fprintf (dump_file, "Splitting with gen_split_2727 (sse.md:17044)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12460,13 +10014,13 @@ gen_split_2907 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17044 */
-extern rtx_insn *gen_split_2908 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2728 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2908 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2728 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2908 (sse.md:17044)\n");
+    fprintf (dump_file, "Splitting with gen_split_2728 (sse.md:17044)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12488,13 +10042,13 @@ gen_split_2908 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17044 */
-extern rtx_insn *gen_split_2909 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2729 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2909 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2729 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2909 (sse.md:17044)\n");
+    fprintf (dump_file, "Splitting with gen_split_2729 (sse.md:17044)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12516,13 +10070,13 @@ gen_split_2909 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17044 */
-extern rtx_insn *gen_split_2910 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2730 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2910 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2730 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2910 (sse.md:17044)\n");
+    fprintf (dump_file, "Splitting with gen_split_2730 (sse.md:17044)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12544,13 +10098,13 @@ gen_split_2910 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17076 */
-extern rtx_insn *gen_split_2911 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2731 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2911 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2731 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2911 (sse.md:17076)\n");
+    fprintf (dump_file, "Splitting with gen_split_2731 (sse.md:17076)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12572,13 +10126,13 @@ gen_split_2911 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17076 */
-extern rtx_insn *gen_split_2912 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2732 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2912 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2732 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2912 (sse.md:17076)\n");
+    fprintf (dump_file, "Splitting with gen_split_2732 (sse.md:17076)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12600,13 +10154,13 @@ gen_split_2912 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17076 */
-extern rtx_insn *gen_split_2913 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2733 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2913 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2733 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2913 (sse.md:17076)\n");
+    fprintf (dump_file, "Splitting with gen_split_2733 (sse.md:17076)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12628,13 +10182,13 @@ gen_split_2913 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17076 */
-extern rtx_insn *gen_split_2914 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2734 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2914 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2734 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2914 (sse.md:17076)\n");
+    fprintf (dump_file, "Splitting with gen_split_2734 (sse.md:17076)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12656,13 +10210,13 @@ gen_split_2914 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17076 */
-extern rtx_insn *gen_split_2915 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2735 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2915 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2735 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2915 (sse.md:17076)\n");
+    fprintf (dump_file, "Splitting with gen_split_2735 (sse.md:17076)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12684,13 +10238,13 @@ gen_split_2915 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17076 */
-extern rtx_insn *gen_split_2916 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2736 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2916 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2736 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2916 (sse.md:17076)\n");
+    fprintf (dump_file, "Splitting with gen_split_2736 (sse.md:17076)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12712,13 +10266,13 @@ gen_split_2916 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17076 */
-extern rtx_insn *gen_split_2917 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2737 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2917 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2737 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2917 (sse.md:17076)\n");
+    fprintf (dump_file, "Splitting with gen_split_2737 (sse.md:17076)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12740,13 +10294,13 @@ gen_split_2917 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17076 */
-extern rtx_insn *gen_split_2918 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2738 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2918 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2738 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2918 (sse.md:17076)\n");
+    fprintf (dump_file, "Splitting with gen_split_2738 (sse.md:17076)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12768,9 +10322,9 @@ gen_split_2918 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17109 */
-extern rtx_insn *gen_split_2919 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2739 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2919 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2739 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -12779,7 +10333,7 @@ gen_split_2919 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2919 (sse.md:17109)\n");
+    fprintf (dump_file, "Splitting with gen_split_2739 (sse.md:17109)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12815,9 +10369,9 @@ gen_split_2919 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17109 */
-extern rtx_insn *gen_split_2920 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2740 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2920 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2740 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -12826,7 +10380,7 @@ gen_split_2920 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2920 (sse.md:17109)\n");
+    fprintf (dump_file, "Splitting with gen_split_2740 (sse.md:17109)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12862,9 +10416,9 @@ gen_split_2920 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17138 */
-extern rtx_insn *gen_split_2921 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2741 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2921 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2741 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -12873,7 +10427,7 @@ gen_split_2921 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2921 (sse.md:17138)\n");
+    fprintf (dump_file, "Splitting with gen_split_2741 (sse.md:17138)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12910,9 +10464,9 @@ gen_split_2921 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17138 */
-extern rtx_insn *gen_split_2922 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2742 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2922 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2742 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -12921,7 +10475,7 @@ gen_split_2922 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2922 (sse.md:17138)\n");
+    fprintf (dump_file, "Splitting with gen_split_2742 (sse.md:17138)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -12958,9 +10512,9 @@ gen_split_2922 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17170 */
-extern rtx_insn *gen_split_2923 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2743 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2923 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2743 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -12969,7 +10523,7 @@ gen_split_2923 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2923 (sse.md:17170)\n");
+    fprintf (dump_file, "Splitting with gen_split_2743 (sse.md:17170)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -13005,9 +10559,9 @@ gen_split_2923 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17170 */
-extern rtx_insn *gen_split_2924 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2744 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2924 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2744 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -13016,7 +10570,7 @@ gen_split_2924 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2924 (sse.md:17170)\n");
+    fprintf (dump_file, "Splitting with gen_split_2744 (sse.md:17170)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -25610,9 +23164,9 @@ gen_one_cmplv2di2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2925 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2745 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2925 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2745 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -25620,7 +23174,7 @@ gen_split_2925 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2925 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2745 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -25686,9 +23240,9 @@ gen_split_2925 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2926 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2746 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2926 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2746 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -25696,7 +23250,7 @@ gen_split_2926 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2926 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2746 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -25762,9 +23316,9 @@ gen_split_2926 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2927 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2747 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2927 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2747 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -25772,7 +23326,7 @@ gen_split_2927 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2927 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2747 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -25838,9 +23392,9 @@ gen_split_2927 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2928 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2748 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2928 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2748 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -25848,7 +23402,7 @@ gen_split_2928 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2928 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2748 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -25914,9 +23468,9 @@ gen_split_2928 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2929 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2749 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2929 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2749 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -25924,7 +23478,7 @@ gen_split_2929 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2929 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2749 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -25990,9 +23544,9 @@ gen_split_2929 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2930 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2750 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2930 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2750 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -26000,7 +23554,7 @@ gen_split_2930 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2930 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2750 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26066,9 +23620,9 @@ gen_split_2930 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2931 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2751 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2931 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2751 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -26076,7 +23630,7 @@ gen_split_2931 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2931 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2751 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26142,9 +23696,9 @@ gen_split_2931 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2932 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2752 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2932 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2752 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -26152,7 +23706,7 @@ gen_split_2932 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2932 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2752 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26218,9 +23772,9 @@ gen_split_2932 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2933 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2753 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2933 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2753 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -26228,7 +23782,7 @@ gen_split_2933 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2933 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2753 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26294,9 +23848,9 @@ gen_split_2933 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2934 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2754 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2934 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2754 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -26304,7 +23858,7 @@ gen_split_2934 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2934 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2754 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26370,9 +23924,9 @@ gen_split_2934 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2935 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2755 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2935 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2755 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -26380,7 +23934,7 @@ gen_split_2935 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2935 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2755 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26446,9 +24000,9 @@ gen_split_2935 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17507 */
-extern rtx_insn *gen_split_2936 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2756 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2936 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2756 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -26456,7 +24010,7 @@ gen_split_2936 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2936 (sse.md:17507)\n");
+    fprintf (dump_file, "Splitting with gen_split_2756 (sse.md:17507)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26522,16 +24076,16 @@ gen_split_2936 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17597 */
-extern rtx_insn *gen_split_2937 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2757 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2937 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2757 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2937 (sse.md:17597)\n");
+    fprintf (dump_file, "Splitting with gen_split_2757 (sse.md:17597)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26556,16 +24110,16 @@ operands[2] = CONSTM1_RTX (V16SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17597 */
-extern rtx_insn *gen_split_2938 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2758 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2938 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2758 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2938 (sse.md:17597)\n");
+    fprintf (dump_file, "Splitting with gen_split_2758 (sse.md:17597)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26590,16 +24144,16 @@ operands[2] = CONSTM1_RTX (V8SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17597 */
-extern rtx_insn *gen_split_2939 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2759 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2939 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2759 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2939 (sse.md:17597)\n");
+    fprintf (dump_file, "Splitting with gen_split_2759 (sse.md:17597)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26624,16 +24178,16 @@ operands[2] = CONSTM1_RTX (V4SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17597 */
-extern rtx_insn *gen_split_2940 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2760 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2940 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2760 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2940 (sse.md:17597)\n");
+    fprintf (dump_file, "Splitting with gen_split_2760 (sse.md:17597)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26658,16 +24212,16 @@ operands[2] = CONSTM1_RTX (V8DImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17597 */
-extern rtx_insn *gen_split_2941 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2761 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2941 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2761 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2941 (sse.md:17597)\n");
+    fprintf (dump_file, "Splitting with gen_split_2761 (sse.md:17597)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26692,16 +24246,16 @@ operands[2] = CONSTM1_RTX (V4DImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17597 */
-extern rtx_insn *gen_split_2942 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2762 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2942 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2762 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2942 (sse.md:17597)\n");
+    fprintf (dump_file, "Splitting with gen_split_2762 (sse.md:17597)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -26990,9 +24544,9 @@ gen_sse2_andnotv2di3_mask (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17756 */
-extern rtx_insn *gen_split_2943 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2763 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2943 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2763 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27000,7 +24554,7 @@ gen_split_2943 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2943 (sse.md:17756)\n");
+    fprintf (dump_file, "Splitting with gen_split_2763 (sse.md:17756)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27030,9 +24584,9 @@ operands[3] = gen_reg_rtx (V4SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17756 */
-extern rtx_insn *gen_split_2944 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2764 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2944 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2764 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27040,7 +24594,7 @@ gen_split_2944 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2944 (sse.md:17756)\n");
+    fprintf (dump_file, "Splitting with gen_split_2764 (sse.md:17756)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27070,9 +24624,9 @@ operands[3] = gen_reg_rtx (V2DImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2945 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2765 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2945 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2765 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27080,7 +24634,7 @@ gen_split_2945 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2945 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2765 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27110,9 +24664,9 @@ operands[3] = gen_reg_rtx (V64QImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2946 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2766 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2946 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2766 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27120,7 +24674,7 @@ gen_split_2946 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2946 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2766 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27150,9 +24704,9 @@ operands[3] = gen_reg_rtx (V32QImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2947 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2767 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2947 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2767 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27160,7 +24714,7 @@ gen_split_2947 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2947 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2767 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27190,9 +24744,9 @@ operands[3] = gen_reg_rtx (V16QImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2948 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2768 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2948 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2768 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27200,7 +24754,7 @@ gen_split_2948 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2948 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2768 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27230,9 +24784,9 @@ operands[3] = gen_reg_rtx (V32HImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2949 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2769 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2949 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2769 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27240,7 +24794,7 @@ gen_split_2949 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2949 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2769 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27270,9 +24824,9 @@ operands[3] = gen_reg_rtx (V16HImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2950 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2770 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2950 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2770 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27280,7 +24834,7 @@ gen_split_2950 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2950 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2770 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27310,9 +24864,9 @@ operands[3] = gen_reg_rtx (V8HImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2951 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2771 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2951 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2771 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27320,7 +24874,7 @@ gen_split_2951 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2951 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2771 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27350,9 +24904,9 @@ operands[3] = gen_reg_rtx (V16SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2952 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2772 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2952 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2772 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27360,7 +24914,7 @@ gen_split_2952 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2952 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2772 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27390,9 +24944,9 @@ operands[3] = gen_reg_rtx (V8SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2953 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2773 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2953 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2773 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27400,7 +24954,7 @@ gen_split_2953 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2953 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2773 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27430,9 +24984,9 @@ operands[3] = gen_reg_rtx (V4SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2954 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2774 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2954 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2774 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27440,7 +24994,7 @@ gen_split_2954 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2954 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2774 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27470,9 +25024,9 @@ operands[3] = gen_reg_rtx (V8DImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2955 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2775 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2955 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2775 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27480,7 +25034,7 @@ gen_split_2955 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2955 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2775 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27510,9 +25064,9 @@ operands[3] = gen_reg_rtx (V4DImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17772 */
-extern rtx_insn *gen_split_2956 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2776 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2956 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2776 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27520,7 +25074,7 @@ gen_split_2956 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2956 (sse.md:17772)\n");
+    fprintf (dump_file, "Splitting with gen_split_2776 (sse.md:17772)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27550,9 +25104,9 @@ operands[3] = gen_reg_rtx (V2DImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2957 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2777 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2957 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2777 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27560,7 +25114,7 @@ gen_split_2957 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2957 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2777 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27590,9 +25144,9 @@ operands[3] = gen_reg_rtx (V16SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2958 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2778 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2958 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2778 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27600,7 +25154,7 @@ gen_split_2958 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2958 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2778 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27630,9 +25184,9 @@ operands[3] = gen_reg_rtx (V8DImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2959 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2779 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2959 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2779 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27640,7 +25194,7 @@ gen_split_2959 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2959 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2779 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27670,9 +25224,9 @@ operands[3] = gen_reg_rtx (V64QImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2960 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2780 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2960 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2780 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27680,7 +25234,7 @@ gen_split_2960 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2960 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2780 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27710,9 +25264,9 @@ operands[3] = gen_reg_rtx (V32QImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2961 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2781 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2961 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2781 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27720,7 +25274,7 @@ gen_split_2961 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2961 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2781 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27750,9 +25304,9 @@ operands[3] = gen_reg_rtx (V16QImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2962 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2782 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2962 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2782 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27760,7 +25314,7 @@ gen_split_2962 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2962 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2782 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27790,9 +25344,9 @@ operands[3] = gen_reg_rtx (V32HImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2963 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2783 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2963 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2783 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27800,7 +25354,7 @@ gen_split_2963 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2963 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2783 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27830,9 +25384,9 @@ operands[3] = gen_reg_rtx (V16HImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2964 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2784 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2964 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2784 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27840,7 +25394,7 @@ gen_split_2964 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2964 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2784 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27870,9 +25424,9 @@ operands[3] = gen_reg_rtx (V8HImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2965 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2785 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2965 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2785 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27880,7 +25434,7 @@ gen_split_2965 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2965 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2785 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27910,9 +25464,9 @@ operands[3] = gen_reg_rtx (V8SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2966 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2786 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2966 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2786 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27920,7 +25474,7 @@ gen_split_2966 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2966 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2786 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27950,9 +25504,9 @@ operands[3] = gen_reg_rtx (V4SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2967 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2787 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2967 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2787 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -27960,7 +25514,7 @@ gen_split_2967 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2967 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2787 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -27990,9 +25544,9 @@ operands[3] = gen_reg_rtx (V4DImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17787 */
-extern rtx_insn *gen_split_2968 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2788 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2968 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2788 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28000,7 +25554,7 @@ gen_split_2968 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2968 (sse.md:17787)\n");
+    fprintf (dump_file, "Splitting with gen_split_2788 (sse.md:17787)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28030,9 +25584,9 @@ operands[3] = gen_reg_rtx (V2DImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2969 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2789 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2969 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2789 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28040,7 +25594,7 @@ gen_split_2969 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2969 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2789 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28070,9 +25624,9 @@ operands[3] = gen_reg_rtx (V16SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2970 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2790 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2970 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2790 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28080,7 +25634,7 @@ gen_split_2970 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2970 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2790 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28110,9 +25664,9 @@ operands[3] = gen_reg_rtx (V8DImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2971 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2791 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2971 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2791 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28120,7 +25674,7 @@ gen_split_2971 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2971 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2791 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28150,9 +25704,9 @@ operands[3] = gen_reg_rtx (V64QImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2972 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2792 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2972 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2792 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28160,7 +25714,7 @@ gen_split_2972 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2972 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2792 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28190,9 +25744,9 @@ operands[3] = gen_reg_rtx (V32QImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2973 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2793 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2973 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2793 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28200,7 +25754,7 @@ gen_split_2973 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2973 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2793 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28230,9 +25784,9 @@ operands[3] = gen_reg_rtx (V16QImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2974 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2794 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2974 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2794 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28240,7 +25794,7 @@ gen_split_2974 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2974 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2794 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28270,9 +25824,9 @@ operands[3] = gen_reg_rtx (V32HImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2975 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2795 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2975 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2795 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28280,7 +25834,7 @@ gen_split_2975 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2975 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2795 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28310,9 +25864,9 @@ operands[3] = gen_reg_rtx (V16HImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2976 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2796 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2976 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2796 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28320,7 +25874,7 @@ gen_split_2976 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2976 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2796 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28350,9 +25904,9 @@ operands[3] = gen_reg_rtx (V8HImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2977 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2797 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2977 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2797 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28360,7 +25914,7 @@ gen_split_2977 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2977 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2797 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28390,9 +25944,9 @@ operands[3] = gen_reg_rtx (V8SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2978 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2798 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2978 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2798 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28400,7 +25954,7 @@ gen_split_2978 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2978 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2798 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28430,9 +25984,9 @@ operands[3] = gen_reg_rtx (V4SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2979 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2799 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2979 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2799 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28440,7 +25994,7 @@ gen_split_2979 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2979 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2799 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -28470,9 +26024,9 @@ operands[3] = gen_reg_rtx (V4DImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:17802 */
-extern rtx_insn *gen_split_2980 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2800 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2980 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2800 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -28480,7 +26034,7 @@ gen_split_2980 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2980 (sse.md:17802)\n");
+    fprintf (dump_file, "Splitting with gen_split_2800 (sse.md:17802)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -32593,9 +30147,9 @@ gen_vec_interleave_lowv4di (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:19088 */
-extern rtx_insn *gen_split_2981 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2801 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2981 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2801 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -32603,7 +30157,7 @@ gen_split_2981 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2981 (sse.md:19088)\n");
+    fprintf (dump_file, "Splitting with gen_split_2801 (sse.md:19088)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -32627,9 +30181,9 @@ gen_split_2981 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:19088 */
-extern rtx_insn *gen_split_2982 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2802 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2982 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2802 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -32637,7 +30191,7 @@ gen_split_2982 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2982 (sse.md:19088)\n");
+    fprintf (dump_file, "Splitting with gen_split_2802 (sse.md:19088)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -32661,9 +30215,9 @@ gen_split_2982 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:19088 */
-extern rtx_insn *gen_split_2983 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2803 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2983 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2803 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -32671,7 +30225,7 @@ gen_split_2983 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2983 (sse.md:19088)\n");
+    fprintf (dump_file, "Splitting with gen_split_2803 (sse.md:19088)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -34378,9 +31932,9 @@ operands[2] = CONST0_RTX (V4SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20205 */
-extern rtx_insn *gen_split_2984 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2804 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2984 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2804 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -34389,7 +31943,7 @@ gen_split_2984 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2984 (sse.md:20205)\n");
+    fprintf (dump_file, "Splitting with gen_split_2804 (sse.md:20205)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34421,9 +31975,9 @@ gen_split_2984 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20205 */
-extern rtx_insn *gen_split_2985 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2805 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2985 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2805 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -34432,7 +31986,7 @@ gen_split_2985 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2985 (sse.md:20205)\n");
+    fprintf (dump_file, "Splitting with gen_split_2805 (sse.md:20205)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34464,9 +32018,9 @@ gen_split_2985 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20327 */
-extern rtx_insn *gen_split_2986 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2806 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2986 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2806 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -34476,7 +32030,7 @@ gen_split_2986 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2986 (sse.md:20327)\n");
+    fprintf (dump_file, "Splitting with gen_split_2806 (sse.md:20327)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34514,15 +32068,15 @@ gen_split_2986 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20345 */
-extern rtx_insn *gen_split_2987 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2807 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2987 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2807 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2987 (sse.md:20345)\n");
+    fprintf (dump_file, "Splitting with gen_split_2807 (sse.md:20345)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34542,15 +32096,15 @@ operands[1] = gen_lowpart (SImode, operands[1]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20345 */
-extern rtx_insn *gen_split_2988 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2808 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2988 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2808 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2988 (sse.md:20345)\n");
+    fprintf (dump_file, "Splitting with gen_split_2808 (sse.md:20345)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34570,15 +32124,15 @@ operands[1] = gen_lowpart (DImode, operands[1]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20378 */
-extern rtx_insn *gen_split_2989 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2809 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2989 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2809 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2989 (sse.md:20378)\n");
+    fprintf (dump_file, "Splitting with gen_split_2809 (sse.md:20378)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34598,47 +32152,16 @@ operands[1] = gen_lowpart (SImode, operands[1]);
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:20453 */
-extern rtx_insn *gen_split_2990 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_2990 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2990 (sse.md:20453)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 20463 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  operands[1] = adjust_address (operands[1], SImode, INTVAL (operands[2]) * 4);
-}
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (DImode,
-	operand1)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20531 */
-extern rtx_insn *gen_split_2991 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2810 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2991 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2810 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2991 (sse.md:20531)\n");
+    fprintf (dump_file, "Splitting with gen_split_2810 (sse.md:20531)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34662,15 +32185,15 @@ gen_split_2991 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20531 */
-extern rtx_insn *gen_split_2992 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2811 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2992 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2811 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2992 (sse.md:20531)\n");
+    fprintf (dump_file, "Splitting with gen_split_2811 (sse.md:20531)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34694,15 +32217,15 @@ gen_split_2992 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20531 */
-extern rtx_insn *gen_split_2993 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2812 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2993 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2812 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2993 (sse.md:20531)\n");
+    fprintf (dump_file, "Splitting with gen_split_2812 (sse.md:20531)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34726,15 +32249,15 @@ gen_split_2993 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20531 */
-extern rtx_insn *gen_split_2994 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2813 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2994 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2813 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2994 (sse.md:20531)\n");
+    fprintf (dump_file, "Splitting with gen_split_2813 (sse.md:20531)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34758,15 +32281,15 @@ gen_split_2994 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20579 */
-extern rtx_insn *gen_split_2995 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2814 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2995 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2814 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2995 (sse.md:20579)\n");
+    fprintf (dump_file, "Splitting with gen_split_2814 (sse.md:20579)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34786,15 +32309,15 @@ operands[1] = gen_lowpart (TImode, operands[1]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20579 */
-extern rtx_insn *gen_split_2996 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2815 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2996 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2815 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2996 (sse.md:20579)\n");
+    fprintf (dump_file, "Splitting with gen_split_2815 (sse.md:20579)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34814,15 +32337,15 @@ operands[1] = gen_lowpart (TImode, operands[1]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20592 */
-extern rtx_insn *gen_split_2997 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2816 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2997 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2816 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2997 (sse.md:20592)\n");
+    fprintf (dump_file, "Splitting with gen_split_2816 (sse.md:20592)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34882,15 +32405,15 @@ gen_split_2997 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20592 */
-extern rtx_insn *gen_split_2998 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2817 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2998 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2817 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2998 (sse.md:20592)\n");
+    fprintf (dump_file, "Splitting with gen_split_2817 (sse.md:20592)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34950,16 +32473,16 @@ gen_split_2998 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20730 */
-extern rtx_insn *gen_split_2999 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2818 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_2999 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2818 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_2999 (sse.md:20730)\n");
+    fprintf (dump_file, "Splitting with gen_split_2818 (sse.md:20730)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -34990,16 +32513,16 @@ gen_split_2999 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:20759 */
-extern rtx_insn *gen_split_3000 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2819 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3000 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2819 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3000 (sse.md:20759)\n");
+    fprintf (dump_file, "Splitting with gen_split_2819 (sse.md:20759)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37052,15 +34575,15 @@ ix86_fixup_binary_operands_no_copy (PLUS, V16QImode, operands);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21099 */
-extern rtx_insn *gen_split_3001 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2820 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3001 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2820 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3001 (sse.md:21099)\n");
+    fprintf (dump_file, "Splitting with gen_split_2820 (sse.md:21099)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37083,15 +34606,15 @@ operands[1] = gen_lowpart (V8SFmode, operands[1]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21099 */
-extern rtx_insn *gen_split_3002 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2821 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3002 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2821 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3002 (sse.md:21099)\n");
+    fprintf (dump_file, "Splitting with gen_split_2821 (sse.md:21099)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37114,15 +34637,15 @@ operands[1] = gen_lowpart (V4SFmode, operands[1]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21099 */
-extern rtx_insn *gen_split_3003 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2822 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3003 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2822 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3003 (sse.md:21099)\n");
+    fprintf (dump_file, "Splitting with gen_split_2822 (sse.md:21099)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37145,15 +34668,15 @@ operands[1] = gen_lowpart (V4DFmode, operands[1]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21099 */
-extern rtx_insn *gen_split_3004 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2823 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3004 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2823 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3004 (sse.md:21099)\n");
+    fprintf (dump_file, "Splitting with gen_split_2823 (sse.md:21099)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37175,272 +34698,16 @@ operands[1] = gen_lowpart (V2DFmode, operands[1]);
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21117 */
-extern rtx_insn *gen_split_3005 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3005 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3005 (sse.md:21117)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21130 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V8SFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21117 */
-extern rtx_insn *gen_split_3006 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3006 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3006 (sse.md:21117)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21130 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V8SFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21117 */
-extern rtx_insn *gen_split_3007 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3007 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3007 (sse.md:21117)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21130 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V4SFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21117 */
-extern rtx_insn *gen_split_3008 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3008 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3008 (sse.md:21117)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21130 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V4SFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21117 */
-extern rtx_insn *gen_split_3009 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3009 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3009 (sse.md:21117)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21130 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V4DFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21117 */
-extern rtx_insn *gen_split_3010 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3010 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3010 (sse.md:21117)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21130 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V4DFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21117 */
-extern rtx_insn *gen_split_3011 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3011 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3011 (sse.md:21117)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21130 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V2DFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21117 */
-extern rtx_insn *gen_split_3012 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3012 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3012 (sse.md:21117)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21130 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V2DFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21136 */
-extern rtx_insn *gen_split_3013 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2824 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3013 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2824 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3013 (sse.md:21136)\n");
+    fprintf (dump_file, "Splitting with gen_split_2824 (sse.md:21136)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37463,15 +34730,15 @@ operands[1] = gen_lowpart (V8SFmode, operands[1]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21136 */
-extern rtx_insn *gen_split_3014 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2825 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3014 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2825 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3014 (sse.md:21136)\n");
+    fprintf (dump_file, "Splitting with gen_split_2825 (sse.md:21136)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37494,15 +34761,15 @@ operands[1] = gen_lowpart (V4SFmode, operands[1]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21136 */
-extern rtx_insn *gen_split_3015 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2826 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3015 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2826 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3015 (sse.md:21136)\n");
+    fprintf (dump_file, "Splitting with gen_split_2826 (sse.md:21136)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37525,15 +34792,15 @@ operands[1] = gen_lowpart (V4DFmode, operands[1]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21136 */
-extern rtx_insn *gen_split_3016 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2827 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3016 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2827 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3016 (sse.md:21136)\n");
+    fprintf (dump_file, "Splitting with gen_split_2827 (sse.md:21136)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37550,277 +34817,21 @@ operands[1] = gen_lowpart (V2DFmode, operands[1]);
 	gen_rtvec (1,
 		operand1),
 	48)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21155 */
-extern rtx_insn *gen_split_3017 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3017 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3017 (sse.md:21155)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21169 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V8SFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21155 */
-extern rtx_insn *gen_split_3018 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3018 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3018 (sse.md:21155)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21169 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V8SFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21155 */
-extern rtx_insn *gen_split_3019 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3019 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3019 (sse.md:21155)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21169 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V4SFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21155 */
-extern rtx_insn *gen_split_3020 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3020 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3020 (sse.md:21155)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21169 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V4SFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21155 */
-extern rtx_insn *gen_split_3021 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3021 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3021 (sse.md:21155)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21169 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V4DFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21155 */
-extern rtx_insn *gen_split_3022 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3022 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3022 (sse.md:21155)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21169 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V4DFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21155 */
-extern rtx_insn *gen_split_3023 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3023 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3023 (sse.md:21155)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21169 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V2DFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21155 */
-extern rtx_insn *gen_split_3024 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3024 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3024 (sse.md:21155)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21169 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[1] = gen_lowpart (V2DFmode, operands[1]);
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
   _val = get_insns ();
   end_sequence ();
   return _val;
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21228 */
-extern rtx_insn *gen_split_3025 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2828 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3025 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2828 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3025 (sse.md:21228)\n");
+    fprintf (dump_file, "Splitting with gen_split_2828 (sse.md:21228)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -37837,16 +34848,16 @@ gen_split_3025 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21241 */
-extern rtx_insn *gen_split_3026 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2829 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3026 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2829 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3026 (sse.md:21241)\n");
+    fprintf (dump_file, "Splitting with gen_split_2829 (sse.md:21241)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37875,9 +34886,9 @@ operands[2] = gen_reg_rtx (SImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21256 */
-extern rtx_insn *gen_split_3027 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2830 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3027 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2830 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -37885,7 +34896,7 @@ gen_split_3027 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3027 (sse.md:21256)\n");
+    fprintf (dump_file, "Splitting with gen_split_2830 (sse.md:21256)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37925,9 +34936,9 @@ gen_split_3027 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21256 */
-extern rtx_insn *gen_split_3028 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2831 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3028 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2831 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -37935,7 +34946,7 @@ gen_split_3028 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3028 (sse.md:21256)\n");
+    fprintf (dump_file, "Splitting with gen_split_2831 (sse.md:21256)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -37975,9 +34986,9 @@ gen_split_3028 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21278 */
-extern rtx_insn *gen_split_3029 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2832 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3029 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2832 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -37985,7 +34996,7 @@ gen_split_3029 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3029 (sse.md:21278)\n");
+    fprintf (dump_file, "Splitting with gen_split_2832 (sse.md:21278)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -38026,9 +35037,9 @@ gen_split_3029 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21278 */
-extern rtx_insn *gen_split_3030 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2833 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3030 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2833 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -38036,7 +35047,7 @@ gen_split_3030 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3030 (sse.md:21278)\n");
+    fprintf (dump_file, "Splitting with gen_split_2833 (sse.md:21278)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -38077,15 +35088,15 @@ gen_split_3030 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21303 */
-extern rtx_insn *gen_split_3031 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2834 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3031 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2834 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3031 (sse.md:21303)\n");
+    fprintf (dump_file, "Splitting with gen_split_2834 (sse.md:21303)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -38108,15 +35119,15 @@ gen_split_3031 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21303 */
-extern rtx_insn *gen_split_3032 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2835 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3032 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2835 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3032 (sse.md:21303)\n");
+    fprintf (dump_file, "Splitting with gen_split_2835 (sse.md:21303)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -38138,111 +35149,15 @@ gen_split_3032 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21325 */
-extern rtx_insn *gen_split_3033 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3033 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3033 (sse.md:21325)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21337 "../gcc-14.1.0/gcc/config/i386/sse.md"
-
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21325 */
-extern rtx_insn *gen_split_3034 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3034 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3034 (sse.md:21325)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21337 "../gcc-14.1.0/gcc/config/i386/sse.md"
-
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_ZERO_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21348 */
-extern rtx_insn *gen_split_3035 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3035 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3035 (sse.md:21348)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21360 "../gcc-14.1.0/gcc/config/i386/sse.md"
-
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_SIGN_EXTEND (DImode,
-	gen_rtx_UNSPEC (SImode,
-	gen_rtvec (1,
-		operand1),
-	48))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21375 */
-extern rtx_insn *gen_split_3036 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2836 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3036 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2836 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3036 (sse.md:21375)\n");
+    fprintf (dump_file, "Splitting with gen_split_2836 (sse.md:21375)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -38259,14 +35174,14 @@ gen_split_3036 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21375 */
-extern rtx_insn *gen_split_3037 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2837 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3037 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2837 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3037 (sse.md:21375)\n");
+    fprintf (dump_file, "Splitting with gen_split_2837 (sse.md:21375)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -38298,13 +35213,13 @@ gen_sse2_maskmovdqu (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21544 */
-extern rtx_insn *gen_split_3038 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2838 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3038 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2838 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3038 (sse.md:21544)\n");
+    fprintf (dump_file, "Splitting with gen_split_2838 (sse.md:21544)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -38330,13 +35245,13 @@ gen_split_3038 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21544 */
-extern rtx_insn *gen_split_3039 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2839 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3039 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2839 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3039 (sse.md:21544)\n");
+    fprintf (dump_file, "Splitting with gen_split_2839 (sse.md:21544)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -38362,13 +35277,13 @@ gen_split_3039 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21544 */
-extern rtx_insn *gen_split_3040 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2840 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3040 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2840 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3040 (sse.md:21544)\n");
+    fprintf (dump_file, "Splitting with gen_split_2840 (sse.md:21544)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -38394,13 +35309,13 @@ gen_split_3040 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21544 */
-extern rtx_insn *gen_split_3041 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2841 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3041 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2841 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3041 (sse.md:21544)\n");
+    fprintf (dump_file, "Splitting with gen_split_2841 (sse.md:21544)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -38426,13 +35341,13 @@ gen_split_3041 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21633 */
-extern rtx_insn *gen_split_3042 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2842 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3042 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2842 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3042 (sse.md:21633)\n");
+    fprintf (dump_file, "Splitting with gen_split_2842 (sse.md:21633)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -38458,13 +35373,13 @@ gen_split_3042 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21633 */
-extern rtx_insn *gen_split_3043 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2843 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3043 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2843 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3043 (sse.md:21633)\n");
+    fprintf (dump_file, "Splitting with gen_split_2843 (sse.md:21633)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -38861,53 +35776,6 @@ gen_smulhrsv8hi3 (rtx operand0,
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:21946 */
-rtx
-gen_smulhrsv4hi3 (rtx operand0,
-	rtx operand1,
-	rtx operand2)
-{
-  rtx operand3;
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[4];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 21961 "../gcc-14.1.0/gcc/config/i386/sse.md"
-operands[3] = CONST1_RTX(V4HImode);
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_TRUNCATE (V4HImode,
-	gen_rtx_LSHIFTRT (V4SImode,
-	gen_rtx_PLUS (V4SImode,
-	gen_rtx_LSHIFTRT (V4SImode,
-	gen_rtx_MULT (V4SImode,
-	gen_rtx_SIGN_EXTEND (V4SImode,
-	operand1),
-	gen_rtx_SIGN_EXTEND (V4SImode,
-	operand2)),
-	const_int_rtx[MAX_SAVED_CONST_INT + (14)]),
-	operand3),
-	const1_rtx))));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:21963 */
 rtx
 gen_ssse3_pmulhrswv4hi3 (rtx operand0,
@@ -39054,9 +35922,9 @@ gen_ssse3_pshufbv8qi3 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22084 */
-extern rtx_insn *gen_split_3044 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2844 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3044 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2844 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -39065,7 +35933,7 @@ gen_split_3044 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3044 (sse.md:22084)\n");
+    fprintf (dump_file, "Splitting with gen_split_2844 (sse.md:22084)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -39110,9 +35978,9 @@ gen_split_3044 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22206 */
-extern rtx_insn *gen_split_3045 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2845 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3045 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2845 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -39120,7 +35988,7 @@ gen_split_3045 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3045 (sse.md:22206)\n");
+    fprintf (dump_file, "Splitting with gen_split_2845 (sse.md:22206)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -39640,9 +36508,9 @@ gen_absv2di2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22514 */
-extern rtx_insn *gen_split_3046 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2846 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3046 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2846 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -39650,7 +36518,7 @@ gen_split_3046 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3046 (sse.md:22514)\n");
+    fprintf (dump_file, "Splitting with gen_split_2846 (sse.md:22514)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -39679,9 +36547,9 @@ operands[3] = gen_lowpart (V8SFmode, operands[3]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22514 */
-extern rtx_insn *gen_split_3047 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2847 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3047 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2847 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -39689,7 +36557,7 @@ gen_split_3047 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3047 (sse.md:22514)\n");
+    fprintf (dump_file, "Splitting with gen_split_2847 (sse.md:22514)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -39718,9 +36586,9 @@ operands[3] = gen_lowpart (V4SFmode, operands[3]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22514 */
-extern rtx_insn *gen_split_3048 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2848 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3048 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2848 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -39728,7 +36596,7 @@ gen_split_3048 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3048 (sse.md:22514)\n");
+    fprintf (dump_file, "Splitting with gen_split_2848 (sse.md:22514)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -39757,9 +36625,9 @@ operands[3] = gen_lowpart (V4DFmode, operands[3]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22514 */
-extern rtx_insn *gen_split_3049 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2849 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3049 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2849 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -39767,7 +36635,7 @@ gen_split_3049 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3049 (sse.md:22514)\n");
+    fprintf (dump_file, "Splitting with gen_split_2849 (sse.md:22514)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -39796,9 +36664,9 @@ operands[3] = gen_lowpart (V2DFmode, operands[3]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22547 */
-extern rtx_insn *gen_split_3050 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2850 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3050 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2850 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -39806,7 +36674,7 @@ gen_split_3050 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3050 (sse.md:22547)\n");
+    fprintf (dump_file, "Splitting with gen_split_2850 (sse.md:22547)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -39840,9 +36708,9 @@ gen_split_3050 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22547 */
-extern rtx_insn *gen_split_3051 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2851 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3051 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2851 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -39850,7 +36718,7 @@ gen_split_3051 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3051 (sse.md:22547)\n");
+    fprintf (dump_file, "Splitting with gen_split_2851 (sse.md:22547)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -39884,9 +36752,9 @@ gen_split_3051 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22547 */
-extern rtx_insn *gen_split_3052 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2852 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3052 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2852 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -39894,7 +36762,7 @@ gen_split_3052 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3052 (sse.md:22547)\n");
+    fprintf (dump_file, "Splitting with gen_split_2852 (sse.md:22547)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -39928,9 +36796,9 @@ gen_split_3052 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22547 */
-extern rtx_insn *gen_split_3053 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2853 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3053 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2853 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -39938,7 +36806,7 @@ gen_split_3053 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3053 (sse.md:22547)\n");
+    fprintf (dump_file, "Splitting with gen_split_2853 (sse.md:22547)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -39972,9 +36840,9 @@ gen_split_3053 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22580 */
-extern rtx_insn *gen_split_3054 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2854 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3054 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2854 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -39982,7 +36850,7 @@ gen_split_3054 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3054 (sse.md:22580)\n");
+    fprintf (dump_file, "Splitting with gen_split_2854 (sse.md:22580)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40017,9 +36885,9 @@ gen_split_3054 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22580 */
-extern rtx_insn *gen_split_3055 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2855 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3055 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2855 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -40027,7 +36895,7 @@ gen_split_3055 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3055 (sse.md:22580)\n");
+    fprintf (dump_file, "Splitting with gen_split_2855 (sse.md:22580)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40062,9 +36930,9 @@ gen_split_3055 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22580 */
-extern rtx_insn *gen_split_3056 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2856 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3056 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2856 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -40072,7 +36940,7 @@ gen_split_3056 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3056 (sse.md:22580)\n");
+    fprintf (dump_file, "Splitting with gen_split_2856 (sse.md:22580)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40107,9 +36975,9 @@ gen_split_3056 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22580 */
-extern rtx_insn *gen_split_3057 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2857 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3057 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2857 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -40117,7 +36985,7 @@ gen_split_3057 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3057 (sse.md:22580)\n");
+    fprintf (dump_file, "Splitting with gen_split_2857 (sse.md:22580)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40152,9 +37020,9 @@ gen_split_3057 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22707 */
-extern rtx_insn *gen_split_3058 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2858 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3058 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2858 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -40162,7 +37030,7 @@ gen_split_3058 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3058 (sse.md:22707)\n");
+    fprintf (dump_file, "Splitting with gen_split_2858 (sse.md:22707)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -40185,9 +37053,9 @@ gen_split_3058 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22707 */
-extern rtx_insn *gen_split_3059 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2859 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3059 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2859 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -40195,7 +37063,7 @@ gen_split_3059 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3059 (sse.md:22707)\n");
+    fprintf (dump_file, "Splitting with gen_split_2859 (sse.md:22707)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -40218,9 +37086,9 @@ gen_split_3059 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22720 */
-extern rtx_insn *gen_split_3060 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2860 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3060 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2860 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -40229,7 +37097,7 @@ gen_split_3060 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3060 (sse.md:22720)\n");
+    fprintf (dump_file, "Splitting with gen_split_2860 (sse.md:22720)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40260,9 +37128,9 @@ operands[4] = gen_lowpart (V32QImode, operands[3]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22720 */
-extern rtx_insn *gen_split_3061 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2861 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3061 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2861 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -40271,7 +37139,7 @@ gen_split_3061 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3061 (sse.md:22720)\n");
+    fprintf (dump_file, "Splitting with gen_split_2861 (sse.md:22720)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40302,9 +37170,9 @@ operands[4] = gen_lowpart (V16QImode, operands[3]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22736 */
-extern rtx_insn *gen_split_3062 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2862 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3062 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2862 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -40312,7 +37180,7 @@ gen_split_3062 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3062 (sse.md:22736)\n");
+    fprintf (dump_file, "Splitting with gen_split_2862 (sse.md:22736)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40341,9 +37209,9 @@ gen_split_3062 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22736 */
-extern rtx_insn *gen_split_3063 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2863 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3063 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2863 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -40351,7 +37219,7 @@ gen_split_3063 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3063 (sse.md:22736)\n");
+    fprintf (dump_file, "Splitting with gen_split_2863 (sse.md:22736)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40380,9 +37248,9 @@ gen_split_3063 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22760 */
-extern rtx_insn *gen_split_3064 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2864 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3064 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2864 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -40391,7 +37259,7 @@ gen_split_3064 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3064 (sse.md:22760)\n");
+    fprintf (dump_file, "Splitting with gen_split_2864 (sse.md:22760)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40424,9 +37292,9 @@ operands[3] = gen_lowpart (V32QImode, operands[3]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22760 */
-extern rtx_insn *gen_split_3065 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2865 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3065 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2865 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -40435,7 +37303,7 @@ gen_split_3065 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3065 (sse.md:22760)\n");
+    fprintf (dump_file, "Splitting with gen_split_2865 (sse.md:22760)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40810,15 +37678,15 @@ gen_avx2_pblendbf_1 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22911 */
-extern rtx_insn *gen_split_3066 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2866 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3066 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2866 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3066 (sse.md:22911)\n");
+    fprintf (dump_file, "Splitting with gen_split_2866 (sse.md:22911)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40842,15 +37710,15 @@ gen_split_3066 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22928 */
-extern rtx_insn *gen_split_3067 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2867 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3067 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2867 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3067 (sse.md:22928)\n");
+    fprintf (dump_file, "Splitting with gen_split_2867 (sse.md:22928)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40874,15 +37742,15 @@ gen_split_3067 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22928 */
-extern rtx_insn *gen_split_3068 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2868 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3068 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2868 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3068 (sse.md:22928)\n");
+    fprintf (dump_file, "Splitting with gen_split_2868 (sse.md:22928)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40906,15 +37774,15 @@ gen_split_3068 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22928 */
-extern rtx_insn *gen_split_3069 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2869 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3069 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2869 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3069 (sse.md:22928)\n");
+    fprintf (dump_file, "Splitting with gen_split_2869 (sse.md:22928)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40958,15 +37826,15 @@ gen_zero_extendv16qiv16hi2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22964 */
-extern rtx_insn *gen_split_3070 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2870 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3070 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2870 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3070 (sse.md:22964)\n");
+    fprintf (dump_file, "Splitting with gen_split_2870 (sse.md:22964)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -40990,15 +37858,15 @@ gen_split_3070 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22981 */
-extern rtx_insn *gen_split_3071 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2871 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3071 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2871 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3071 (sse.md:22981)\n");
+    fprintf (dump_file, "Splitting with gen_split_2871 (sse.md:22981)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41022,15 +37890,15 @@ gen_split_3071 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22981 */
-extern rtx_insn *gen_split_3072 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2872 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3072 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2872 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3072 (sse.md:22981)\n");
+    fprintf (dump_file, "Splitting with gen_split_2872 (sse.md:22981)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41054,15 +37922,15 @@ gen_split_3072 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:22981 */
-extern rtx_insn *gen_split_3073 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2873 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3073 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2873 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3073 (sse.md:22981)\n");
+    fprintf (dump_file, "Splitting with gen_split_2873 (sse.md:22981)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41106,15 +37974,15 @@ gen_zero_extendv32qiv32hi2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23040 */
-extern rtx_insn *gen_split_3074 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2874 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3074 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2874 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3074 (sse.md:23040)\n");
+    fprintf (dump_file, "Splitting with gen_split_2874 (sse.md:23040)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41135,15 +38003,15 @@ operands[1] = adjust_address_nv (operands[1], V8QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23040 */
-extern rtx_insn *gen_split_3075 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2875 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3075 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2875 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3075 (sse.md:23040)\n");
+    fprintf (dump_file, "Splitting with gen_split_2875 (sse.md:23040)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41164,15 +38032,15 @@ operands[1] = adjust_address_nv (operands[1], V8QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23040 */
-extern rtx_insn *gen_split_3076 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2876 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3076 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2876 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3076 (sse.md:23040)\n");
+    fprintf (dump_file, "Splitting with gen_split_2876 (sse.md:23040)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41193,15 +38061,15 @@ operands[1] = adjust_address_nv (operands[1], V8QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23040 */
-extern rtx_insn *gen_split_3077 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2877 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3077 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2877 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3077 (sse.md:23040)\n");
+    fprintf (dump_file, "Splitting with gen_split_2877 (sse.md:23040)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41222,15 +38090,15 @@ operands[1] = adjust_address_nv (operands[1], V8QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23060 */
-extern rtx_insn *gen_split_3078 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2878 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3078 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2878 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3078 (sse.md:23060)\n");
+    fprintf (dump_file, "Splitting with gen_split_2878 (sse.md:23060)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41271,15 +38139,15 @@ gen_split_3078 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23092 */
-extern rtx_insn *gen_split_3079 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2879 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3079 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2879 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3079 (sse.md:23092)\n");
+    fprintf (dump_file, "Splitting with gen_split_2879 (sse.md:23092)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41321,15 +38189,15 @@ gen_split_3079 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23092 */
-extern rtx_insn *gen_split_3080 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2880 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3080 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2880 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3080 (sse.md:23092)\n");
+    fprintf (dump_file, "Splitting with gen_split_2880 (sse.md:23092)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41371,15 +38239,15 @@ gen_split_3080 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23092 */
-extern rtx_insn *gen_split_3081 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2881 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3081 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2881 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3081 (sse.md:23092)\n");
+    fprintf (dump_file, "Splitting with gen_split_2881 (sse.md:23092)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41529,15 +38397,15 @@ gen_zero_extendv16qiv16si2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23192 */
-extern rtx_insn *gen_split_3082 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2882 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3082 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2882 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3082 (sse.md:23192)\n");
+    fprintf (dump_file, "Splitting with gen_split_2882 (sse.md:23192)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41558,15 +38426,15 @@ operands[1] = adjust_address_nv (operands[1], V8QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23192 */
-extern rtx_insn *gen_split_3083 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2883 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3083 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2883 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3083 (sse.md:23192)\n");
+    fprintf (dump_file, "Splitting with gen_split_2883 (sse.md:23192)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41587,15 +38455,15 @@ operands[1] = adjust_address_nv (operands[1], V8QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23192 */
-extern rtx_insn *gen_split_3084 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2884 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3084 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2884 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3084 (sse.md:23192)\n");
+    fprintf (dump_file, "Splitting with gen_split_2884 (sse.md:23192)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41616,15 +38484,15 @@ operands[1] = adjust_address_nv (operands[1], V8QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23192 */
-extern rtx_insn *gen_split_3085 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2885 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3085 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2885 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3085 (sse.md:23192)\n");
+    fprintf (dump_file, "Splitting with gen_split_2885 (sse.md:23192)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41721,15 +38589,15 @@ gen_zero_extendv8qiv8si2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23255 */
-extern rtx_insn *gen_split_3086 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2886 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3086 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2886 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3086 (sse.md:23255)\n");
+    fprintf (dump_file, "Splitting with gen_split_2886 (sse.md:23255)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41750,15 +38618,15 @@ operands[1] = adjust_address_nv (operands[1], V4QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23255 */
-extern rtx_insn *gen_split_3087 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2887 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3087 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2887 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3087 (sse.md:23255)\n");
+    fprintf (dump_file, "Splitting with gen_split_2887 (sse.md:23255)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41779,15 +38647,15 @@ operands[1] = adjust_address_nv (operands[1], V4QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23255 */
-extern rtx_insn *gen_split_3088 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2888 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3088 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2888 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3088 (sse.md:23255)\n");
+    fprintf (dump_file, "Splitting with gen_split_2888 (sse.md:23255)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41808,15 +38676,15 @@ operands[1] = adjust_address_nv (operands[1], V4QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23255 */
-extern rtx_insn *gen_split_3089 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2889 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3089 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2889 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3089 (sse.md:23255)\n");
+    fprintf (dump_file, "Splitting with gen_split_2889 (sse.md:23255)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41933,15 +38801,15 @@ gen_zero_extendv16hiv16si2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23308 */
-extern rtx_insn *gen_split_3090 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2890 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3090 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2890 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3090 (sse.md:23308)\n");
+    fprintf (dump_file, "Splitting with gen_split_2890 (sse.md:23308)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41965,15 +38833,15 @@ gen_split_3090 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23325 */
-extern rtx_insn *gen_split_3091 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2891 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3091 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2891 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3091 (sse.md:23325)\n");
+    fprintf (dump_file, "Splitting with gen_split_2891 (sse.md:23325)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -41997,15 +38865,15 @@ gen_split_3091 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23325 */
-extern rtx_insn *gen_split_3092 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2892 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3092 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2892 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3092 (sse.md:23325)\n");
+    fprintf (dump_file, "Splitting with gen_split_2892 (sse.md:23325)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42029,15 +38897,15 @@ gen_split_3092 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23325 */
-extern rtx_insn *gen_split_3093 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2893 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3093 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2893 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3093 (sse.md:23325)\n");
+    fprintf (dump_file, "Splitting with gen_split_2893 (sse.md:23325)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42081,15 +38949,15 @@ gen_zero_extendv8hiv8si2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23362 */
-extern rtx_insn *gen_split_3094 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2894 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3094 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2894 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3094 (sse.md:23362)\n");
+    fprintf (dump_file, "Splitting with gen_split_2894 (sse.md:23362)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42113,15 +38981,15 @@ gen_split_3094 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23379 */
-extern rtx_insn *gen_split_3095 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2895 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3095 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2895 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3095 (sse.md:23379)\n");
+    fprintf (dump_file, "Splitting with gen_split_2895 (sse.md:23379)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42145,15 +39013,15 @@ gen_split_3095 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23379 */
-extern rtx_insn *gen_split_3096 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2896 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3096 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2896 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3096 (sse.md:23379)\n");
+    fprintf (dump_file, "Splitting with gen_split_2896 (sse.md:23379)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42177,15 +39045,15 @@ gen_split_3096 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23379 */
-extern rtx_insn *gen_split_3097 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2897 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3097 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2897 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3097 (sse.md:23379)\n");
+    fprintf (dump_file, "Splitting with gen_split_2897 (sse.md:23379)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42209,15 +39077,15 @@ gen_split_3097 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23428 */
-extern rtx_insn *gen_split_3098 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2898 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3098 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2898 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3098 (sse.md:23428)\n");
+    fprintf (dump_file, "Splitting with gen_split_2898 (sse.md:23428)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42238,15 +39106,15 @@ operands[1] = adjust_address_nv (operands[1], V4HImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23428 */
-extern rtx_insn *gen_split_3099 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2899 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3099 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2899 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3099 (sse.md:23428)\n");
+    fprintf (dump_file, "Splitting with gen_split_2899 (sse.md:23428)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42267,15 +39135,15 @@ operands[1] = adjust_address_nv (operands[1], V4HImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23428 */
-extern rtx_insn *gen_split_3100 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2900 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3100 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2900 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3100 (sse.md:23428)\n");
+    fprintf (dump_file, "Splitting with gen_split_2900 (sse.md:23428)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42296,15 +39164,15 @@ operands[1] = adjust_address_nv (operands[1], V4HImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23428 */
-extern rtx_insn *gen_split_3101 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2901 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3101 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2901 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3101 (sse.md:23428)\n");
+    fprintf (dump_file, "Splitting with gen_split_2901 (sse.md:23428)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42413,15 +39281,15 @@ gen_zero_extendv4hiv4si2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23467 */
-extern rtx_insn *gen_split_3102 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2902 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3102 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2902 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3102 (sse.md:23467)\n");
+    fprintf (dump_file, "Splitting with gen_split_2902 (sse.md:23467)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42458,15 +39326,15 @@ gen_split_3102 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23497 */
-extern rtx_insn *gen_split_3103 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2903 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3103 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2903 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3103 (sse.md:23497)\n");
+    fprintf (dump_file, "Splitting with gen_split_2903 (sse.md:23497)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42504,15 +39372,15 @@ gen_split_3103 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23497 */
-extern rtx_insn *gen_split_3104 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2904 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3104 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2904 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3104 (sse.md:23497)\n");
+    fprintf (dump_file, "Splitting with gen_split_2904 (sse.md:23497)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42550,15 +39418,15 @@ gen_split_3104 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23497 */
-extern rtx_insn *gen_split_3105 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2905 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3105 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2905 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3105 (sse.md:23497)\n");
+    fprintf (dump_file, "Splitting with gen_split_2905 (sse.md:23497)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42596,15 +39464,15 @@ gen_split_3105 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23556 */
-extern rtx_insn *gen_split_3106 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2906 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3106 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2906 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3106 (sse.md:23556)\n");
+    fprintf (dump_file, "Splitting with gen_split_2906 (sse.md:23556)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42625,15 +39493,15 @@ operands[1] = adjust_address_nv (operands[1], V8QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23556 */
-extern rtx_insn *gen_split_3107 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2907 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3107 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2907 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3107 (sse.md:23556)\n");
+    fprintf (dump_file, "Splitting with gen_split_2907 (sse.md:23556)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42654,15 +39522,15 @@ operands[1] = adjust_address_nv (operands[1], V8QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23556 */
-extern rtx_insn *gen_split_3108 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2908 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3108 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2908 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3108 (sse.md:23556)\n");
+    fprintf (dump_file, "Splitting with gen_split_2908 (sse.md:23556)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42683,15 +39551,15 @@ operands[1] = adjust_address_nv (operands[1], V8QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23556 */
-extern rtx_insn *gen_split_3109 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2909 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3109 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2909 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3109 (sse.md:23556)\n");
+    fprintf (dump_file, "Splitting with gen_split_2909 (sse.md:23556)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42788,15 +39656,15 @@ gen_zero_extendv8qiv8di2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23615 */
-extern rtx_insn *gen_split_3110 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2910 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3110 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2910 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3110 (sse.md:23615)\n");
+    fprintf (dump_file, "Splitting with gen_split_2910 (sse.md:23615)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42817,15 +39685,15 @@ operands[1] = adjust_address_nv (operands[1], V4QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23615 */
-extern rtx_insn *gen_split_3111 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2911 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3111 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2911 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3111 (sse.md:23615)\n");
+    fprintf (dump_file, "Splitting with gen_split_2911 (sse.md:23615)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42846,15 +39714,15 @@ operands[1] = adjust_address_nv (operands[1], V4QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23615 */
-extern rtx_insn *gen_split_3112 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2912 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3112 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2912 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3112 (sse.md:23615)\n");
+    fprintf (dump_file, "Splitting with gen_split_2912 (sse.md:23615)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -42875,15 +39743,15 @@ operands[1] = adjust_address_nv (operands[1], V4QImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23615 */
-extern rtx_insn *gen_split_3113 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2913 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3113 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2913 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3113 (sse.md:23615)\n");
+    fprintf (dump_file, "Splitting with gen_split_2913 (sse.md:23615)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43056,13 +39924,13 @@ gen_zero_extendv2qiv2di2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23694 */
-extern rtx_insn *gen_split_3114 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2914 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3114 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2914 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3114 (sse.md:23694)\n");
+    fprintf (dump_file, "Splitting with gen_split_2914 (sse.md:23694)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43083,13 +39951,13 @@ gen_split_3114 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23694 */
-extern rtx_insn *gen_split_3115 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2915 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3115 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2915 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3115 (sse.md:23694)\n");
+    fprintf (dump_file, "Splitting with gen_split_2915 (sse.md:23694)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43110,13 +39978,13 @@ gen_split_3115 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23694 */
-extern rtx_insn *gen_split_3116 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2916 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3116 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2916 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3116 (sse.md:23694)\n");
+    fprintf (dump_file, "Splitting with gen_split_2916 (sse.md:23694)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43157,15 +40025,15 @@ gen_zero_extendv8hiv8di2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23758 */
-extern rtx_insn *gen_split_3117 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2917 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3117 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2917 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3117 (sse.md:23758)\n");
+    fprintf (dump_file, "Splitting with gen_split_2917 (sse.md:23758)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43186,15 +40054,15 @@ operands[1] = adjust_address_nv (operands[1], V4HImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23758 */
-extern rtx_insn *gen_split_3118 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2918 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3118 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2918 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3118 (sse.md:23758)\n");
+    fprintf (dump_file, "Splitting with gen_split_2918 (sse.md:23758)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43215,15 +40083,15 @@ operands[1] = adjust_address_nv (operands[1], V4HImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23758 */
-extern rtx_insn *gen_split_3119 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2919 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3119 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2919 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3119 (sse.md:23758)\n");
+    fprintf (dump_file, "Splitting with gen_split_2919 (sse.md:23758)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43244,15 +40112,15 @@ operands[1] = adjust_address_nv (operands[1], V4HImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23758 */
-extern rtx_insn *gen_split_3120 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2920 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3120 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2920 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3120 (sse.md:23758)\n");
+    fprintf (dump_file, "Splitting with gen_split_2920 (sse.md:23758)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43349,15 +40217,15 @@ gen_zero_extendv4hiv4di2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23818 */
-extern rtx_insn *gen_split_3121 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2921 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3121 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2921 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3121 (sse.md:23818)\n");
+    fprintf (dump_file, "Splitting with gen_split_2921 (sse.md:23818)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43378,15 +40246,15 @@ operands[1] = adjust_address_nv (operands[1], V2HImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23818 */
-extern rtx_insn *gen_split_3122 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2922 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3122 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2922 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3122 (sse.md:23818)\n");
+    fprintf (dump_file, "Splitting with gen_split_2922 (sse.md:23818)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43407,15 +40275,15 @@ operands[1] = adjust_address_nv (operands[1], V2HImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23818 */
-extern rtx_insn *gen_split_3123 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2923 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3123 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2923 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3123 (sse.md:23818)\n");
+    fprintf (dump_file, "Splitting with gen_split_2923 (sse.md:23818)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43436,15 +40304,15 @@ operands[1] = adjust_address_nv (operands[1], V2HImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23818 */
-extern rtx_insn *gen_split_3124 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2924 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3124 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2924 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3124 (sse.md:23818)\n");
+    fprintf (dump_file, "Splitting with gen_split_2924 (sse.md:23818)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43541,15 +40409,15 @@ gen_zero_extendv2hiv2di2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23864 */
-extern rtx_insn *gen_split_3125 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2925 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3125 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2925 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3125 (sse.md:23864)\n");
+    fprintf (dump_file, "Splitting with gen_split_2925 (sse.md:23864)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43573,15 +40441,15 @@ gen_split_3125 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23881 */
-extern rtx_insn *gen_split_3126 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2926 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3126 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2926 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3126 (sse.md:23881)\n");
+    fprintf (dump_file, "Splitting with gen_split_2926 (sse.md:23881)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43624,15 +40492,15 @@ gen_zero_extendv8siv8di2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23916 */
-extern rtx_insn *gen_split_3127 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2927 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3127 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2927 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3127 (sse.md:23916)\n");
+    fprintf (dump_file, "Splitting with gen_split_2927 (sse.md:23916)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43656,15 +40524,15 @@ gen_split_3127 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23933 */
-extern rtx_insn *gen_split_3128 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2928 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3128 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2928 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3128 (sse.md:23933)\n");
+    fprintf (dump_file, "Splitting with gen_split_2928 (sse.md:23933)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43707,15 +40575,15 @@ gen_zero_extendv4siv4di2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23984 */
-extern rtx_insn *gen_split_3129 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2929 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3129 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2929 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3129 (sse.md:23984)\n");
+    fprintf (dump_file, "Splitting with gen_split_2929 (sse.md:23984)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43736,15 +40604,15 @@ operands[1] = adjust_address_nv (operands[1], V2SImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23984 */
-extern rtx_insn *gen_split_3130 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2930 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3130 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2930 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3130 (sse.md:23984)\n");
+    fprintf (dump_file, "Splitting with gen_split_2930 (sse.md:23984)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43765,15 +40633,15 @@ operands[1] = adjust_address_nv (operands[1], V2SImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23984 */
-extern rtx_insn *gen_split_3131 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2931 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3131 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2931 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3131 (sse.md:23984)\n");
+    fprintf (dump_file, "Splitting with gen_split_2931 (sse.md:23984)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43794,15 +40662,15 @@ operands[1] = adjust_address_nv (operands[1], V2SImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:23984 */
-extern rtx_insn *gen_split_3132 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2932 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3132 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2932 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3132 (sse.md:23984)\n");
+    fprintf (dump_file, "Splitting with gen_split_2932 (sse.md:23984)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43823,15 +40691,15 @@ operands[1] = adjust_address_nv (operands[1], V2SImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24001 */
-extern rtx_insn *gen_split_3133 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2933 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3133 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2933 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3133 (sse.md:24001)\n");
+    fprintf (dump_file, "Splitting with gen_split_2933 (sse.md:24001)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -43866,15 +40734,15 @@ gen_split_3133 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24029 */
-extern rtx_insn *gen_split_3134 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2934 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3134 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2934 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3134 (sse.md:24029)\n");
+    fprintf (dump_file, "Splitting with gen_split_2934 (sse.md:24029)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -44585,15 +41453,15 @@ gen_avx_ptestv4df (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3135 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2935 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3135 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2935 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3135 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2935 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44612,15 +41480,15 @@ gen_split_3135 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3136 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2936 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3136 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2936 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3136 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2936 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44639,15 +41507,15 @@ gen_split_3136 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3137 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2937 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3137 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2937 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3137 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2937 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44666,15 +41534,15 @@ gen_split_3137 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3138 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2938 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3138 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2938 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3138 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2938 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44693,15 +41561,15 @@ gen_split_3138 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3139 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2939 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3139 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2939 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3139 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2939 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44720,15 +41588,15 @@ gen_split_3139 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3140 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2940 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3140 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2940 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3140 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2940 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44747,15 +41615,15 @@ gen_split_3140 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3141 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2941 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3141 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2941 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3141 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2941 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44774,15 +41642,15 @@ gen_split_3141 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3142 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2942 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3142 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2942 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3142 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2942 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44801,15 +41669,15 @@ gen_split_3142 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3143 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2943 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3143 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2943 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3143 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2943 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44828,15 +41696,15 @@ gen_split_3143 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3144 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2944 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3144 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2944 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3144 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2944 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44855,15 +41723,15 @@ gen_split_3144 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3145 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2945 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3145 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2945 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3145 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2945 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44882,15 +41750,15 @@ gen_split_3145 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3146 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2946 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3146 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2946 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3146 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2946 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44909,15 +41777,15 @@ gen_split_3146 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3147 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2947 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3147 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2947 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3147 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2947 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44936,15 +41804,15 @@ gen_split_3147 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24154 */
-extern rtx_insn *gen_split_3148 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2948 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3148 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2948 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3148 (sse.md:24154)\n");
+    fprintf (dump_file, "Splitting with gen_split_2948 (sse.md:24154)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -44963,13 +41831,13 @@ gen_split_3148 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3149 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2949 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3149 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2949 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3149 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2949 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -44983,13 +41851,13 @@ gen_split_3149 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3150 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2950 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3150 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2950 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3150 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2950 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45003,13 +41871,13 @@ gen_split_3150 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3151 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2951 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3151 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2951 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3151 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2951 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45023,13 +41891,13 @@ gen_split_3151 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3152 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2952 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3152 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2952 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3152 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2952 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45043,13 +41911,13 @@ gen_split_3152 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3153 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2953 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3153 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2953 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3153 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2953 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45063,13 +41931,13 @@ gen_split_3153 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3154 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2954 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3154 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2954 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3154 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2954 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45083,13 +41951,13 @@ gen_split_3154 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3155 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2955 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3155 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2955 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3155 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2955 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45103,13 +41971,13 @@ gen_split_3155 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3156 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2956 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3156 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2956 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3156 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2956 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45123,13 +41991,13 @@ gen_split_3156 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3157 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2957 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3157 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2957 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3157 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2957 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45143,13 +42011,13 @@ gen_split_3157 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3158 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2958 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3158 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2958 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3158 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2958 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45163,13 +42031,13 @@ gen_split_3158 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3159 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2959 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3159 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2959 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3159 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2959 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45183,13 +42051,13 @@ gen_split_3159 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3160 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2960 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3160 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2960 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3160 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2960 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45203,13 +42071,13 @@ gen_split_3160 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3161 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2961 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3161 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2961 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3161 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2961 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45223,13 +42091,13 @@ gen_split_3161 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24168 */
-extern rtx_insn *gen_split_3162 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2962 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3162 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_2962 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3162 (sse.md:24168)\n");
+    fprintf (dump_file, "Splitting with gen_split_2962 (sse.md:24168)\n");
   start_sequence ();
   emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
 	17),
@@ -45243,9 +42111,9 @@ gen_split_3162 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3163 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2963 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3163 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2963 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45253,7 +42121,7 @@ gen_split_3163 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3163 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2963 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45281,9 +42149,9 @@ gen_split_3163 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3164 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2964 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3164 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2964 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45291,7 +42159,7 @@ gen_split_3164 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3164 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2964 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45319,9 +42187,9 @@ gen_split_3164 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3165 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2965 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3165 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2965 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45329,7 +42197,7 @@ gen_split_3165 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3165 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2965 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45357,9 +42225,9 @@ gen_split_3165 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3166 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2966 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3166 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2966 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45367,7 +42235,7 @@ gen_split_3166 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3166 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2966 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45395,9 +42263,9 @@ gen_split_3166 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3167 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2967 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3167 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2967 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45405,7 +42273,7 @@ gen_split_3167 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3167 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2967 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45433,9 +42301,9 @@ gen_split_3167 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3168 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2968 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3168 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2968 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45443,7 +42311,7 @@ gen_split_3168 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3168 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2968 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45471,9 +42339,9 @@ gen_split_3168 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3169 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2969 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3169 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2969 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45481,7 +42349,7 @@ gen_split_3169 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3169 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2969 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45509,9 +42377,9 @@ gen_split_3169 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3170 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2970 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3170 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2970 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45519,7 +42387,7 @@ gen_split_3170 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3170 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2970 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45547,9 +42415,9 @@ gen_split_3170 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3171 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2971 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3171 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2971 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45557,7 +42425,7 @@ gen_split_3171 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3171 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2971 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45585,9 +42453,9 @@ gen_split_3171 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3172 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2972 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3172 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2972 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45595,7 +42463,7 @@ gen_split_3172 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3172 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2972 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45623,9 +42491,9 @@ gen_split_3172 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3173 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2973 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3173 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2973 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45633,7 +42501,7 @@ gen_split_3173 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3173 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2973 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45661,9 +42529,9 @@ gen_split_3173 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3174 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2974 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3174 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2974 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45671,7 +42539,7 @@ gen_split_3174 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3174 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2974 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45699,9 +42567,9 @@ gen_split_3174 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3175 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2975 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3175 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2975 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45709,7 +42577,7 @@ gen_split_3175 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3175 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2975 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45737,9 +42605,9 @@ gen_split_3175 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3176 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2976 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3176 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2976 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45747,7 +42615,7 @@ gen_split_3176 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3176 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2976 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45775,9 +42643,9 @@ gen_split_3176 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3177 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2977 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3177 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2977 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45785,7 +42653,7 @@ gen_split_3177 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3177 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2977 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45813,9 +42681,9 @@ gen_split_3177 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3178 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2978 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3178 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2978 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45823,7 +42691,7 @@ gen_split_3178 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3178 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2978 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45851,9 +42719,9 @@ gen_split_3178 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3179 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2979 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3179 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2979 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45861,7 +42729,7 @@ gen_split_3179 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3179 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2979 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45889,9 +42757,9 @@ gen_split_3179 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3180 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2980 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3180 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2980 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45899,7 +42767,7 @@ gen_split_3180 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3180 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2980 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45927,9 +42795,9 @@ gen_split_3180 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3181 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2981 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3181 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2981 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45937,7 +42805,7 @@ gen_split_3181 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3181 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2981 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -45965,9 +42833,9 @@ gen_split_3181 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3182 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2982 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3182 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2982 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -45975,7 +42843,7 @@ gen_split_3182 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3182 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2982 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46003,9 +42871,9 @@ gen_split_3182 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3183 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2983 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3183 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2983 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46013,7 +42881,7 @@ gen_split_3183 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3183 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2983 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46041,9 +42909,9 @@ gen_split_3183 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3184 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2984 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3184 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2984 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46051,7 +42919,7 @@ gen_split_3184 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3184 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2984 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46079,9 +42947,9 @@ gen_split_3184 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3185 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2985 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3185 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2985 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46089,7 +42957,7 @@ gen_split_3185 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3185 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2985 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46117,9 +42985,9 @@ gen_split_3185 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3186 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2986 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3186 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2986 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46127,7 +42995,7 @@ gen_split_3186 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3186 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2986 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46155,9 +43023,9 @@ gen_split_3186 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3187 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2987 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3187 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2987 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46165,7 +43033,7 @@ gen_split_3187 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3187 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2987 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46193,9 +43061,9 @@ gen_split_3187 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3188 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2988 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3188 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2988 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46203,7 +43071,7 @@ gen_split_3188 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3188 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2988 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46231,9 +43099,9 @@ gen_split_3188 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3189 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2989 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3189 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2989 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46241,7 +43109,7 @@ gen_split_3189 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3189 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2989 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46269,9 +43137,9 @@ gen_split_3189 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3190 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2990 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3190 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2990 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46279,7 +43147,7 @@ gen_split_3190 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3190 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2990 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46307,9 +43175,9 @@ gen_split_3190 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3191 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2991 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3191 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2991 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46317,7 +43185,7 @@ gen_split_3191 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3191 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2991 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46345,9 +43213,9 @@ gen_split_3191 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3192 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2992 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3192 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2992 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46355,7 +43223,7 @@ gen_split_3192 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3192 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2992 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46383,9 +43251,9 @@ gen_split_3192 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3193 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2993 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3193 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2993 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46393,7 +43261,7 @@ gen_split_3193 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3193 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2993 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46421,9 +43289,9 @@ gen_split_3193 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3194 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2994 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3194 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2994 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46431,7 +43299,7 @@ gen_split_3194 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3194 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2994 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46459,9 +43327,9 @@ gen_split_3194 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3195 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2995 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3195 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2995 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46469,7 +43337,7 @@ gen_split_3195 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3195 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2995 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46497,9 +43365,9 @@ gen_split_3195 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3196 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2996 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3196 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2996 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46507,7 +43375,7 @@ gen_split_3196 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3196 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2996 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46535,9 +43403,9 @@ gen_split_3196 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3197 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2997 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3197 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2997 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46545,7 +43413,7 @@ gen_split_3197 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3197 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2997 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46573,9 +43441,9 @@ gen_split_3197 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3198 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2998 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3198 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2998 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46583,7 +43451,7 @@ gen_split_3198 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3198 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2998 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46611,9 +43479,9 @@ gen_split_3198 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3199 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_2999 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3199 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_2999 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46621,7 +43489,7 @@ gen_split_3199 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3199 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_2999 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46649,9 +43517,9 @@ gen_split_3199 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3200 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3000 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3200 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3000 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46659,7 +43527,7 @@ gen_split_3200 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3200 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_3000 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46687,9 +43555,9 @@ gen_split_3200 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3201 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3001 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3201 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3001 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46697,7 +43565,7 @@ gen_split_3201 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3201 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_3001 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46725,9 +43593,9 @@ gen_split_3201 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3202 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3002 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3202 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3002 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46735,7 +43603,7 @@ gen_split_3202 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3202 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_3002 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46763,9 +43631,9 @@ gen_split_3202 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3203 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3003 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3203 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3003 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46773,7 +43641,7 @@ gen_split_3203 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3203 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_3003 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -46801,9 +43669,9 @@ gen_split_3203 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3204 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3004 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3204 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3004 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -46811,539 +43679,7 @@ gen_split_3204 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3204 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3205 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3205 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3205 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3206 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3206 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3206 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3207 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3207 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3207 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3208 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3208 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3208 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3209 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3209 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3209 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3210 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3210 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3210 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3211 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3211 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3211 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3212 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3212 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3212 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3213 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3213 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3213 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3214 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3214 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3214 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3215 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3215 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3215 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3216 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3216 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3216 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3217 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3217 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3217 (sse.md:24180)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  emit_insn (gen_rtx_SET (gen_rtx_REG (CCCmode,
-	17),
-	gen_rtx_UNSPEC (CCCmode,
-	gen_rtvec (2,
-		operand1,
-		operand2),
-	126)));
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_fmt_ee (GET_CODE (operand3), GET_MODE (operand3),
-		gen_rtx_REG (CCCmode,
-	17),
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:24180 */
-extern rtx_insn *gen_split_3218 (rtx_insn *, rtx *);
-rtx_insn *
-gen_split_3218 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3218 (sse.md:24180)\n");
+    fprintf (dump_file, "Splitting with gen_split_3004 (sse.md:24180)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47371,9 +43707,9 @@ gen_split_3218 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3219 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3005 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3219 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3005 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47381,7 +43717,7 @@ gen_split_3219 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3219 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3005 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47410,9 +43746,9 @@ gen_split_3219 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3220 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3006 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3220 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3006 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47420,7 +43756,7 @@ gen_split_3220 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3220 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3006 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47449,9 +43785,9 @@ gen_split_3220 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3221 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3007 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3221 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3007 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47459,7 +43795,7 @@ gen_split_3221 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3221 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3007 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47488,9 +43824,9 @@ gen_split_3221 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3222 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3008 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3222 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3008 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47498,7 +43834,7 @@ gen_split_3222 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3222 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3008 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47527,9 +43863,9 @@ gen_split_3222 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3223 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3009 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3223 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3009 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47537,7 +43873,7 @@ gen_split_3223 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3223 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3009 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47566,9 +43902,9 @@ gen_split_3223 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3224 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3010 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3224 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3010 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47576,7 +43912,7 @@ gen_split_3224 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3224 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3010 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47605,9 +43941,9 @@ gen_split_3224 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3225 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3011 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3225 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3011 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47615,7 +43951,7 @@ gen_split_3225 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3225 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3011 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47644,9 +43980,9 @@ gen_split_3225 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3226 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3012 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3226 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3012 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47654,7 +43990,7 @@ gen_split_3226 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3226 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3012 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47683,9 +44019,9 @@ gen_split_3226 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3227 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3013 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3227 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3013 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47693,7 +44029,7 @@ gen_split_3227 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3227 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3013 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47722,9 +44058,9 @@ gen_split_3227 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3228 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3014 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3228 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3014 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47732,7 +44068,7 @@ gen_split_3228 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3228 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3014 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47761,9 +44097,9 @@ gen_split_3228 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3229 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3015 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3229 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3015 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47771,7 +44107,7 @@ gen_split_3229 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3229 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3015 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47800,9 +44136,9 @@ gen_split_3229 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3230 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3016 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3230 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3016 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47810,7 +44146,7 @@ gen_split_3230 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3230 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3016 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47839,9 +44175,9 @@ gen_split_3230 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3231 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3017 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3231 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3017 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47849,7 +44185,7 @@ gen_split_3231 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3231 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3017 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47878,9 +44214,9 @@ gen_split_3231 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24195 */
-extern rtx_insn *gen_split_3232 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3018 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3232 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3018 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47888,7 +44224,7 @@ gen_split_3232 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3232 (sse.md:24195)\n");
+    fprintf (dump_file, "Splitting with gen_split_3018 (sse.md:24195)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47917,9 +44253,9 @@ gen_split_3232 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3233 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3019 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3233 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3019 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47927,7 +44263,7 @@ gen_split_3233 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3233 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3019 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47958,9 +44294,9 @@ gen_split_3233 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3234 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3020 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3234 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3020 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -47968,7 +44304,7 @@ gen_split_3234 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3234 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3020 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -47999,9 +44335,9 @@ gen_split_3234 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3235 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3021 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3235 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3021 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48009,7 +44345,7 @@ gen_split_3235 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3235 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3021 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -48040,9 +44376,9 @@ gen_split_3235 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3236 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3022 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3236 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3022 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48050,7 +44386,7 @@ gen_split_3236 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3236 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3022 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -48081,9 +44417,9 @@ gen_split_3236 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3237 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3023 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3237 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3023 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48091,7 +44427,7 @@ gen_split_3237 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3237 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3023 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -48122,9 +44458,9 @@ gen_split_3237 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3238 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3024 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3238 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3024 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48132,7 +44468,7 @@ gen_split_3238 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3238 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3024 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -48163,9 +44499,9 @@ gen_split_3238 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3239 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3025 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3239 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3025 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48173,7 +44509,7 @@ gen_split_3239 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3239 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3025 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -48204,9 +44540,9 @@ gen_split_3239 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3240 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3026 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3240 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3026 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48214,7 +44550,7 @@ gen_split_3240 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3240 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3026 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -48245,9 +44581,9 @@ gen_split_3240 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3241 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3027 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3241 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3027 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48255,7 +44591,7 @@ gen_split_3241 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3241 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3027 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -48286,9 +44622,9 @@ gen_split_3241 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3242 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3028 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3242 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3028 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48296,7 +44632,7 @@ gen_split_3242 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3242 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3028 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -48327,9 +44663,9 @@ gen_split_3242 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3243 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3029 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3243 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3029 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48337,7 +44673,7 @@ gen_split_3243 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3243 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3029 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -48368,9 +44704,9 @@ gen_split_3243 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3244 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3030 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3244 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3030 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48378,7 +44714,7 @@ gen_split_3244 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3244 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3030 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -48409,9 +44745,9 @@ gen_split_3244 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3245 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3031 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3245 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3031 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48419,7 +44755,7 @@ gen_split_3245 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3245 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3031 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -48450,9 +44786,9 @@ gen_split_3245 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24211 */
-extern rtx_insn *gen_split_3246 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3032 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3246 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3032 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -48460,7 +44796,7 @@ gen_split_3246 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3246 (sse.md:24211)\n");
+    fprintf (dump_file, "Splitting with gen_split_3032 (sse.md:24211)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -52413,13 +48749,13 @@ gen_roundv2df2_vec_pack_sfix (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24604 */
-extern rtx_insn *gen_split_3247 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3033 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3247 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3033 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3247 (sse.md:24604)\n");
+    fprintf (dump_file, "Splitting with gen_split_3033 (sse.md:24604)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -52458,13 +48794,13 @@ gen_split_3247 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:24747 */
-extern rtx_insn *gen_split_3248 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3034 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3248 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3034 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3248 (sse.md:24747)\n");
+    fprintf (dump_file, "Splitting with gen_split_3034 (sse.md:24747)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -52948,9 +49284,9 @@ gen_exp2v8df2 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3249 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3035 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3249 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3035 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -52958,7 +49294,7 @@ gen_split_3249 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3249 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3035 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -52979,9 +49315,9 @@ gen_split_3249 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3250 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3036 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3250 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3036 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -52989,7 +49325,7 @@ gen_split_3250 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3250 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3036 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53010,9 +49346,9 @@ gen_split_3250 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3251 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3037 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3251 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3037 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53020,7 +49356,7 @@ gen_split_3251 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3251 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3037 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53041,9 +49377,9 @@ gen_split_3251 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3252 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3038 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3252 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3038 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53051,7 +49387,7 @@ gen_split_3252 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3252 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3038 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53072,9 +49408,9 @@ gen_split_3252 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3253 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3039 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3253 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3039 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53082,7 +49418,7 @@ gen_split_3253 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3253 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3039 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53103,9 +49439,9 @@ gen_split_3253 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3254 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3040 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3254 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3040 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53113,7 +49449,7 @@ gen_split_3254 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3254 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3040 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53134,9 +49470,9 @@ gen_split_3254 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3255 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3041 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3255 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3041 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53144,7 +49480,7 @@ gen_split_3255 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3255 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3041 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53165,9 +49501,9 @@ gen_split_3255 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3256 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3042 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3256 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3042 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53175,7 +49511,7 @@ gen_split_3256 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3256 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3042 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53196,9 +49532,9 @@ gen_split_3256 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3257 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3043 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3257 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3043 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53206,7 +49542,7 @@ gen_split_3257 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3257 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3043 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53227,9 +49563,9 @@ gen_split_3257 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3258 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3044 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3258 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3044 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53237,7 +49573,7 @@ gen_split_3258 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3258 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3044 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53258,9 +49594,9 @@ gen_split_3258 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3259 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3045 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3259 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3045 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53268,7 +49604,7 @@ gen_split_3259 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3259 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3045 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53289,9 +49625,9 @@ gen_split_3259 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3260 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3046 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3260 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3046 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53299,7 +49635,7 @@ gen_split_3260 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3260 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3046 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53320,9 +49656,9 @@ gen_split_3260 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3261 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3047 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3261 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3047 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53330,7 +49666,7 @@ gen_split_3261 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3261 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3047 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53351,9 +49687,9 @@ gen_split_3261 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3262 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3048 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3262 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3048 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53361,7 +49697,7 @@ gen_split_3262 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3262 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3048 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53382,9 +49718,9 @@ gen_split_3262 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3263 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3049 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3263 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3049 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53392,7 +49728,7 @@ gen_split_3263 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3263 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3049 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53413,9 +49749,9 @@ gen_split_3263 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25269 */
-extern rtx_insn *gen_split_3264 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3050 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3264 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3050 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53423,7 +49759,7 @@ gen_split_3264 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3264 (sse.md:25269)\n");
+    fprintf (dump_file, "Splitting with gen_split_3050 (sse.md:25269)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53444,9 +49780,9 @@ gen_split_3264 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3265 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3051 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3265 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3051 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53454,7 +49790,7 @@ gen_split_3265 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3265 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3051 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53475,9 +49811,9 @@ gen_split_3265 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3266 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3052 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3266 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3052 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53485,7 +49821,7 @@ gen_split_3266 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3266 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3052 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53506,9 +49842,9 @@ gen_split_3266 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3267 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3053 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3267 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3053 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53516,7 +49852,7 @@ gen_split_3267 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3267 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3053 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53537,9 +49873,9 @@ gen_split_3267 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3268 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3054 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3268 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3054 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53547,7 +49883,7 @@ gen_split_3268 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3268 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3054 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53568,9 +49904,9 @@ gen_split_3268 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3269 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3055 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3269 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3055 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53578,7 +49914,7 @@ gen_split_3269 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3269 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3055 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53599,9 +49935,9 @@ gen_split_3269 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3270 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3056 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3270 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3056 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53609,7 +49945,7 @@ gen_split_3270 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3270 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3056 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53630,9 +49966,9 @@ gen_split_3270 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3271 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3057 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3271 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3057 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53640,7 +49976,7 @@ gen_split_3271 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3271 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3057 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53661,9 +49997,9 @@ gen_split_3271 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3272 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3058 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3272 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3058 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53671,7 +50007,7 @@ gen_split_3272 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3272 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3058 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53692,9 +50028,9 @@ gen_split_3272 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3273 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3059 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3273 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3059 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53702,7 +50038,7 @@ gen_split_3273 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3273 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3059 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53723,9 +50059,9 @@ gen_split_3273 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3274 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3060 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3274 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3060 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53733,7 +50069,7 @@ gen_split_3274 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3274 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3060 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53754,9 +50090,9 @@ gen_split_3274 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3275 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3061 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3275 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3061 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53764,7 +50100,7 @@ gen_split_3275 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3275 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3061 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53785,9 +50121,9 @@ gen_split_3275 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3276 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3062 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3276 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3062 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53795,7 +50131,7 @@ gen_split_3276 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3276 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3062 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53816,9 +50152,9 @@ gen_split_3276 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3277 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3063 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3277 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3063 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53826,7 +50162,7 @@ gen_split_3277 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3277 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3063 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53847,9 +50183,9 @@ gen_split_3277 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3278 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3064 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3278 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3064 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53857,7 +50193,7 @@ gen_split_3278 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3278 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3064 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53878,9 +50214,9 @@ gen_split_3278 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3279 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3065 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3279 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3065 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53888,7 +50224,7 @@ gen_split_3279 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3279 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3065 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -53909,9 +50245,9 @@ gen_split_3279 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:25281 */
-extern rtx_insn *gen_split_3280 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3066 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3280 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3066 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -53919,7 +50255,7 @@ gen_split_3280 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3280 (sse.md:25281)\n");
+    fprintf (dump_file, "Splitting with gen_split_3066 (sse.md:25281)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -56876,15 +53212,15 @@ gen_avx_vzeroupper (void)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:26569 */
-extern rtx_insn *gen_split_3281 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3067 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3281 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3067 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3281 (sse.md:26569)\n");
+    fprintf (dump_file, "Splitting with gen_split_3067 (sse.md:26569)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -56953,15 +53289,15 @@ gen_split_3281 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:26569 */
-extern rtx_insn *gen_split_3282 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3068 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3282 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3068 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3282 (sse.md:26569)\n");
+    fprintf (dump_file, "Splitting with gen_split_3068 (sse.md:26569)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58080,15 +54416,15 @@ gen_avx512f_permv8di_mask (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27087 */
-extern rtx_insn *gen_split_3283 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3069 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3283 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3069 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3283 (sse.md:27087)\n");
+    fprintf (dump_file, "Splitting with gen_split_3069 (sse.md:27087)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58110,13 +54446,13 @@ operands[1] = adjust_address_nv (operands[1], V2DImode, 0);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27148 */
-extern rtx_insn *gen_split_3284 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3070 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3284 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3070 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3284 (sse.md:27148)\n");
+    fprintf (dump_file, "Splitting with gen_split_3070 (sse.md:27148)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58139,13 +54475,13 @@ gen_split_3284 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27148 */
-extern rtx_insn *gen_split_3285 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3071 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3285 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3071 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3285 (sse.md:27148)\n");
+    fprintf (dump_file, "Splitting with gen_split_3071 (sse.md:27148)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58168,13 +54504,13 @@ gen_split_3285 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27148 */
-extern rtx_insn *gen_split_3286 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3072 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3286 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3072 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3286 (sse.md:27148)\n");
+    fprintf (dump_file, "Splitting with gen_split_3072 (sse.md:27148)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58197,13 +54533,13 @@ gen_split_3286 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27148 */
-extern rtx_insn *gen_split_3287 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3073 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3287 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3073 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3287 (sse.md:27148)\n");
+    fprintf (dump_file, "Splitting with gen_split_3073 (sse.md:27148)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58226,13 +54562,13 @@ gen_split_3287 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27148 */
-extern rtx_insn *gen_split_3288 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3074 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3288 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3074 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3288 (sse.md:27148)\n");
+    fprintf (dump_file, "Splitting with gen_split_3074 (sse.md:27148)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58255,13 +54591,13 @@ gen_split_3288 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27148 */
-extern rtx_insn *gen_split_3289 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3075 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3289 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3075 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3289 (sse.md:27148)\n");
+    fprintf (dump_file, "Splitting with gen_split_3075 (sse.md:27148)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58284,13 +54620,13 @@ gen_split_3289 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27148 */
-extern rtx_insn *gen_split_3290 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3076 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3290 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3076 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3290 (sse.md:27148)\n");
+    fprintf (dump_file, "Splitting with gen_split_3076 (sse.md:27148)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58313,13 +54649,13 @@ gen_split_3290 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27148 */
-extern rtx_insn *gen_split_3291 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3077 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3291 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3077 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3291 (sse.md:27148)\n");
+    fprintf (dump_file, "Splitting with gen_split_3077 (sse.md:27148)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58342,13 +54678,13 @@ gen_split_3291 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27148 */
-extern rtx_insn *gen_split_3292 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3078 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3292 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3078 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3292 (sse.md:27148)\n");
+    fprintf (dump_file, "Splitting with gen_split_3078 (sse.md:27148)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58371,13 +54707,13 @@ gen_split_3292 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27148 */
-extern rtx_insn *gen_split_3293 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3079 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3293 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3079 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3293 (sse.md:27148)\n");
+    fprintf (dump_file, "Splitting with gen_split_3079 (sse.md:27148)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58400,16 +54736,16 @@ gen_split_3293 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27171 */
-extern rtx_insn *gen_split_3294 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3080 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3294 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3080 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3294 (sse.md:27171)\n");
+    fprintf (dump_file, "Splitting with gen_split_3080 (sse.md:27171)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58436,16 +54772,16 @@ operands[2] = gen_lowpart (V4SImode, operands[0]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27171 */
-extern rtx_insn *gen_split_3295 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3081 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3295 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3081 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3295 (sse.md:27171)\n");
+    fprintf (dump_file, "Splitting with gen_split_3081 (sse.md:27171)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58472,16 +54808,16 @@ operands[2] = gen_lowpart (V4SFmode, operands[0]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27171 */
-extern rtx_insn *gen_split_3296 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3082 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3296 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3082 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3296 (sse.md:27171)\n");
+    fprintf (dump_file, "Splitting with gen_split_3082 (sse.md:27171)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -58508,16 +54844,16 @@ operands[2] = gen_lowpart (V2DImode, operands[0]);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27171 */
-extern rtx_insn *gen_split_3297 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3083 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3297 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3083 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx operand2;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3297 (sse.md:27171)\n");
+    fprintf (dump_file, "Splitting with gen_split_3083 (sse.md:27171)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -62939,15 +59275,15 @@ gen_cbranchv2di4 (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27958 */
-extern rtx_insn *gen_split_3298 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3084 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3298 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3084 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3298 (sse.md:27958)\n");
+    fprintf (dump_file, "Splitting with gen_split_3084 (sse.md:27958)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -62973,15 +59309,15 @@ gen_split_3298 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27958 */
-extern rtx_insn *gen_split_3299 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3085 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3299 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3085 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3299 (sse.md:27958)\n");
+    fprintf (dump_file, "Splitting with gen_split_3085 (sse.md:27958)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -63007,15 +59343,15 @@ gen_split_3299 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:27958 */
-extern rtx_insn *gen_split_3300 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3086 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3300 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3086 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3300 (sse.md:27958)\n");
+    fprintf (dump_file, "Splitting with gen_split_3086 (sse.md:27958)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66337,9 +62673,9 @@ gen_cond_ashrv2di (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3301 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3087 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3301 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3087 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66349,7 +62685,7 @@ gen_split_3301 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3301 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3087 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66382,9 +62718,9 @@ gen_split_3301 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3302 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3088 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3302 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3088 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66394,7 +62730,7 @@ gen_split_3302 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3302 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3088 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66427,9 +62763,9 @@ gen_split_3302 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3303 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3089 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3303 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3089 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66439,7 +62775,7 @@ gen_split_3303 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3303 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3089 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66472,9 +62808,9 @@ gen_split_3303 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3304 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3090 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3304 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3090 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66484,7 +62820,7 @@ gen_split_3304 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3304 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3090 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66517,9 +62853,9 @@ gen_split_3304 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3305 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3091 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3305 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3091 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66529,7 +62865,7 @@ gen_split_3305 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3305 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3091 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66562,9 +62898,9 @@ gen_split_3305 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3306 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3092 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3306 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3092 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66574,7 +62910,7 @@ gen_split_3306 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3306 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3092 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66607,9 +62943,9 @@ gen_split_3306 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3307 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3093 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3307 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3093 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66619,7 +62955,7 @@ gen_split_3307 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3307 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3093 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66652,9 +62988,9 @@ gen_split_3307 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3308 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3094 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3308 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3094 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66664,7 +63000,7 @@ gen_split_3308 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3308 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3094 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66697,9 +63033,9 @@ gen_split_3308 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3309 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3095 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3309 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3095 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66709,7 +63045,7 @@ gen_split_3309 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3309 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3095 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66742,9 +63078,9 @@ gen_split_3309 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3310 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3096 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3310 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3096 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66754,7 +63090,7 @@ gen_split_3310 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3310 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3096 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66787,9 +63123,9 @@ gen_split_3310 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3311 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3097 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3311 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3097 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66799,7 +63135,7 @@ gen_split_3311 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3311 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3097 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66832,9 +63168,9 @@ gen_split_3311 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3312 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3098 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3312 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3098 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66844,7 +63180,7 @@ gen_split_3312 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3312 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3098 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66877,9 +63213,9 @@ gen_split_3312 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3313 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3099 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3313 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3099 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66889,7 +63225,7 @@ gen_split_3313 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3313 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3099 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66922,9 +63258,9 @@ gen_split_3313 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3314 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3100 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3314 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3100 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66934,7 +63270,7 @@ gen_split_3314 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3314 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3100 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -66967,9 +63303,9 @@ gen_split_3314 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3315 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3101 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3315 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3101 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -66979,7 +63315,7 @@ gen_split_3315 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3315 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3101 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -67012,9 +63348,9 @@ gen_split_3315 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3316 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3102 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3316 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3102 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -67024,7 +63360,7 @@ gen_split_3316 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3316 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3102 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -67057,9 +63393,9 @@ gen_split_3316 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3317 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3103 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3317 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3103 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -67069,7 +63405,7 @@ gen_split_3317 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3317 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3103 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -67102,9 +63438,9 @@ gen_split_3317 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3318 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3104 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3318 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3104 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -67114,7 +63450,7 @@ gen_split_3318 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3318 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3104 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -67147,9 +63483,9 @@ gen_split_3318 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3319 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3105 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3319 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3105 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -67159,7 +63495,7 @@ gen_split_3319 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3319 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3105 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -67192,9 +63528,9 @@ gen_split_3319 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3320 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3106 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3320 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3106 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -67204,7 +63540,7 @@ gen_split_3320 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3320 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3106 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -67237,9 +63573,9 @@ gen_split_3320 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28203 */
-extern rtx_insn *gen_split_3321 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3107 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3321 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3107 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -67249,7 +63585,7 @@ gen_split_3321 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3321 (sse.md:28203)\n");
+    fprintf (dump_file, "Splitting with gen_split_3107 (sse.md:28203)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -71843,13 +68179,13 @@ operands[2] = CONST0_RTX (V2DFmode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3322 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3108 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3322 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3108 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3322 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3108 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -71906,13 +68242,13 @@ gen_split_3322 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3323 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3109 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3323 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3109 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3323 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3109 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -71969,13 +68305,13 @@ gen_split_3323 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3324 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3110 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3324 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3110 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3324 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3110 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72032,13 +68368,13 @@ gen_split_3324 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3325 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3111 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3325 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3111 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3325 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3111 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72095,13 +68431,13 @@ gen_split_3325 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3326 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3112 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3326 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3112 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3326 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3112 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72158,13 +68494,13 @@ gen_split_3326 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3327 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3113 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3327 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3113 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3327 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3113 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72221,13 +68557,13 @@ gen_split_3327 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3328 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3114 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3328 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3114 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3328 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3114 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72284,13 +68620,13 @@ gen_split_3328 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3329 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3115 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3329 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3115 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3329 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3115 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72347,13 +68683,13 @@ gen_split_3329 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3330 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3116 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3330 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3116 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3330 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3116 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72410,13 +68746,13 @@ gen_split_3330 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3331 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3117 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3331 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3117 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3331 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3117 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72473,13 +68809,13 @@ gen_split_3331 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3332 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3118 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3332 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3118 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3332 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3118 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72536,13 +68872,13 @@ gen_split_3332 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3333 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3119 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3333 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3119 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3333 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3119 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72599,13 +68935,13 @@ gen_split_3333 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3334 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3120 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3334 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3120 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3334 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3120 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72662,13 +68998,13 @@ gen_split_3334 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3335 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3121 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3335 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3121 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3335 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3121 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72725,13 +69061,13 @@ gen_split_3335 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3336 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3122 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3336 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3122 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3336 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3122 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72788,13 +69124,13 @@ gen_split_3336 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3337 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3123 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3337 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3123 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3337 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3123 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72851,13 +69187,13 @@ gen_split_3337 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3338 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3124 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3338 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3124 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3338 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3124 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -72914,13 +69250,13 @@ gen_split_3338 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:28890 */
-extern rtx_insn *gen_split_3339 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3125 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3339 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3125 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3339 (sse.md:28890)\n");
+    fprintf (dump_file, "Splitting with gen_split_3125 (sse.md:28890)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -73229,15 +69565,15 @@ operands[2] = CONST0_RTX (V8HImode);
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:29278 */
-extern rtx_insn *gen_split_3340 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3126 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3340 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3126 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3340 (sse.md:29278)\n");
+    fprintf (dump_file, "Splitting with gen_split_3126 (sse.md:29278)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -73263,15 +69599,15 @@ gen_split_3340 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:29278 */
-extern rtx_insn *gen_split_3341 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3127 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3341 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3127 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3341 (sse.md:29278)\n");
+    fprintf (dump_file, "Splitting with gen_split_3127 (sse.md:29278)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -73297,15 +69633,15 @@ gen_split_3341 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:29278 */
-extern rtx_insn *gen_split_3342 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3128 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3342 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3128 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3342 (sse.md:29278)\n");
+    fprintf (dump_file, "Splitting with gen_split_3128 (sse.md:29278)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -73331,15 +69667,15 @@ gen_split_3342 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:29297 */
-extern rtx_insn *gen_split_3343 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3129 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3343 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3129 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3343 (sse.md:29297)\n");
+    fprintf (dump_file, "Splitting with gen_split_3129 (sse.md:29297)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -73365,15 +69701,15 @@ gen_split_3343 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:29297 */
-extern rtx_insn *gen_split_3344 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3130 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3344 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3130 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3344 (sse.md:29297)\n");
+    fprintf (dump_file, "Splitting with gen_split_3130 (sse.md:29297)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -73399,15 +69735,15 @@ gen_split_3344 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:29297 */
-extern rtx_insn *gen_split_3345 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3131 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3345 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3131 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3345 (sse.md:29297)\n");
+    fprintf (dump_file, "Splitting with gen_split_3131 (sse.md:29297)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -73791,13 +70127,13 @@ gen_movv64si (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:29437 */
-extern rtx_insn *gen_split_3346 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3132 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3346 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3132 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3346 (sse.md:29437)\n");
+    fprintf (dump_file, "Splitting with gen_split_3132 (sse.md:29437)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -73825,13 +70161,13 @@ gen_split_3346 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UN
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:29437 */
-extern rtx_insn *gen_split_3347 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3133 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3347 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3133 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3347 (sse.md:29437)\n");
+    fprintf (dump_file, "Splitting with gen_split_3133 (sse.md:29437)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -75690,9 +72026,9 @@ gen_movp2hi (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:30341 */
-extern rtx_insn *gen_split_3348 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3134 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3348 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3134 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -75700,7 +72036,7 @@ gen_split_3348 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3348 (sse.md:30341)\n");
+    fprintf (dump_file, "Splitting with gen_split_3134 (sse.md:30341)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -75728,9 +72064,9 @@ gen_split_3348 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:30341 */
-extern rtx_insn *gen_split_3349 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3135 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3349 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_split_3135 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -75738,7 +72074,7 @@ gen_split_3349 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand3;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3349 (sse.md:30341)\n");
+    fprintf (dump_file, "Splitting with gen_split_3135 (sse.md:30341)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -76910,117 +73246,6 @@ gen_vec_duplicatev4si (rtx operand0,
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:30761 */
-rtx
-gen_vec_duplicatev8di (rtx operand0,
-	rtx operand1)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[2];
-    operands[0] = operand0;
-    operands[1] = operand1;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 30766 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  if (!ix86_expand_vector_init_duplicate (false,
-					  GET_MODE (operands[0]),
-					  operands[0],
-					  operands[1]))
-    gcc_unreachable ();
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_DUPLICATE (V8DImode,
-	operand1)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:30761 */
-rtx
-gen_vec_duplicatev4di (rtx operand0,
-	rtx operand1)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[2];
-    operands[0] = operand0;
-    operands[1] = operand1;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 30766 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  if (!ix86_expand_vector_init_duplicate (false,
-					  GET_MODE (operands[0]),
-					  operands[0],
-					  operands[1]))
-    gcc_unreachable ();
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_DUPLICATE (V4DImode,
-	operand1)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sse.md:30761 */
-rtx
-gen_vec_duplicatev2di (rtx operand0,
-	rtx operand1)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[2];
-    operands[0] = operand0;
-    operands[1] = operand1;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 30766 "../gcc-14.1.0/gcc/config/i386/sse.md"
-{
-  if (!ix86_expand_vector_init_duplicate (false,
-					  GET_MODE (operands[0]),
-					  operands[0],
-					  operands[1]))
-    gcc_unreachable ();
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-  }
-  emit_insn (gen_rtx_SET (operand0,
-	gen_rtx_VEC_DUPLICATE (V2DImode,
-	operand1)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sse.md:30788 */
 rtx
 gen_sdot_prodv32qi (rtx operand0,
@@ -78016,13 +74241,13 @@ gen_atomic_loaddi (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:190 */
-extern rtx_insn *gen_split_3350 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3136 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3350 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3136 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3350 (sync.md:190)\n");
+    fprintf (dump_file, "Splitting with gen_split_3136 (sync.md:190)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -78351,13 +74576,13 @@ gen_atomic_storedi (rtx operand0,
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:279 */
-extern rtx_insn *gen_split_3351 (rtx_insn *, rtx *);
+extern rtx_insn *gen_split_3137 (rtx_insn *, rtx *);
 rtx_insn *
-gen_split_3351 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
+gen_split_3137 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands ATTRIBUTE_UNUSED)
 {
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_split_3351 (sync.md:279)\n");
+    fprintf (dump_file, "Splitting with gen_split_3137 (sync.md:279)\n");
   start_sequence ();
 #define FAIL return (end_sequence (), _val)
 #define DONE return (_val = get_insns (), end_sequence (), _val)
@@ -78712,100 +74937,10 @@ gen_atomic_compare_and_swapdi (rtx operand0,
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:404 */
-rtx
-gen_atomic_compare_and_swapti (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4,
-	rtx operand5,
-	rtx operand6,
-	rtx operand7)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[8];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-    operands[5] = operand5;
-    operands[6] = operand6;
-    operands[7] = operand7;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 414 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  int doubleword = !(TImode == DImode && TARGET_64BIT);
-  if (TARGET_RELAX_CMPXCHG_LOOP)
-  {
-    ix86_expand_cmpxchg_loop (&operands[0], operands[1], operands[2],
-			      operands[3], operands[4], operands[6],
-			      doubleword, NULL);
-  }
-  else
-  {
-    if (!doubleword)
-      {
-	emit_insn
-	  (gen_atomic_compare_and_swapdi_1
-	   (operands[1], operands[2], operands[3], operands[4], operands[6]));
-      }
-    else
-      {
-	machine_mode hmode = DImode;
-
-	emit_insn
-	  (gen_atomic_compare_and_swapti_doubleword
-	   (operands[1], operands[2], operands[3],
-	    gen_lowpart (hmode, operands[4]), gen_highpart (hmode, operands[4]),
-	    operands[6]));
-      }
-
-    ix86_expand_setcc (operands[0], EQ, gen_rtx_REG (CCZmode, FLAGS_REG),
-		       const0_rtx);
-  }
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-    operand5 = operands[5];
-    (void) operand5;
-    operand6 = operands[6];
-    (void) operand6;
-    operand7 = operands[7];
-    (void) operand7;
-  }
-  emit (operand0, true);
-  emit (operand1, true);
-  emit (operand2, true);
-  emit (operand3, true);
-  emit (operand4, true);
-  emit (operand5, true);
-  emit (operand6, true);
-  emit (operand7, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:484 */
-extern rtx_insn *gen_peephole2_397 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_372 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_397 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_372 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -78814,7 +74949,7 @@ gen_peephole2_397 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_397 (sync.md:484)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_372 (sync.md:484)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -78855,9 +74990,9 @@ gen_peephole2_397 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:484 */
-extern rtx_insn *gen_peephole2_398 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_373 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_398 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_373 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -78866,7 +75001,7 @@ gen_peephole2_398 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_398 (sync.md:484)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_373 (sync.md:484)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -78907,9 +75042,9 @@ gen_peephole2_398 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:484 */
-extern rtx_insn *gen_peephole2_399 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_374 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_399 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_374 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -78918,7 +75053,7 @@ gen_peephole2_399 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_399 (sync.md:484)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_374 (sync.md:484)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -78959,9 +75094,9 @@ gen_peephole2_399 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:484 */
-extern rtx_insn *gen_peephole2_400 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_375 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_400 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_375 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -78970,7 +75105,7 @@ gen_peephole2_400 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_400 (sync.md:484)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_375 (sync.md:484)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -79011,9 +75146,9 @@ gen_peephole2_400 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:519 */
-extern rtx_insn *gen_peephole2_401 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_376 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_401 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_376 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -79023,7 +75158,7 @@ gen_peephole2_401 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_401 (sync.md:519)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_376 (sync.md:519)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -79069,9 +75204,9 @@ gen_peephole2_401 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:519 */
-extern rtx_insn *gen_peephole2_402 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_377 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_402 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_377 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -79081,7 +75216,7 @@ gen_peephole2_402 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_402 (sync.md:519)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_377 (sync.md:519)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -79127,9 +75262,9 @@ gen_peephole2_402 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:519 */
-extern rtx_insn *gen_peephole2_403 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_378 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_403 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_378 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -79139,7 +75274,7 @@ gen_peephole2_403 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_403 (sync.md:519)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_378 (sync.md:519)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -79185,9 +75320,9 @@ gen_peephole2_403 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:519 */
-extern rtx_insn *gen_peephole2_404 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_379 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_404 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_379 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -79197,7 +75332,7 @@ gen_peephole2_404 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_404 (sync.md:519)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_379 (sync.md:519)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -79243,9 +75378,9 @@ gen_peephole2_404 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:519 */
-extern rtx_insn *gen_peephole2_405 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_380 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_405 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_380 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -79255,7 +75390,7 @@ gen_peephole2_405 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_405 (sync.md:519)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_380 (sync.md:519)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -79301,9 +75436,9 @@ gen_peephole2_405 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:519 */
-extern rtx_insn *gen_peephole2_406 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_381 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_406 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_381 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -79313,7 +75448,7 @@ gen_peephole2_406 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_406 (sync.md:519)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_381 (sync.md:519)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -79359,9 +75494,9 @@ gen_peephole2_406 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:519 */
-extern rtx_insn *gen_peephole2_407 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_382 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_407 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_382 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -79371,7 +75506,7 @@ gen_peephole2_407 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_407 (sync.md:519)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_382 (sync.md:519)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -79417,9 +75552,9 @@ gen_peephole2_407 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:519 */
-extern rtx_insn *gen_peephole2_408 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_383 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_408 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_383 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -79429,7 +75564,7 @@ gen_peephole2_408 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand5;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_408 (sync.md:519)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_383 (sync.md:519)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -80689,147 +76824,6 @@ gen_atomic_fetch_xordi (rtx operand0,
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:607 */
-rtx
-gen_atomic_fetch_andti (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[4];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 614 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  bool doubleword = (TImode == DImode && !TARGET_64BIT)
-		    || (TImode == TImode);
-  ix86_expand_atomic_fetch_op_loop (operands[0], operands[1],
-				    operands[2], AND, false,
-				    doubleword);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-  }
-  emit (operand0, true);
-  emit_insn (gen_rtx_AND (TImode,
-	operand1,
-	operand2));
-  emit (operand3, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:607 */
-rtx
-gen_atomic_fetch_orti (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[4];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 614 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  bool doubleword = (TImode == DImode && !TARGET_64BIT)
-		    || (TImode == TImode);
-  ix86_expand_atomic_fetch_op_loop (operands[0], operands[1],
-				    operands[2], IOR, false,
-				    doubleword);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-  }
-  emit (operand0, true);
-  emit_insn (gen_rtx_IOR (TImode,
-	operand1,
-	operand2));
-  emit (operand3, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:607 */
-rtx
-gen_atomic_fetch_xorti (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[4];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 614 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  bool doubleword = (TImode == DImode && !TARGET_64BIT)
-		    || (TImode == TImode);
-  ix86_expand_atomic_fetch_op_loop (operands[0], operands[1],
-				    operands[2], XOR, false,
-				    doubleword);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-  }
-  emit (operand0, true);
-  emit_insn (gen_rtx_XOR (TImode,
-	operand1,
-	operand2));
-  emit (operand3, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:623 */
 rtx
 gen_atomic_and_fetchdi (rtx operand0,
@@ -80971,147 +76965,6 @@ gen_atomic_xor_fetchdi (rtx operand0,
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:623 */
-rtx
-gen_atomic_and_fetchti (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[4];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 630 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  bool doubleword = (TImode == DImode && !TARGET_64BIT)
-		    || (TImode == TImode);
-  ix86_expand_atomic_fetch_op_loop (operands[0], operands[1],
-				    operands[2], AND, true,
-				    doubleword);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-  }
-  emit (operand0, true);
-  emit_insn (gen_rtx_AND (TImode,
-	operand1,
-	operand2));
-  emit (operand3, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:623 */
-rtx
-gen_atomic_or_fetchti (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[4];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 630 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  bool doubleword = (TImode == DImode && !TARGET_64BIT)
-		    || (TImode == TImode);
-  ix86_expand_atomic_fetch_op_loop (operands[0], operands[1],
-				    operands[2], IOR, true,
-				    doubleword);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-  }
-  emit (operand0, true);
-  emit_insn (gen_rtx_IOR (TImode,
-	operand1,
-	operand2));
-  emit (operand3, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:623 */
-rtx
-gen_atomic_xor_fetchti (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[4];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 630 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  bool doubleword = (TImode == DImode && !TARGET_64BIT)
-		    || (TImode == TImode);
-  ix86_expand_atomic_fetch_op_loop (operands[0], operands[1],
-				    operands[2], XOR, true,
-				    doubleword);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-  }
-  emit (operand0, true);
-  emit_insn (gen_rtx_XOR (TImode,
-	operand1,
-	operand2));
-  emit (operand3, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:639 */
 rtx
 gen_atomic_fetch_nanddi (rtx operand0,
@@ -81133,52 +76986,6 @@ gen_atomic_fetch_nanddi (rtx operand0,
 {
   bool doubleword = (DImode == DImode && !TARGET_64BIT)
 		    || (DImode == TImode);
-  ix86_expand_atomic_fetch_op_loop (operands[0], operands[1],
-				    operands[2], NOT, false,
-				    doubleword);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-  }
-  emit (operand0, true);
-  emit (operand1, true);
-  emit (operand2, true);
-  emit (operand3, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:639 */
-rtx
-gen_atomic_fetch_nandti (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[4];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 645 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  bool doubleword = (TImode == DImode && !TARGET_64BIT)
-		    || (TImode == TImode);
   ix86_expand_atomic_fetch_op_loop (operands[0], operands[1],
 				    operands[2], NOT, false,
 				    doubleword);
@@ -81250,56 +77057,10 @@ gen_atomic_nand_fetchdi (rtx operand0,
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:654 */
-rtx
-gen_atomic_nand_fetchti (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[4];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 660 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  bool doubleword = (TImode == DImode && !TARGET_64BIT)
-		    || (TImode == TImode);
-  ix86_expand_atomic_fetch_op_loop (operands[0], operands[1],
-				    operands[2], NOT, true,
-				    doubleword);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-  }
-  emit (operand0, true);
-  emit (operand1, true);
-  emit (operand2, true);
-  emit (operand3, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:689 */
-extern rtx_insn *gen_peephole2_409 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_384 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_409 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_384 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -81308,7 +77069,7 @@ gen_peephole2_409 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_409 (sync.md:689)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_384 (sync.md:689)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -81341,9 +77102,9 @@ gen_peephole2_409 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:689 */
-extern rtx_insn *gen_peephole2_410 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_385 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_410 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_385 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -81352,7 +77113,7 @@ gen_peephole2_410 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_410 (sync.md:689)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_385 (sync.md:689)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -81385,9 +77146,9 @@ gen_peephole2_410 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:689 */
-extern rtx_insn *gen_peephole2_411 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_386 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_411 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_386 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -81396,7 +77157,7 @@ gen_peephole2_411 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_411 (sync.md:689)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_386 (sync.md:689)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -81429,9 +77190,9 @@ gen_peephole2_411 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:689 */
-extern rtx_insn *gen_peephole2_412 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_387 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_412 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_387 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -81440,7 +77201,7 @@ gen_peephole2_412 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_412 (sync.md:689)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_387 (sync.md:689)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -81473,9 +77234,9 @@ gen_peephole2_412 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:718 */
-extern rtx_insn *gen_peephole2_413 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_388 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_413 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_388 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -81484,7 +77245,7 @@ gen_peephole2_413 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_413 (sync.md:718)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_388 (sync.md:718)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -81517,9 +77278,9 @@ gen_peephole2_413 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:718 */
-extern rtx_insn *gen_peephole2_414 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_389 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_414 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_389 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -81528,7 +77289,7 @@ gen_peephole2_414 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_414 (sync.md:718)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_389 (sync.md:718)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -81561,9 +77322,9 @@ gen_peephole2_414 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:718 */
-extern rtx_insn *gen_peephole2_415 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_390 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_415 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_390 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -81572,7 +77333,7 @@ gen_peephole2_415 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_415 (sync.md:718)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_390 (sync.md:718)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -81605,9 +77366,9 @@ gen_peephole2_415 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 }
 
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:718 */
-extern rtx_insn *gen_peephole2_416 (rtx_insn *, rtx *);
+extern rtx_insn *gen_peephole2_391 (rtx_insn *, rtx *);
 rtx_insn *
-gen_peephole2_416 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
+gen_peephole2_391 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
 {
   rtx operand0;
   rtx operand1;
@@ -81616,7 +77377,7 @@ gen_peephole2_416 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
   rtx operand4;
   rtx_insn *_val = NULL;
   if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_416 (sync.md:718)\n");
+    fprintf (dump_file, "Splitting with gen_peephole2_391 (sync.md:718)\n");
   start_sequence ();
   operand0 = operands[0];
   (void) operand0;
@@ -81760,62 +77521,6 @@ gen_atomic_bit_test_and_setsi (rtx operand0,
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:869 */
-rtx
-gen_atomic_bit_test_and_setdi (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 876 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  emit_insn (gen_atomic_bit_test_and_setdi_1 (operands[1], operands[2],
-						  operands[3]));
-  rtx tem = gen_reg_rtx (QImode);
-  ix86_expand_setcc (tem, EQ, gen_rtx_REG (CCCmode, FLAGS_REG), const0_rtx);
-  rtx result = convert_modes (DImode, QImode, tem, 1);
-  if (operands[4] == const0_rtx)
-    result = expand_simple_binop (DImode, ASHIFT, result,
-				  operands[2], operands[0], 0, OPTAB_WIDEN);
-  if (result != operands[0])
-    emit_move_insn (operands[0], result);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit (operand0, true);
-  emit (operand1, true);
-  emit (operand2, true);
-  emit (operand3, true);
-  emit (operand4, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:905 */
 rtx
 gen_atomic_bit_test_and_complementhi (rtx operand0,
@@ -81930,63 +77635,6 @@ gen_atomic_bit_test_and_complementsi (rtx operand0,
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:905 */
-rtx
-gen_atomic_bit_test_and_complementdi (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 912 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  emit_insn (gen_atomic_bit_test_and_complementdi_1 (operands[1],
-							 operands[2],
-							 operands[3]));
-  rtx tem = gen_reg_rtx (QImode);
-  ix86_expand_setcc (tem, EQ, gen_rtx_REG (CCCmode, FLAGS_REG), const0_rtx);
-  rtx result = convert_modes (DImode, QImode, tem, 1);
-  if (operands[4] == const0_rtx)
-    result = expand_simple_binop (DImode, ASHIFT, result,
-				  operands[2], operands[0], 0, OPTAB_WIDEN);
-  if (result != operands[0])
-    emit_move_insn (operands[0], result);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit (operand0, true);
-  emit (operand1, true);
-  emit (operand2, true);
-  emit (operand3, true);
-  emit (operand4, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 /* ../gcc-14.1.0/gcc/config/i386/sync.md:944 */
 rtx
 gen_atomic_bit_test_and_resethi (rtx operand0,
@@ -82071,62 +77719,6 @@ gen_atomic_bit_test_and_resetsi (rtx operand0,
   rtx result = convert_modes (SImode, QImode, tem, 1);
   if (operands[4] == const0_rtx)
     result = expand_simple_binop (SImode, ASHIFT, result,
-				  operands[2], operands[0], 0, OPTAB_WIDEN);
-  if (result != operands[0])
-    emit_move_insn (operands[0], result);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit (operand0, true);
-  emit (operand1, true);
-  emit (operand2, true);
-  emit (operand3, true);
-  emit (operand4, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:944 */
-rtx
-gen_atomic_bit_test_and_resetdi (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 951 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  emit_insn (gen_atomic_bit_test_and_resetdi_1 (operands[1], operands[2],
-						    operands[3]));
-  rtx tem = gen_reg_rtx (QImode);
-  ix86_expand_setcc (tem, EQ, gen_rtx_REG (CCCmode, FLAGS_REG), const0_rtx);
-  rtx result = convert_modes (DImode, QImode, tem, 1);
-  if (operands[4] == const0_rtx)
-    result = expand_simple_binop (DImode, ASHIFT, result,
 				  operands[2], operands[0], 0, OPTAB_WIDEN);
   if (result != operands[0])
     emit_move_insn (operands[0], result);
@@ -82470,114 +78062,6 @@ gen_atomic_sub_fetch_cmp_0si (rtx operand0,
   }
   emit (operand0, true);
   emit_insn (gen_rtx_MINUS (SImode,
-	operand1,
-	operand2));
-  emit (operand3, true);
-  emit (operand4, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:980 */
-rtx
-gen_atomic_add_fetch_cmp_0di (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 987 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  if (INTVAL (operands[4]) == GT || INTVAL (operands[4]) == LE)
-    FAIL;
-  emit_insn (gen_atomic_add_fetch_cmp_0di_1 (operands[1],
-								  operands[2],
-								  operands[3]));
-  ix86_expand_setcc (operands[0], (enum rtx_code) INTVAL (operands[4]),
-		     gen_rtx_REG (CCGOCmode, FLAGS_REG), const0_rtx);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit (operand0, true);
-  emit_insn (gen_rtx_PLUS (DImode,
-	operand1,
-	operand2));
-  emit (operand3, true);
-  emit (operand4, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:980 */
-rtx
-gen_atomic_sub_fetch_cmp_0di (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 987 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  if (INTVAL (operands[4]) == GT || INTVAL (operands[4]) == LE)
-    FAIL;
-  emit_insn (gen_atomic_sub_fetch_cmp_0di_1 (operands[1],
-								  operands[2],
-								  operands[3]));
-  ix86_expand_setcc (operands[0], (enum rtx_code) INTVAL (operands[4]),
-		     gen_rtx_REG (CCGOCmode, FLAGS_REG), const0_rtx);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit (operand0, true);
-  emit_insn (gen_rtx_MINUS (DImode,
 	operand1,
 	operand2));
   emit (operand3, true);
@@ -83046,659 +78530,6 @@ gen_atomic_xor_fetch_cmp_0si (rtx operand0,
   return _val;
 }
 
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:1054 */
-rtx
-gen_atomic_and_fetch_cmp_0di (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 1061 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  emit_insn (gen_atomic_and_fetch_cmp_0di_1 (operands[1], operands[2],
-						     operands[3]));
-  ix86_expand_setcc (operands[0], (enum rtx_code) INTVAL (operands[4]),
-		     gen_rtx_REG (CCNOmode, FLAGS_REG), const0_rtx);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit (operand0, true);
-  emit_insn (gen_rtx_AND (DImode,
-	operand1,
-	operand2));
-  emit (operand3, true);
-  emit (operand4, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:1054 */
-rtx
-gen_atomic_or_fetch_cmp_0di (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 1061 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  emit_insn (gen_atomic_or_fetch_cmp_0di_1 (operands[1], operands[2],
-						     operands[3]));
-  ix86_expand_setcc (operands[0], (enum rtx_code) INTVAL (operands[4]),
-		     gen_rtx_REG (CCNOmode, FLAGS_REG), const0_rtx);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit (operand0, true);
-  emit_insn (gen_rtx_IOR (DImode,
-	operand1,
-	operand2));
-  emit (operand3, true);
-  emit (operand4, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:1054 */
-rtx
-gen_atomic_xor_fetch_cmp_0di (rtx operand0,
-	rtx operand1,
-	rtx operand2,
-	rtx operand3,
-	rtx operand4)
-{
-  rtx_insn *_val = 0;
-  start_sequence ();
-  {
-    rtx operands[5];
-    operands[0] = operand0;
-    operands[1] = operand1;
-    operands[2] = operand2;
-    operands[3] = operand3;
-    operands[4] = operand4;
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 1061 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  emit_insn (gen_atomic_xor_fetch_cmp_0di_1 (operands[1], operands[2],
-						     operands[3]));
-  ix86_expand_setcc (operands[0], (enum rtx_code) INTVAL (operands[4]),
-		     gen_rtx_REG (CCNOmode, FLAGS_REG), const0_rtx);
-  DONE;
-}
-#undef DONE
-#undef FAIL
-    operand0 = operands[0];
-    (void) operand0;
-    operand1 = operands[1];
-    (void) operand1;
-    operand2 = operands[2];
-    (void) operand2;
-    operand3 = operands[3];
-    (void) operand3;
-    operand4 = operands[4];
-    (void) operand4;
-  }
-  emit (operand0, true);
-  emit_insn (gen_rtx_XOR (DImode,
-	operand1,
-	operand2));
-  emit (operand3, true);
-  emit (operand4, false);
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:1111 */
-extern rtx_insn *gen_peephole2_417 (rtx_insn *, rtx *);
-rtx_insn *
-gen_peephole2_417 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx operand4;
-  rtx operand5;
-  rtx operand6;
-  rtx operand7;
-  rtx operand8;
-  rtx operand9;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_417 (sync.md:1111)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  operand4 = operands[4];
-  (void) operand4;
-  operand5 = operands[5];
-  (void) operand5;
-  operand6 = operands[6];
-  (void) operand6;
-  operand7 = operands[7];
-  (void) operand7;
-  operand8 = operands[8];
-  (void) operand8;
-  operand9 = operands[9];
-  (void) operand9;
-  emit_insn (gen_rtx_SET (operand0,
-	operand1));
-  emit (gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (3,
-		gen_rtx_SET (copy_rtx (operand0),
-	gen_rtx_UNSPEC_VOLATILE (SImode,
-	gen_rtvec (4,
-		operand2,
-		copy_rtx (operand0),
-		operand3,
-		operand4),
-	111)),
-		gen_rtx_SET (copy_rtx (operand2),
-	gen_rtx_UNSPEC_VOLATILE (SImode,
-	gen_rtvec (1,
-		const0_rtx),
-	111)),
-		gen_rtx_SET (gen_rtx_REG (CCmode,
-	17),
-	gen_rtx_COMPARE (CCmode,
-	copy_rtx (operand2),
-	copy_rtx (operand0))))), true);
-  emit_insn (gen_rtx_SET (operand7,
-	gen_rtx_fmt_ee (GET_CODE (operand8), GET_MODE (operand8),
-		operand9,
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:1111 */
-extern rtx_insn *gen_peephole2_418 (rtx_insn *, rtx *);
-rtx_insn *
-gen_peephole2_418 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx operand4;
-  rtx operand5;
-  rtx operand6;
-  rtx operand7;
-  rtx operand8;
-  rtx operand9;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_418 (sync.md:1111)\n");
-  start_sequence ();
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  operand4 = operands[4];
-  (void) operand4;
-  operand5 = operands[5];
-  (void) operand5;
-  operand6 = operands[6];
-  (void) operand6;
-  operand7 = operands[7];
-  (void) operand7;
-  operand8 = operands[8];
-  (void) operand8;
-  operand9 = operands[9];
-  (void) operand9;
-  emit_insn (gen_rtx_SET (operand0,
-	operand1));
-  emit (gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (3,
-		gen_rtx_SET (copy_rtx (operand0),
-	gen_rtx_UNSPEC_VOLATILE (DImode,
-	gen_rtvec (4,
-		operand2,
-		copy_rtx (operand0),
-		operand3,
-		operand4),
-	111)),
-		gen_rtx_SET (copy_rtx (operand2),
-	gen_rtx_UNSPEC_VOLATILE (DImode,
-	gen_rtvec (1,
-		const0_rtx),
-	111)),
-		gen_rtx_SET (gen_rtx_REG (CCmode,
-	17),
-	gen_rtx_COMPARE (CCmode,
-	copy_rtx (operand2),
-	copy_rtx (operand0))))), true);
-  emit_insn (gen_rtx_SET (operand7,
-	gen_rtx_fmt_ee (GET_CODE (operand8), GET_MODE (operand8),
-		operand9,
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:1150 */
-extern rtx_insn *gen_peephole2_419 (rtx_insn *, rtx *);
-rtx_insn *
-gen_peephole2_419 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx operand4;
-  rtx operand5;
-  rtx operand6;
-  rtx operand7;
-  rtx operand8;
-  rtx operand9;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_419 (sync.md:1150)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 1192 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  operands[9] = gen_rtx_REG (GET_MODE (XEXP (operands[8], 0)), FLAGS_REG);
-  if (swap_condition (GET_CODE (operands[8])) != GET_CODE (operands[8]))
-     {
-       operands[8] = shallow_copy_rtx (operands[8]);
-       enum rtx_code ccode = swap_condition (GET_CODE (operands[8]));
-       PUT_CODE (operands[8], ccode);
-       operands[9] = gen_rtx_REG (SELECT_CC_MODE (ccode,
-						  operands[6],
-						  operands[5]),
-				   FLAGS_REG);
-     }
-}
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  operand4 = operands[4];
-  (void) operand4;
-  operand5 = operands[5];
-  (void) operand5;
-  operand6 = operands[6];
-  (void) operand6;
-  operand7 = operands[7];
-  (void) operand7;
-  operand8 = operands[8];
-  (void) operand8;
-  operand9 = operands[9];
-  (void) operand9;
-  emit_insn (gen_rtx_SET (operand0,
-	operand1));
-  emit (gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (3,
-		gen_rtx_SET (copy_rtx (operand0),
-	gen_rtx_UNSPEC_VOLATILE (SImode,
-	gen_rtvec (4,
-		operand2,
-		copy_rtx (operand0),
-		operand3,
-		operand4),
-	111)),
-		gen_rtx_SET (copy_rtx (operand2),
-	gen_rtx_UNSPEC_VOLATILE (SImode,
-	gen_rtvec (1,
-		const0_rtx),
-	111)),
-		gen_rtx_SET (gen_rtx_REG (CCmode,
-	17),
-	gen_rtx_COMPARE (CCmode,
-	copy_rtx (operand2),
-	copy_rtx (operand0))))), true);
-  emit_insn (gen_rtx_SET (operand7,
-	gen_rtx_fmt_ee (GET_CODE (operand8), GET_MODE (operand8),
-		operand9,
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:1150 */
-extern rtx_insn *gen_peephole2_420 (rtx_insn *, rtx *);
-rtx_insn *
-gen_peephole2_420 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx operand4;
-  rtx operand5;
-  rtx operand6;
-  rtx operand7;
-  rtx operand8;
-  rtx operand9;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_420 (sync.md:1150)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 1192 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  operands[9] = gen_rtx_REG (GET_MODE (XEXP (operands[8], 0)), FLAGS_REG);
-  if (swap_condition (GET_CODE (operands[8])) != GET_CODE (operands[8]))
-     {
-       operands[8] = shallow_copy_rtx (operands[8]);
-       enum rtx_code ccode = swap_condition (GET_CODE (operands[8]));
-       PUT_CODE (operands[8], ccode);
-       operands[9] = gen_rtx_REG (SELECT_CC_MODE (ccode,
-						  operands[6],
-						  operands[5]),
-				   FLAGS_REG);
-     }
-}
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  operand4 = operands[4];
-  (void) operand4;
-  operand5 = operands[5];
-  (void) operand5;
-  operand6 = operands[6];
-  (void) operand6;
-  operand7 = operands[7];
-  (void) operand7;
-  operand8 = operands[8];
-  (void) operand8;
-  operand9 = operands[9];
-  (void) operand9;
-  emit_insn (gen_rtx_SET (operand0,
-	operand1));
-  emit (gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (3,
-		gen_rtx_SET (copy_rtx (operand0),
-	gen_rtx_UNSPEC_VOLATILE (DImode,
-	gen_rtvec (4,
-		operand2,
-		copy_rtx (operand0),
-		operand3,
-		operand4),
-	111)),
-		gen_rtx_SET (copy_rtx (operand2),
-	gen_rtx_UNSPEC_VOLATILE (DImode,
-	gen_rtvec (1,
-		const0_rtx),
-	111)),
-		gen_rtx_SET (gen_rtx_REG (CCmode,
-	17),
-	gen_rtx_COMPARE (CCmode,
-	copy_rtx (operand2),
-	copy_rtx (operand0))))), true);
-  emit_insn (gen_rtx_SET (operand7,
-	gen_rtx_fmt_ee (GET_CODE (operand8), GET_MODE (operand8),
-		operand9,
-		const0_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:1206 */
-extern rtx_insn *gen_peephole2_421 (rtx_insn *, rtx *);
-rtx_insn *
-gen_peephole2_421 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx operand4;
-  rtx operand5;
-  rtx operand6;
-  rtx operand7;
-  rtx operand8;
-  rtx operand9;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_421 (sync.md:1206)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 1253 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  operands[9] = gen_rtx_REG (GET_MODE (XEXP (operands[7], 0)), FLAGS_REG);
-  if (swap_condition (GET_CODE (operands[7])) != GET_CODE (operands[7]))
-     {
-       operands[7] = shallow_copy_rtx (operands[7]);
-       enum rtx_code ccode = swap_condition (GET_CODE (operands[7]));
-       PUT_CODE (operands[7], ccode);
-       operands[9] = gen_rtx_REG (SELECT_CC_MODE (ccode,
-						  operands[6],
-						  operands[5]),
-				   FLAGS_REG);
-     }
-}
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  operand4 = operands[4];
-  (void) operand4;
-  operand5 = operands[5];
-  (void) operand5;
-  operand6 = operands[6];
-  (void) operand6;
-  operand7 = operands[7];
-  (void) operand7;
-  operand8 = operands[8];
-  (void) operand8;
-  operand9 = operands[9];
-  (void) operand9;
-  emit_insn (gen_rtx_SET (operand0,
-	operand1));
-  emit (gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (3,
-		gen_rtx_SET (copy_rtx (operand0),
-	gen_rtx_UNSPEC_VOLATILE (SImode,
-	gen_rtvec (4,
-		operand2,
-		copy_rtx (operand0),
-		operand3,
-		operand4),
-	111)),
-		gen_rtx_SET (copy_rtx (operand2),
-	gen_rtx_UNSPEC_VOLATILE (SImode,
-	gen_rtvec (1,
-		const0_rtx),
-	111)),
-		gen_rtx_SET (gen_rtx_REG (CCmode,
-	17),
-	gen_rtx_COMPARE (CCmode,
-	copy_rtx (operand2),
-	copy_rtx (operand0))))), true);
-  emit_jump_insn (gen_rtx_SET (pc_rtx,
-	gen_rtx_IF_THEN_ELSE (VOIDmode,
-	gen_rtx_fmt_ee (GET_CODE (operand7), GET_MODE (operand7),
-		operand9,
-		const0_rtx),
-	gen_rtx_LABEL_REF (VOIDmode,
-	operand8),
-	pc_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
-/* ../gcc-14.1.0/gcc/config/i386/sync.md:1206 */
-extern rtx_insn *gen_peephole2_422 (rtx_insn *, rtx *);
-rtx_insn *
-gen_peephole2_422 (rtx_insn *curr_insn ATTRIBUTE_UNUSED, rtx *operands)
-{
-  rtx operand0;
-  rtx operand1;
-  rtx operand2;
-  rtx operand3;
-  rtx operand4;
-  rtx operand5;
-  rtx operand6;
-  rtx operand7;
-  rtx operand8;
-  rtx operand9;
-  rtx_insn *_val = NULL;
-  if (dump_file)
-    fprintf (dump_file, "Splitting with gen_peephole2_422 (sync.md:1206)\n");
-  start_sequence ();
-#define FAIL return (end_sequence (), _val)
-#define DONE return (_val = get_insns (), end_sequence (), _val)
-#line 1253 "../gcc-14.1.0/gcc/config/i386/sync.md"
-{
-  operands[9] = gen_rtx_REG (GET_MODE (XEXP (operands[7], 0)), FLAGS_REG);
-  if (swap_condition (GET_CODE (operands[7])) != GET_CODE (operands[7]))
-     {
-       operands[7] = shallow_copy_rtx (operands[7]);
-       enum rtx_code ccode = swap_condition (GET_CODE (operands[7]));
-       PUT_CODE (operands[7], ccode);
-       operands[9] = gen_rtx_REG (SELECT_CC_MODE (ccode,
-						  operands[6],
-						  operands[5]),
-				   FLAGS_REG);
-     }
-}
-#undef DONE
-#undef FAIL
-  operand0 = operands[0];
-  (void) operand0;
-  operand1 = operands[1];
-  (void) operand1;
-  operand2 = operands[2];
-  (void) operand2;
-  operand3 = operands[3];
-  (void) operand3;
-  operand4 = operands[4];
-  (void) operand4;
-  operand5 = operands[5];
-  (void) operand5;
-  operand6 = operands[6];
-  (void) operand6;
-  operand7 = operands[7];
-  (void) operand7;
-  operand8 = operands[8];
-  (void) operand8;
-  operand9 = operands[9];
-  (void) operand9;
-  emit_insn (gen_rtx_SET (operand0,
-	operand1));
-  emit (gen_rtx_PARALLEL (VOIDmode,
-	gen_rtvec (3,
-		gen_rtx_SET (copy_rtx (operand0),
-	gen_rtx_UNSPEC_VOLATILE (DImode,
-	gen_rtvec (4,
-		operand2,
-		copy_rtx (operand0),
-		operand3,
-		operand4),
-	111)),
-		gen_rtx_SET (copy_rtx (operand2),
-	gen_rtx_UNSPEC_VOLATILE (DImode,
-	gen_rtvec (1,
-		const0_rtx),
-	111)),
-		gen_rtx_SET (gen_rtx_REG (CCmode,
-	17),
-	gen_rtx_COMPARE (CCmode,
-	copy_rtx (operand2),
-	copy_rtx (operand0))))), true);
-  emit_jump_insn (gen_rtx_SET (pc_rtx,
-	gen_rtx_IF_THEN_ELSE (VOIDmode,
-	gen_rtx_fmt_ee (GET_CODE (operand7), GET_MODE (operand7),
-		operand9,
-		const0_rtx),
-	gen_rtx_LABEL_REF (VOIDmode,
-	operand8),
-	pc_rtx)));
-  _val = get_insns ();
-  end_sequence ();
-  return _val;
-}
-
 
 
 void
@@ -83706,129 +78537,129 @@ add_clobbers (rtx pattern ATTRIBUTE_UNUSED, int insn_code_number)
 {
   switch (insn_code_number)
     {
-    case 9457:
-    case 9452:
+    case 8898:
+    case 8894:
       XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (DFmode));
       break;
 
-    case 8764:
-    case 8763:
-    case 8760:
-    case 8759:
-    case 8756:
-    case 8748:
-    case 8740:
-    case 8732:
-    case 8724:
-    case 8716:
-    case 8708:
-    case 8700:
+    case 8214:
+    case 8213:
+    case 8210:
+    case 8209:
+    case 8206:
+    case 8198:
+    case 8190:
+    case 8182:
+    case 8174:
+    case 8166:
+    case 8158:
+    case 8150:
       XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (V8SFmode));
       break;
 
-    case 8762:
-    case 8761:
-    case 8758:
-    case 8757:
-    case 8755:
-    case 8747:
-    case 8739:
-    case 8731:
-    case 8723:
-    case 8715:
-    case 8707:
-    case 8699:
+    case 8212:
+    case 8211:
+    case 8208:
+    case 8207:
+    case 8205:
+    case 8197:
+    case 8189:
+    case 8181:
+    case 8173:
+    case 8165:
+    case 8157:
+    case 8149:
       XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (V8SImode));
       break;
 
-    case 8752:
-    case 8744:
-    case 8736:
-    case 8728:
-    case 8720:
-    case 8712:
-    case 8704:
-    case 8696:
+    case 8202:
+    case 8194:
+    case 8186:
+    case 8178:
+    case 8170:
+    case 8162:
+    case 8154:
+    case 8146:
       XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (V4DFmode));
       break;
 
-    case 8751:
-    case 8743:
-    case 8735:
-    case 8727:
-    case 8719:
-    case 8711:
-    case 8703:
-    case 8695:
+    case 8201:
+    case 8193:
+    case 8185:
+    case 8177:
+    case 8169:
+    case 8161:
+    case 8153:
+    case 8145:
       XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (V4DImode));
       break;
 
-    case 8750:
-    case 8742:
-    case 8734:
-    case 8726:
-    case 8718:
-    case 8710:
-    case 8702:
-    case 8694:
+    case 8200:
+    case 8192:
+    case 8184:
+    case 8176:
+    case 8168:
+    case 8160:
+    case 8152:
+    case 8144:
       XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (V2DFmode));
       break;
 
-    case 8749:
-    case 8741:
-    case 8733:
-    case 8725:
-    case 8717:
-    case 8709:
-    case 8701:
-    case 8693:
+    case 8199:
+    case 8191:
+    case 8183:
+    case 8175:
+    case 8167:
+    case 8159:
+    case 8151:
+    case 8143:
       XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (V2DImode));
       break;
 
-    case 7980:
-    case 7976:
+    case 7430:
+    case 7426:
       XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (V16QImode));
       XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (SImode));
       break;
 
-    case 8754:
-    case 8746:
-    case 8738:
-    case 8730:
-    case 8722:
-    case 8714:
-    case 8706:
-    case 8698:
-    case 4165:
+    case 8204:
+    case 8196:
+    case 8188:
+    case 8180:
+    case 8172:
+    case 8164:
+    case 8156:
+    case 8148:
+    case 3686:
       XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (V4SFmode));
       break;
 
-    case 8753:
-    case 8745:
-    case 8737:
-    case 8729:
-    case 8721:
-    case 8713:
-    case 8705:
-    case 8697:
-    case 7648:
-    case 2176:
+    case 8203:
+    case 8195:
+    case 8187:
+    case 8179:
+    case 8171:
+    case 8163:
+    case 8155:
+    case 8147:
+    case 7098:
+    case 1714:
       XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (V4SImode));
       break;
 
-    case 2012:
-    case 2011:
+    case 1550:
+    case 1549:
       XVECEXP (pattern, 0, 1) = gen_hard_reg_clobber (XFmode, 8);
       XVECEXP (pattern, 0, 2) = gen_hard_reg_clobber (XFmode, 9);
       XVECEXP (pattern, 0, 3) = gen_hard_reg_clobber (XFmode, 10);
@@ -83847,8 +78678,8 @@ add_clobbers (rtx pattern ATTRIBUTE_UNUSED, int insn_code_number)
       XVECEXP (pattern, 0, 16) = gen_hard_reg_clobber (DImode, 35);
       break;
 
-    case 1574:
-    case 1573:
+    case 1225:
+    case 1224:
       XVECEXP (pattern, 0, 1) = gen_hard_reg_clobber (XFmode, 8);
       XVECEXP (pattern, 0, 2) = gen_hard_reg_clobber (XFmode, 9);
       XVECEXP (pattern, 0, 3) = gen_hard_reg_clobber (XFmode, 10);
@@ -83859,9 +78690,9 @@ add_clobbers (rtx pattern ATTRIBUTE_UNUSED, int insn_code_number)
       XVECEXP (pattern, 0, 8) = gen_hard_reg_clobber (XFmode, 15);
       break;
 
-    case 1303:
-    case 1299:
-    case 1295:
+    case 1001:
+    case 1000:
+    case 999:
       XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
 	gen_rtx_SCRATCH (SImode));
       XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
@@ -83869,42 +78700,630 @@ add_clobbers (rtx pattern ATTRIBUTE_UNUSED, int insn_code_number)
       XVECEXP (pattern, 0, 3) = gen_hard_reg_clobber (CCmode, 17);
       break;
 
-    case 9471:
-    case 9470:
-    case 9469:
-    case 9468:
-    case 1516:
-    case 1515:
-    case 1514:
-    case 1513:
-    case 1440:
-    case 1439:
-    case 1283:
-    case 1281:
-    case 1279:
-    case 1278:
-    case 1221:
-    case 1220:
-    case 1219:
-    case 1218:
-    case 1213:
-    case 1212:
-    case 1210:
-    case 1209:
-    case 1207:
-    case 1206:
-    case 1195:
+    case 8909:
+    case 8908:
+    case 8907:
     case 1194:
+    case 1193:
+    case 1192:
     case 1191:
+    case 1124:
+    case 1123:
+    case 989:
+    case 958:
+    case 957:
+    case 954:
+    case 953:
+    case 952:
+    case 948:
+    case 678:
+    case 677:
+    case 676:
+    case 675:
+    case 674:
+    case 673:
+    case 461:
+    case 456:
+    case 455:
+    case 454:
+    case 453:
+    case 452:
+    case 451:
+      XVECEXP (pattern, 0, 2) = gen_hard_reg_clobber (CCmode, 17);
+      break;
+
+    case 460:
+    case 459:
+    case 458:
+    case 457:
+    case 450:
+    case 449:
+      XVECEXP (pattern, 0, 3) = gen_hard_reg_clobber (CCmode, 17);
+      break;
+
+    case 943:
+    case 448:
+    case 447:
+    case 446:
+    case 445:
+      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (SImode));
+      XVECEXP (pattern, 0, 2) = gen_hard_reg_clobber (CCmode, 17);
+      break;
+
+    case 437:
+      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (SImode));
+      break;
+
+    case 436:
+      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (HImode));
+      break;
+
+    case 1202:
+    case 967:
+    case 798:
+    case 797:
+    case 735:
+    case 597:
+    case 596:
+    case 562:
+    case 238:
+    case 231:
+      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (DImode));
+      break;
+
+    case 1201:
+    case 973:
+    case 971:
+    case 966:
+    case 962:
+    case 796:
+    case 795:
+    case 734:
+    case 645:
+    case 595:
+    case 594:
+    case 561:
+    case 386:
+    case 379:
+    case 367:
+    case 366:
+    case 365:
+    case 237:
+    case 234:
+    case 230:
+      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (SImode));
+      break;
+
+    case 8314:
+    case 8313:
+    case 8312:
+    case 8311:
+    case 8242:
+    case 8241:
+    case 8240:
+    case 8239:
+    case 8218:
+    case 8217:
+    case 8216:
+    case 8215:
+    case 794:
+    case 793:
+    case 733:
+    case 644:
+    case 593:
+    case 592:
+    case 385:
+    case 378:
+    case 236:
+    case 233:
+    case 229:
+      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (HImode));
+      break;
+
+    case 8358:
+    case 8357:
+    case 8356:
+    case 8355:
+    case 8354:
+    case 8353:
+    case 8352:
+    case 8351:
+    case 8350:
+    case 8349:
+    case 8348:
+    case 8347:
+    case 8346:
+    case 8345:
+    case 8344:
+    case 8343:
+    case 8342:
+    case 8341:
+    case 8340:
+    case 8339:
+    case 8338:
+    case 8337:
+    case 8336:
+    case 8335:
+    case 8334:
+    case 8333:
+    case 8332:
+    case 8331:
+    case 8330:
+    case 8329:
+    case 8328:
+    case 8327:
+    case 8326:
+    case 8325:
+    case 8324:
+    case 8323:
+    case 8322:
+    case 8321:
+    case 8320:
+    case 8319:
+    case 8318:
+    case 8317:
+    case 8316:
+    case 8315:
+    case 8310:
+    case 8309:
+    case 8308:
+    case 8307:
+    case 8306:
+    case 8305:
+    case 8304:
+    case 8303:
+    case 8302:
+    case 8301:
+    case 8300:
+    case 8299:
+    case 8298:
+    case 8297:
+    case 8296:
+    case 8295:
+    case 8294:
+    case 8293:
+    case 8292:
+    case 8291:
+    case 8290:
+    case 8289:
+    case 8288:
+    case 8287:
+    case 8286:
+    case 8285:
+    case 8284:
+    case 8283:
+    case 8282:
+    case 8281:
+    case 8280:
+    case 8279:
+    case 8278:
+    case 8277:
+    case 8276:
+    case 8275:
+    case 8274:
+    case 8273:
+    case 8272:
+    case 8271:
+    case 8270:
+    case 8269:
+    case 8268:
+    case 8267:
+    case 8266:
+    case 8265:
+    case 8264:
+    case 8263:
+    case 8262:
+    case 8261:
+    case 8260:
+    case 8259:
+    case 8258:
+    case 8257:
+    case 8256:
+    case 8255:
+    case 8254:
+    case 8253:
+    case 8252:
+    case 8251:
+    case 8250:
+    case 8249:
+    case 8248:
+    case 8247:
+    case 8246:
+    case 8245:
+    case 8244:
+    case 8243:
+    case 8238:
+    case 8237:
+    case 8236:
+    case 8235:
+    case 8234:
+    case 8233:
+    case 8232:
+    case 8231:
+    case 8230:
+    case 8229:
+    case 8228:
+    case 8227:
+    case 8226:
+    case 8225:
+    case 8224:
+    case 8223:
+    case 8222:
+    case 8221:
+    case 8220:
+    case 8219:
+    case 792:
+    case 791:
+    case 732:
+    case 643:
+    case 591:
+    case 590:
+    case 384:
+    case 377:
+    case 235:
+    case 232:
+    case 228:
+      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (QImode));
+      break;
+
+    case 199:
+    case 198:
+    case 197:
+      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (DImode));
+      break;
+
+    case 194:
+    case 193:
+    case 192:
+      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (V4SImode));
+      XVECEXP (pattern, 0, 3) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (V4SImode));
+      break;
+
+    case 1089:
+    case 1088:
+    case 177:
+      XVECEXP (pattern, 0, 3) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (XFmode));
+      break;
+
+    case 1071:
+    case 1061:
+    case 1060:
+    case 1059:
+    case 173:
+    case 172:
+    case 171:
+      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (XFmode));
+      break;
+
+    case 168:
+      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (V2DFmode));
+      XVECEXP (pattern, 0, 3) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (V2DFmode));
+      break;
+
+    case 167:
+      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (V4SFmode));
+      XVECEXP (pattern, 0, 3) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (V4SFmode));
+      break;
+
+    case 822:
+    case 821:
+    case 143:
+      XVECEXP (pattern, 0, 1) = gen_hard_reg_clobber (CCmode, 17);
+      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
+	gen_rtx_SCRATCH (SImode));
+      break;
+
+    case 8934:
+    case 8933:
+    case 8932:
+    case 8931:
+    case 8930:
+    case 8929:
+    case 8928:
+    case 8927:
+    case 8926:
+    case 8925:
+    case 8924:
+    case 8923:
+    case 8922:
+    case 8921:
+    case 8920:
+    case 8893:
+    case 8843:
+    case 1483:
+    case 1482:
+    case 1481:
+    case 1480:
+    case 1479:
+    case 1478:
+    case 1477:
+    case 1476:
+    case 1475:
+    case 1465:
+    case 1464:
+    case 1463:
+    case 1419:
+    case 1418:
+    case 1417:
+    case 1352:
+    case 1351:
+    case 1338:
+    case 1190:
     case 1189:
-    case 1188:
+    case 1186:
+    case 1185:
+    case 1184:
+    case 1183:
+    case 1178:
+    case 1177:
+    case 1176:
+    case 1175:
+    case 1174:
+    case 1173:
+    case 1172:
+    case 1171:
+    case 1170:
+    case 1169:
+    case 1168:
+    case 1167:
+    case 1166:
+    case 1165:
+    case 1164:
+    case 1163:
+    case 1162:
+    case 1161:
+    case 1160:
+    case 1159:
+    case 1158:
+    case 1157:
+    case 1156:
+    case 1155:
+    case 1129:
+    case 1128:
+    case 1127:
+    case 1126:
+    case 1125:
+    case 1087:
+    case 1086:
+    case 1085:
+    case 1084:
+    case 1083:
+    case 1082:
+    case 1077:
+    case 1076:
+    case 1075:
+    case 1074:
+    case 1010:
+    case 1009:
+    case 1007:
+    case 1006:
+    case 1005:
+    case 996:
+    case 992:
+    case 991:
+    case 990:
+    case 988:
+    case 987:
+    case 986:
+    case 985:
+    case 984:
+    case 983:
+    case 982:
+    case 981:
+    case 980:
+    case 979:
+    case 978:
+    case 975:
+    case 974:
+    case 972:
+    case 969:
+    case 968:
+    case 963:
+    case 961:
+    case 960:
+    case 959:
+    case 956:
+    case 955:
+    case 951:
+    case 950:
+    case 947:
+    case 938:
+    case 937:
+    case 889:
+    case 888:
+    case 887:
+    case 886:
+    case 885:
+    case 884:
+    case 883:
+    case 882:
+    case 881:
+    case 880:
+    case 879:
+    case 878:
+    case 877:
+    case 876:
+    case 875:
+    case 874:
+    case 873:
+    case 872:
+    case 871:
+    case 870:
+    case 869:
+    case 868:
+    case 860:
+    case 859:
+    case 858:
+    case 857:
+    case 856:
     case 855:
     case 854:
     case 853:
     case 852:
     case 851:
     case 850:
-    case 587:
+    case 849:
+    case 848:
+    case 847:
+    case 846:
+    case 845:
+    case 844:
+    case 843:
+    case 842:
+    case 839:
+    case 838:
+    case 837:
+    case 836:
+    case 835:
+    case 834:
+    case 833:
+    case 832:
+    case 831:
+    case 830:
+    case 829:
+    case 828:
+    case 827:
+    case 820:
+    case 819:
+    case 818:
+    case 817:
+    case 816:
+    case 815:
+    case 814:
+    case 813:
+    case 812:
+    case 811:
+    case 810:
+    case 809:
+    case 808:
+    case 807:
+    case 806:
+    case 805:
+    case 803:
+    case 802:
+    case 801:
+    case 800:
+    case 799:
+    case 782:
+    case 781:
+    case 780:
+    case 779:
+    case 778:
+    case 777:
+    case 776:
+    case 775:
+    case 774:
+    case 773:
+    case 772:
+    case 771:
+    case 768:
+    case 767:
+    case 766:
+    case 765:
+    case 764:
+    case 763:
+    case 762:
+    case 761:
+    case 760:
+    case 759:
+    case 758:
+    case 757:
+    case 756:
+    case 755:
+    case 754:
+    case 753:
+    case 752:
+    case 751:
+    case 750:
+    case 749:
+    case 748:
+    case 747:
+    case 746:
+    case 745:
+    case 744:
+    case 743:
+    case 742:
+    case 741:
+    case 740:
+    case 739:
+    case 738:
+    case 737:
+    case 736:
+    case 727:
+    case 726:
+    case 725:
+    case 724:
+    case 723:
+    case 722:
+    case 720:
+    case 719:
+    case 718:
+    case 717:
+    case 716:
+    case 715:
+    case 714:
+    case 713:
+    case 712:
+    case 711:
+    case 710:
+    case 709:
+    case 708:
+    case 707:
+    case 706:
+    case 705:
+    case 704:
+    case 703:
+    case 702:
+    case 701:
+    case 672:
+    case 671:
+    case 670:
+    case 669:
+    case 668:
+    case 667:
+    case 663:
+    case 662:
+    case 661:
+    case 660:
+    case 659:
+    case 658:
+    case 657:
+    case 656:
+    case 655:
+    case 654:
+    case 653:
+    case 652:
+    case 647:
+    case 646:
+    case 635:
+    case 634:
+    case 633:
+    case 632:
+    case 631:
+    case 630:
+    case 629:
+    case 628:
+    case 581:
+    case 580:
+    case 579:
+    case 578:
+    case 577:
     case 576:
     case 575:
     case 574:
@@ -83919,843 +79338,34 @@ add_clobbers (rtx pattern ATTRIBUTE_UNUSED, int insn_code_number)
     case 565:
     case 564:
     case 563:
-      XVECEXP (pattern, 0, 2) = gen_hard_reg_clobber (CCmode, 17);
-      break;
-
-    case 586:
-    case 585:
-    case 584:
-    case 583:
-    case 582:
-    case 581:
-    case 580:
-    case 579:
-    case 578:
-    case 577:
-    case 562:
-    case 561:
     case 560:
     case 559:
     case 558:
     case 557:
     case 556:
     case 555:
-      XVECEXP (pattern, 0, 3) = gen_hard_reg_clobber (CCmode, 17);
-      break;
-
-    case 550:
-    case 549:
-    case 546:
-    case 545:
-      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (DImode));
-      XVECEXP (pattern, 0, 2) = gen_hard_reg_clobber (CCmode, 17);
-      break;
-
-    case 1179:
     case 554:
     case 553:
     case 552:
     case 551:
+    case 550:
+    case 549:
     case 548:
     case 547:
+    case 546:
+    case 545:
     case 544:
     case 543:
-      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (SImode));
-      XVECEXP (pattern, 0, 2) = gen_hard_reg_clobber (CCmode, 17);
-      break;
-
-    case 531:
-      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (SImode));
-      break;
-
-    case 530:
-      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (HImode));
-      break;
-
-    case 1530:
-    case 1245:
-    case 1241:
-    case 1233:
-    case 1227:
-    case 1010:
-    case 1009:
-    case 927:
-    case 821:
-    case 757:
-    case 756:
-    case 712:
-    case 475:
-    case 466:
-    case 453:
-    case 451:
-    case 449:
-    case 301:
-    case 294:
-    case 292:
-      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (DImode));
-      break;
-
-    case 1529:
-    case 1244:
-    case 1240:
-    case 1232:
-    case 1226:
-    case 1008:
-    case 1007:
-    case 926:
-    case 820:
-    case 755:
-    case 754:
-    case 711:
-    case 474:
-    case 465:
-    case 452:
-    case 450:
-    case 448:
-    case 300:
-    case 297:
-    case 291:
-      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (SImode));
-      break;
-
-    case 8864:
-    case 8863:
-    case 8862:
-    case 8861:
-    case 8792:
-    case 8791:
-    case 8790:
-    case 8789:
-    case 8768:
-    case 8767:
-    case 8766:
-    case 8765:
-    case 1006:
-    case 1005:
-    case 925:
-    case 819:
-    case 753:
-    case 752:
-    case 473:
-    case 464:
-    case 299:
-    case 296:
-    case 290:
-      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (HImode));
-      break;
-
-    case 8908:
-    case 8907:
-    case 8906:
-    case 8905:
-    case 8904:
-    case 8903:
-    case 8902:
-    case 8901:
-    case 8900:
-    case 8899:
-    case 8898:
-    case 8897:
-    case 8896:
-    case 8895:
-    case 8894:
-    case 8893:
-    case 8892:
-    case 8891:
-    case 8890:
-    case 8889:
-    case 8888:
-    case 8887:
-    case 8886:
-    case 8885:
-    case 8884:
-    case 8883:
-    case 8882:
-    case 8881:
-    case 8880:
-    case 8879:
-    case 8878:
-    case 8877:
-    case 8876:
-    case 8875:
-    case 8874:
-    case 8873:
-    case 8872:
-    case 8871:
-    case 8870:
-    case 8869:
-    case 8868:
-    case 8867:
-    case 8866:
-    case 8865:
-    case 8860:
-    case 8859:
-    case 8858:
-    case 8857:
-    case 8856:
-    case 8855:
-    case 8854:
-    case 8853:
-    case 8852:
-    case 8851:
-    case 8850:
-    case 8849:
-    case 8848:
-    case 8847:
-    case 8846:
-    case 8845:
-    case 8844:
-    case 8843:
-    case 8842:
-    case 8841:
-    case 8840:
-    case 8839:
-    case 8838:
-    case 8837:
-    case 8836:
-    case 8835:
-    case 8834:
-    case 8833:
-    case 8832:
-    case 8831:
-    case 8830:
-    case 8829:
-    case 8828:
-    case 8827:
-    case 8826:
-    case 8825:
-    case 8824:
-    case 8823:
-    case 8822:
-    case 8821:
-    case 8820:
-    case 8819:
-    case 8818:
-    case 8817:
-    case 8816:
-    case 8815:
-    case 8814:
-    case 8813:
-    case 8812:
-    case 8811:
-    case 8810:
-    case 8809:
-    case 8808:
-    case 8807:
-    case 8806:
-    case 8805:
-    case 8804:
-    case 8803:
-    case 8802:
-    case 8801:
-    case 8800:
-    case 8799:
-    case 8798:
-    case 8797:
-    case 8796:
-    case 8795:
-    case 8794:
-    case 8793:
-    case 8788:
-    case 8787:
-    case 8786:
-    case 8785:
-    case 8784:
-    case 8783:
-    case 8782:
-    case 8781:
-    case 8780:
-    case 8779:
-    case 8778:
-    case 8777:
-    case 8776:
-    case 8775:
-    case 8774:
-    case 8773:
-    case 8772:
-    case 8771:
-    case 8770:
-    case 8769:
-    case 1004:
-    case 1003:
-    case 924:
-    case 818:
-    case 751:
-    case 750:
-    case 472:
-    case 463:
-    case 298:
-    case 295:
-    case 289:
-      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (QImode));
-      break;
-
+    case 533:
     case 532:
-    case 252:
-    case 251:
-    case 250:
-      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (DImode));
-      break;
-
-    case 245:
-    case 244:
-    case 243:
-      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (V4SImode));
-      XVECEXP (pattern, 0, 3) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (V4SImode));
-      break;
-
-    case 1397:
-    case 1396:
-    case 224:
-      XVECEXP (pattern, 0, 3) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (XFmode));
-      break;
-
-    case 1379:
-    case 1369:
-    case 1368:
-    case 1367:
-    case 220:
-    case 219:
-    case 218:
-      XVECEXP (pattern, 0, 1) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (XFmode));
-      break;
-
-    case 213:
-      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (V2DFmode));
-      XVECEXP (pattern, 0, 3) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (V2DFmode));
-      break;
-
-    case 212:
-      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (V4SFmode));
-      XVECEXP (pattern, 0, 3) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (V4SFmode));
-      break;
-
-    case 1039:
-    case 1037:
-    case 175:
-      XVECEXP (pattern, 0, 1) = gen_hard_reg_clobber (CCmode, 17);
-      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (DImode));
-      break;
-
-    case 1038:
-    case 1036:
-    case 174:
-      XVECEXP (pattern, 0, 1) = gen_hard_reg_clobber (CCmode, 17);
-      XVECEXP (pattern, 0, 2) = gen_rtx_CLOBBER (VOIDmode,
-	gen_rtx_SCRATCH (SImode));
-      break;
-
-    case 9507:
-    case 9506:
-    case 9505:
-    case 9504:
-    case 9503:
-    case 9502:
-    case 9501:
-    case 9500:
-    case 9499:
-    case 9498:
-    case 9497:
-    case 9496:
-    case 9495:
-    case 9494:
-    case 9493:
-    case 9492:
-    case 9491:
-    case 9490:
-    case 9489:
-    case 9488:
-    case 9451:
-    case 9401:
-    case 1916:
-    case 1915:
-    case 1914:
-    case 1913:
-    case 1912:
-    case 1911:
-    case 1910:
-    case 1909:
-    case 1908:
-    case 1898:
-    case 1897:
-    case 1896:
-    case 1841:
-    case 1840:
-    case 1839:
-    case 1765:
-    case 1764:
-    case 1751:
-    case 1512:
-    case 1511:
-    case 1508:
-    case 1507:
-    case 1506:
-    case 1505:
-    case 1500:
-    case 1499:
-    case 1498:
-    case 1497:
-    case 1496:
-    case 1495:
-    case 1494:
-    case 1493:
-    case 1492:
-    case 1491:
-    case 1490:
-    case 1489:
-    case 1488:
-    case 1487:
-    case 1486:
-    case 1485:
-    case 1484:
-    case 1483:
-    case 1482:
-    case 1481:
-    case 1480:
-    case 1479:
-    case 1478:
-    case 1477:
-    case 1448:
-    case 1447:
-    case 1446:
-    case 1445:
-    case 1444:
-    case 1443:
-    case 1442:
-    case 1441:
-    case 1395:
-    case 1394:
-    case 1393:
-    case 1392:
-    case 1391:
-    case 1390:
-    case 1385:
-    case 1384:
-    case 1383:
-    case 1382:
-    case 1318:
-    case 1317:
-    case 1316:
-    case 1315:
-    case 1312:
-    case 1311:
-    case 1309:
-    case 1308:
-    case 1307:
-    case 1292:
-    case 1286:
-    case 1285:
-    case 1284:
-    case 1282:
-    case 1280:
-    case 1277:
-    case 1276:
-    case 1275:
-    case 1274:
-    case 1273:
-    case 1272:
-    case 1271:
-    case 1270:
-    case 1269:
-    case 1268:
-    case 1267:
-    case 1266:
-    case 1265:
-    case 1264:
-    case 1263:
-    case 1262:
-    case 1261:
-    case 1260:
-    case 1259:
-    case 1258:
-    case 1257:
-    case 1256:
-    case 1251:
-    case 1250:
-    case 1249:
-    case 1248:
-    case 1247:
-    case 1246:
-    case 1243:
-    case 1242:
-    case 1237:
-    case 1236:
-    case 1235:
-    case 1234:
-    case 1229:
-    case 1228:
-    case 1225:
-    case 1224:
-    case 1223:
-    case 1222:
-    case 1217:
-    case 1216:
-    case 1215:
-    case 1214:
-    case 1211:
-    case 1208:
-    case 1205:
-    case 1204:
-    case 1203:
-    case 1202:
-    case 1201:
-    case 1200:
-    case 1198:
-    case 1197:
-    case 1193:
-    case 1192:
-    case 1190:
-    case 1187:
-    case 1186:
-    case 1171:
-    case 1170:
-    case 1122:
-    case 1121:
-    case 1119:
-    case 1118:
-    case 1117:
-    case 1116:
-    case 1115:
-    case 1114:
-    case 1113:
-    case 1112:
-    case 1111:
-    case 1110:
-    case 1109:
-    case 1108:
-    case 1107:
-    case 1106:
-    case 1105:
-    case 1104:
-    case 1103:
-    case 1102:
-    case 1101:
-    case 1100:
-    case 1091:
-    case 1090:
-    case 1089:
-    case 1088:
-    case 1087:
-    case 1086:
-    case 1085:
-    case 1084:
-    case 1083:
-    case 1082:
-    case 1081:
-    case 1080:
-    case 1079:
-    case 1078:
-    case 1077:
-    case 1076:
-    case 1075:
-    case 1074:
-    case 1073:
-    case 1072:
-    case 1071:
-    case 1070:
-    case 1069:
-    case 1068:
-    case 1067:
-    case 1062:
-    case 1061:
-    case 1060:
-    case 1059:
-    case 1058:
-    case 1057:
-    case 1056:
-    case 1055:
-    case 1054:
-    case 1053:
-    case 1052:
-    case 1051:
-    case 1049:
-    case 1048:
-    case 1047:
-    case 1046:
-    case 1035:
-    case 1034:
-    case 1033:
-    case 1032:
-    case 1031:
-    case 1030:
-    case 1029:
-    case 1028:
-    case 1027:
-    case 1026:
-    case 1025:
-    case 1024:
-    case 1023:
-    case 1022:
-    case 1021:
-    case 1020:
-    case 1018:
-    case 1017:
-    case 1016:
-    case 1015:
-    case 1014:
-    case 1013:
-    case 1012:
-    case 1011:
-    case 992:
-    case 991:
-    case 990:
-    case 989:
-    case 988:
-    case 987:
-    case 986:
-    case 985:
-    case 984:
-    case 983:
-    case 980:
-    case 979:
-    case 978:
-    case 977:
-    case 976:
-    case 971:
-    case 970:
-    case 969:
-    case 968:
-    case 967:
-    case 966:
-    case 965:
-    case 964:
-    case 963:
-    case 962:
-    case 961:
-    case 960:
-    case 959:
-    case 958:
-    case 957:
-    case 956:
-    case 955:
-    case 954:
-    case 953:
-    case 952:
-    case 951:
-    case 950:
-    case 949:
-    case 948:
-    case 947:
-    case 946:
-    case 945:
-    case 944:
-    case 943:
-    case 942:
-    case 941:
-    case 940:
-    case 939:
-    case 938:
-    case 937:
-    case 936:
-    case 935:
-    case 934:
-    case 933:
-    case 932:
-    case 931:
-    case 930:
-    case 929:
-    case 928:
-    case 918:
-    case 917:
-    case 916:
-    case 915:
-    case 914:
-    case 912:
-    case 911:
-    case 908:
-    case 907:
-    case 906:
-    case 905:
-    case 904:
-    case 903:
-    case 902:
-    case 901:
-    case 900:
-    case 899:
-    case 898:
-    case 897:
-    case 896:
-    case 895:
-    case 894:
-    case 893:
-    case 892:
-    case 891:
-    case 890:
-    case 889:
-    case 888:
-    case 887:
-    case 886:
-    case 885:
-    case 884:
-    case 883:
-    case 882:
-    case 881:
-    case 849:
-    case 848:
-    case 847:
-    case 846:
-    case 845:
-    case 844:
-    case 840:
-    case 839:
-    case 838:
-    case 837:
-    case 836:
-    case 835:
-    case 834:
-    case 833:
-    case 832:
-    case 831:
-    case 830:
-    case 829:
-    case 824:
-    case 823:
-    case 822:
-    case 808:
-    case 807:
-    case 806:
-    case 805:
-    case 804:
-    case 803:
-    case 802:
-    case 801:
-    case 800:
-    case 737:
-    case 736:
-    case 735:
-    case 734:
-    case 733:
-    case 732:
-    case 731:
-    case 730:
-    case 729:
-    case 728:
-    case 727:
-    case 726:
-    case 725:
-    case 724:
-    case 723:
-    case 722:
-    case 721:
-    case 720:
-    case 719:
-    case 718:
-    case 717:
-    case 716:
-    case 715:
-    case 714:
-    case 713:
-    case 710:
-    case 709:
-    case 708:
-    case 707:
-    case 706:
-    case 705:
-    case 704:
-    case 703:
-    case 702:
-    case 701:
-    case 700:
-    case 699:
-    case 698:
-    case 697:
-    case 696:
-    case 695:
-    case 694:
-    case 693:
-    case 692:
-    case 691:
-    case 690:
-    case 689:
-    case 688:
-    case 687:
-    case 686:
-    case 685:
-    case 675:
-    case 674:
-    case 673:
-    case 672:
-    case 671:
-    case 670:
-    case 669:
-    case 668:
-    case 667:
-    case 666:
-    case 665:
-    case 664:
-    case 663:
-    case 662:
-    case 661:
-    case 660:
-    case 659:
-    case 658:
-    case 657:
-    case 656:
-    case 655:
-    case 654:
-    case 653:
-    case 652:
-    case 651:
-    case 650:
-    case 649:
-    case 642:
-    case 641:
-    case 640:
-    case 639:
-    case 638:
-    case 637:
-    case 636:
-    case 635:
-    case 634:
-    case 633:
-    case 632:
-    case 631:
-    case 630:
-    case 629:
-    case 628:
-    case 627:
-    case 626:
-    case 625:
-    case 624:
-    case 623:
-    case 622:
-    case 621:
-    case 620:
-    case 619:
-    case 618:
-    case 617:
-    case 616:
-    case 615:
-    case 614:
-    case 613:
-    case 612:
-    case 611:
-    case 589:
-    case 588:
-    case 542:
-    case 541:
-    case 540:
-    case 539:
-    case 538:
-    case 537:
+    case 531:
+    case 530:
+    case 529:
+    case 528:
+    case 527:
+    case 526:
+    case 525:
+    case 524:
     case 523:
     case 522:
     case 521:
@@ -84764,10 +79374,6 @@ add_clobbers (rtx pattern ATTRIBUTE_UNUSED, int insn_code_number)
     case 518:
     case 517:
     case 516:
-    case 515:
-    case 514:
-    case 513:
-    case 512:
     case 511:
     case 510:
     case 509:
@@ -84797,21 +79403,15 @@ add_clobbers (rtx pattern ATTRIBUTE_UNUSED, int insn_code_number)
     case 485:
     case 484:
     case 483:
-    case 447:
-    case 446:
-    case 445:
+    case 463:
+    case 462:
     case 444:
     case 443:
     case 442:
     case 441:
-    case 440:
-    case 439:
-    case 438:
-    case 437:
-    case 436:
-    case 435:
-    case 434:
-    case 433:
+    case 431:
+    case 430:
+    case 429:
     case 428:
     case 427:
     case 426:
@@ -84827,25 +79427,27 @@ add_clobbers (rtx pattern ATTRIBUTE_UNUSED, int insn_code_number)
     case 416:
     case 415:
     case 414:
+    case 413:
     case 412:
     case 411:
     case 410:
-    case 385:
-    case 384:
-    case 383:
-    case 382:
-    case 381:
-    case 380:
-    case 379:
-    case 378:
-    case 377:
-    case 371:
-    case 370:
-    case 369:
-    case 368:
-    case 367:
-    case 366:
-    case 365:
+    case 409:
+    case 408:
+    case 407:
+    case 406:
+    case 405:
+    case 404:
+    case 403:
+    case 402:
+    case 401:
+    case 400:
+    case 399:
+    case 398:
+    case 397:
+    case 396:
+    case 395:
+    case 394:
+    case 393:
     case 364:
     case 363:
     case 362:
@@ -84856,68 +79458,90 @@ add_clobbers (rtx pattern ATTRIBUTE_UNUSED, int insn_code_number)
     case 357:
     case 356:
     case 355:
-    case 316:
-    case 315:
-    case 314:
-    case 313:
-    case 312:
-    case 311:
+    case 354:
+    case 353:
+    case 348:
+    case 347:
+    case 346:
+    case 345:
+    case 344:
+    case 343:
+    case 342:
+    case 341:
+    case 340:
+    case 339:
+    case 338:
+    case 337:
+    case 336:
+    case 335:
     case 310:
     case 309:
     case 308:
     case 307:
     case 306:
     case 305:
-    case 304:
-    case 303:
-    case 302:
-    case 283:
-    case 282:
-    case 281:
-    case 280:
-    case 279:
-    case 278:
-    case 277:
-    case 276:
-    case 275:
-    case 274:
-    case 273:
-    case 272:
-    case 271:
-    case 270:
-    case 269:
-    case 268:
-    case 267:
-    case 266:
-    case 265:
-    case 264:
-    case 263:
-    case 262:
-    case 261:
-    case 260:
-    case 259:
-    case 258:
-    case 257:
-    case 256:
-    case 255:
+    case 300:
+    case 299:
+    case 298:
+    case 297:
+    case 296:
+    case 295:
+    case 294:
+    case 293:
+    case 292:
+    case 291:
+    case 290:
+    case 289:
+    case 288:
+    case 287:
+    case 286:
+    case 285:
+    case 248:
+    case 247:
+    case 246:
+    case 245:
+    case 244:
+    case 243:
+    case 242:
+    case 241:
+    case 240:
+    case 239:
     case 223:
     case 222:
     case 221:
-    case 171:
-    case 168:
-    case 167:
-    case 110:
-    case 109:
-    case 103:
-    case 102:
-    case 80:
-    case 79:
-    case 78:
-    case 77:
-    case 76:
-    case 75:
-    case 74:
-    case 73:
+    case 220:
+    case 219:
+    case 218:
+    case 217:
+    case 216:
+    case 215:
+    case 214:
+    case 213:
+    case 212:
+    case 211:
+    case 210:
+    case 209:
+    case 208:
+    case 207:
+    case 206:
+    case 205:
+    case 204:
+    case 203:
+    case 202:
+    case 176:
+    case 175:
+    case 174:
+    case 141:
+    case 138:
+    case 137:
+    case 100:
+    case 94:
+    case 93:
+    case 72:
+    case 71:
+    case 70:
+    case 69:
+    case 68:
       XVECEXP (pattern, 0, 1) = gen_hard_reg_clobber (CCmode, 17);
       break;
 
@@ -84932,357 +79556,648 @@ added_clobbers_hard_reg_p (int insn_code_number)
 {
   switch (insn_code_number)
     {
-    case 9457:
-    case 9452:
-    case 8764:
-    case 8763:
-    case 8760:
-    case 8759:
-    case 8756:
-    case 8748:
-    case 8740:
-    case 8732:
-    case 8724:
-    case 8716:
-    case 8708:
-    case 8700:
-    case 8762:
-    case 8761:
-    case 8758:
-    case 8757:
-    case 8755:
-    case 8747:
-    case 8739:
-    case 8731:
-    case 8723:
-    case 8715:
-    case 8707:
-    case 8699:
-    case 8752:
-    case 8744:
-    case 8736:
-    case 8728:
-    case 8720:
-    case 8712:
-    case 8704:
-    case 8696:
-    case 8751:
-    case 8743:
-    case 8735:
-    case 8727:
-    case 8719:
-    case 8711:
-    case 8703:
-    case 8695:
-    case 8750:
-    case 8742:
-    case 8734:
-    case 8726:
-    case 8718:
-    case 8710:
-    case 8702:
-    case 8694:
-    case 8749:
-    case 8741:
-    case 8733:
-    case 8725:
-    case 8717:
-    case 8709:
-    case 8701:
-    case 8693:
-    case 7980:
-    case 7976:
-    case 8754:
-    case 8746:
-    case 8738:
-    case 8730:
-    case 8722:
-    case 8714:
-    case 8706:
-    case 8698:
-    case 4165:
-    case 8753:
-    case 8745:
-    case 8737:
-    case 8729:
-    case 8721:
-    case 8713:
-    case 8705:
-    case 8697:
-    case 7648:
-    case 2176:
-    case 531:
-    case 530:
-    case 1530:
-    case 1245:
-    case 1241:
-    case 1233:
-    case 1227:
-    case 1010:
-    case 1009:
-    case 927:
-    case 821:
-    case 757:
-    case 756:
-    case 712:
-    case 475:
-    case 466:
-    case 453:
-    case 451:
-    case 449:
-    case 301:
-    case 294:
-    case 292:
-    case 1529:
-    case 1244:
-    case 1240:
-    case 1232:
-    case 1226:
-    case 1008:
-    case 1007:
-    case 926:
-    case 820:
-    case 755:
-    case 754:
-    case 711:
-    case 474:
-    case 465:
-    case 452:
-    case 450:
-    case 448:
-    case 300:
-    case 297:
-    case 291:
-    case 8864:
-    case 8863:
-    case 8862:
-    case 8861:
-    case 8792:
-    case 8791:
-    case 8790:
-    case 8789:
-    case 8768:
-    case 8767:
-    case 8766:
-    case 8765:
-    case 1006:
-    case 1005:
-    case 925:
-    case 819:
-    case 753:
-    case 752:
-    case 473:
-    case 464:
-    case 299:
-    case 296:
-    case 290:
-    case 8908:
-    case 8907:
-    case 8906:
-    case 8905:
-    case 8904:
-    case 8903:
-    case 8902:
-    case 8901:
-    case 8900:
-    case 8899:
     case 8898:
-    case 8897:
-    case 8896:
-    case 8895:
     case 8894:
-    case 8893:
-    case 8892:
-    case 8891:
-    case 8890:
-    case 8889:
-    case 8888:
-    case 8887:
-    case 8886:
-    case 8885:
-    case 8884:
-    case 8883:
-    case 8882:
-    case 8881:
-    case 8880:
-    case 8879:
-    case 8878:
-    case 8877:
-    case 8876:
-    case 8875:
-    case 8874:
-    case 8873:
-    case 8872:
-    case 8871:
-    case 8870:
-    case 8869:
-    case 8868:
-    case 8867:
-    case 8866:
-    case 8865:
-    case 8860:
-    case 8859:
-    case 8858:
-    case 8857:
-    case 8856:
-    case 8855:
-    case 8854:
-    case 8853:
-    case 8852:
-    case 8851:
-    case 8850:
-    case 8849:
-    case 8848:
-    case 8847:
-    case 8846:
-    case 8845:
-    case 8844:
-    case 8843:
-    case 8842:
-    case 8841:
-    case 8840:
-    case 8839:
-    case 8838:
-    case 8837:
-    case 8836:
-    case 8835:
-    case 8834:
-    case 8833:
-    case 8832:
-    case 8831:
-    case 8830:
-    case 8829:
-    case 8828:
-    case 8827:
-    case 8826:
-    case 8825:
-    case 8824:
-    case 8823:
-    case 8822:
-    case 8821:
-    case 8820:
-    case 8819:
-    case 8818:
-    case 8817:
-    case 8816:
-    case 8815:
-    case 8814:
-    case 8813:
-    case 8812:
-    case 8811:
-    case 8810:
-    case 8809:
-    case 8808:
-    case 8807:
-    case 8806:
-    case 8805:
-    case 8804:
-    case 8803:
-    case 8802:
-    case 8801:
-    case 8800:
-    case 8799:
-    case 8798:
-    case 8797:
-    case 8796:
-    case 8795:
-    case 8794:
-    case 8793:
-    case 8788:
-    case 8787:
-    case 8786:
-    case 8785:
-    case 8784:
-    case 8783:
-    case 8782:
-    case 8781:
-    case 8780:
-    case 8779:
-    case 8778:
-    case 8777:
-    case 8776:
-    case 8775:
-    case 8774:
-    case 8773:
-    case 8772:
-    case 8771:
-    case 8770:
-    case 8769:
-    case 1004:
-    case 1003:
-    case 924:
-    case 818:
-    case 751:
-    case 750:
-    case 472:
-    case 463:
-    case 298:
-    case 295:
-    case 289:
-    case 532:
-    case 252:
-    case 251:
-    case 250:
-    case 245:
-    case 244:
-    case 243:
-    case 1397:
-    case 1396:
-    case 224:
-    case 1379:
-    case 1369:
-    case 1368:
-    case 1367:
-    case 220:
-    case 219:
-    case 218:
-    case 213:
-    case 212:
+    case 8214:
+    case 8213:
+    case 8210:
+    case 8209:
+    case 8206:
+    case 8198:
+    case 8190:
+    case 8182:
+    case 8174:
+    case 8166:
+    case 8158:
+    case 8150:
+    case 8212:
+    case 8211:
+    case 8208:
+    case 8207:
+    case 8205:
+    case 8197:
+    case 8189:
+    case 8181:
+    case 8173:
+    case 8165:
+    case 8157:
+    case 8149:
+    case 8202:
+    case 8194:
+    case 8186:
+    case 8178:
+    case 8170:
+    case 8162:
+    case 8154:
+    case 8146:
+    case 8201:
+    case 8193:
+    case 8185:
+    case 8177:
+    case 8169:
+    case 8161:
+    case 8153:
+    case 8145:
+    case 8200:
+    case 8192:
+    case 8184:
+    case 8176:
+    case 8168:
+    case 8160:
+    case 8152:
+    case 8144:
+    case 8199:
+    case 8191:
+    case 8183:
+    case 8175:
+    case 8167:
+    case 8159:
+    case 8151:
+    case 8143:
+    case 7430:
+    case 7426:
+    case 8204:
+    case 8196:
+    case 8188:
+    case 8180:
+    case 8172:
+    case 8164:
+    case 8156:
+    case 8148:
+    case 3686:
+    case 8203:
+    case 8195:
+    case 8187:
+    case 8179:
+    case 8171:
+    case 8163:
+    case 8155:
+    case 8147:
+    case 7098:
+    case 1714:
+    case 437:
+    case 436:
+    case 1202:
+    case 967:
+    case 798:
+    case 797:
+    case 735:
+    case 597:
+    case 596:
+    case 562:
+    case 238:
+    case 231:
+    case 1201:
+    case 973:
+    case 971:
+    case 966:
+    case 962:
+    case 796:
+    case 795:
+    case 734:
+    case 645:
+    case 595:
+    case 594:
+    case 561:
+    case 386:
+    case 379:
+    case 367:
+    case 366:
+    case 365:
+    case 237:
+    case 234:
+    case 230:
+    case 8314:
+    case 8313:
+    case 8312:
+    case 8311:
+    case 8242:
+    case 8241:
+    case 8240:
+    case 8239:
+    case 8218:
+    case 8217:
+    case 8216:
+    case 8215:
+    case 794:
+    case 793:
+    case 733:
+    case 644:
+    case 593:
+    case 592:
+    case 385:
+    case 378:
+    case 236:
+    case 233:
+    case 229:
+    case 8358:
+    case 8357:
+    case 8356:
+    case 8355:
+    case 8354:
+    case 8353:
+    case 8352:
+    case 8351:
+    case 8350:
+    case 8349:
+    case 8348:
+    case 8347:
+    case 8346:
+    case 8345:
+    case 8344:
+    case 8343:
+    case 8342:
+    case 8341:
+    case 8340:
+    case 8339:
+    case 8338:
+    case 8337:
+    case 8336:
+    case 8335:
+    case 8334:
+    case 8333:
+    case 8332:
+    case 8331:
+    case 8330:
+    case 8329:
+    case 8328:
+    case 8327:
+    case 8326:
+    case 8325:
+    case 8324:
+    case 8323:
+    case 8322:
+    case 8321:
+    case 8320:
+    case 8319:
+    case 8318:
+    case 8317:
+    case 8316:
+    case 8315:
+    case 8310:
+    case 8309:
+    case 8308:
+    case 8307:
+    case 8306:
+    case 8305:
+    case 8304:
+    case 8303:
+    case 8302:
+    case 8301:
+    case 8300:
+    case 8299:
+    case 8298:
+    case 8297:
+    case 8296:
+    case 8295:
+    case 8294:
+    case 8293:
+    case 8292:
+    case 8291:
+    case 8290:
+    case 8289:
+    case 8288:
+    case 8287:
+    case 8286:
+    case 8285:
+    case 8284:
+    case 8283:
+    case 8282:
+    case 8281:
+    case 8280:
+    case 8279:
+    case 8278:
+    case 8277:
+    case 8276:
+    case 8275:
+    case 8274:
+    case 8273:
+    case 8272:
+    case 8271:
+    case 8270:
+    case 8269:
+    case 8268:
+    case 8267:
+    case 8266:
+    case 8265:
+    case 8264:
+    case 8263:
+    case 8262:
+    case 8261:
+    case 8260:
+    case 8259:
+    case 8258:
+    case 8257:
+    case 8256:
+    case 8255:
+    case 8254:
+    case 8253:
+    case 8252:
+    case 8251:
+    case 8250:
+    case 8249:
+    case 8248:
+    case 8247:
+    case 8246:
+    case 8245:
+    case 8244:
+    case 8243:
+    case 8238:
+    case 8237:
+    case 8236:
+    case 8235:
+    case 8234:
+    case 8233:
+    case 8232:
+    case 8231:
+    case 8230:
+    case 8229:
+    case 8228:
+    case 8227:
+    case 8226:
+    case 8225:
+    case 8224:
+    case 8223:
+    case 8222:
+    case 8221:
+    case 8220:
+    case 8219:
+    case 792:
+    case 791:
+    case 732:
+    case 643:
+    case 591:
+    case 590:
+    case 384:
+    case 377:
+    case 235:
+    case 232:
+    case 228:
+    case 199:
+    case 198:
+    case 197:
+    case 194:
+    case 193:
+    case 192:
+    case 1089:
+    case 1088:
+    case 177:
+    case 1071:
+    case 1061:
+    case 1060:
+    case 1059:
+    case 173:
+    case 172:
+    case 171:
+    case 168:
+    case 167:
       return false;
 
-    case 2012:
-    case 2011:
-    case 1574:
-    case 1573:
-    case 1303:
-    case 1299:
-    case 1295:
-    case 9471:
-    case 9470:
-    case 9469:
-    case 9468:
-    case 1516:
-    case 1515:
-    case 1514:
-    case 1513:
-    case 1440:
-    case 1439:
-    case 1283:
-    case 1281:
-    case 1279:
-    case 1278:
-    case 1221:
-    case 1220:
-    case 1219:
-    case 1218:
-    case 1213:
-    case 1212:
-    case 1210:
-    case 1209:
-    case 1207:
-    case 1206:
-    case 1195:
+    case 1550:
+    case 1549:
+    case 1225:
+    case 1224:
+    case 1001:
+    case 1000:
+    case 999:
+    case 8909:
+    case 8908:
+    case 8907:
     case 1194:
+    case 1193:
+    case 1192:
     case 1191:
+    case 1124:
+    case 1123:
+    case 989:
+    case 958:
+    case 957:
+    case 954:
+    case 953:
+    case 952:
+    case 948:
+    case 678:
+    case 677:
+    case 676:
+    case 675:
+    case 674:
+    case 673:
+    case 461:
+    case 456:
+    case 455:
+    case 454:
+    case 453:
+    case 452:
+    case 451:
+    case 460:
+    case 459:
+    case 458:
+    case 457:
+    case 450:
+    case 449:
+    case 943:
+    case 448:
+    case 447:
+    case 446:
+    case 445:
+    case 822:
+    case 821:
+    case 143:
+    case 8934:
+    case 8933:
+    case 8932:
+    case 8931:
+    case 8930:
+    case 8929:
+    case 8928:
+    case 8927:
+    case 8926:
+    case 8925:
+    case 8924:
+    case 8923:
+    case 8922:
+    case 8921:
+    case 8920:
+    case 8893:
+    case 8843:
+    case 1483:
+    case 1482:
+    case 1481:
+    case 1480:
+    case 1479:
+    case 1478:
+    case 1477:
+    case 1476:
+    case 1475:
+    case 1465:
+    case 1464:
+    case 1463:
+    case 1419:
+    case 1418:
+    case 1417:
+    case 1352:
+    case 1351:
+    case 1338:
+    case 1190:
     case 1189:
-    case 1188:
+    case 1186:
+    case 1185:
+    case 1184:
+    case 1183:
+    case 1178:
+    case 1177:
+    case 1176:
+    case 1175:
+    case 1174:
+    case 1173:
+    case 1172:
+    case 1171:
+    case 1170:
+    case 1169:
+    case 1168:
+    case 1167:
+    case 1166:
+    case 1165:
+    case 1164:
+    case 1163:
+    case 1162:
+    case 1161:
+    case 1160:
+    case 1159:
+    case 1158:
+    case 1157:
+    case 1156:
+    case 1155:
+    case 1129:
+    case 1128:
+    case 1127:
+    case 1126:
+    case 1125:
+    case 1087:
+    case 1086:
+    case 1085:
+    case 1084:
+    case 1083:
+    case 1082:
+    case 1077:
+    case 1076:
+    case 1075:
+    case 1074:
+    case 1010:
+    case 1009:
+    case 1007:
+    case 1006:
+    case 1005:
+    case 996:
+    case 992:
+    case 991:
+    case 990:
+    case 988:
+    case 987:
+    case 986:
+    case 985:
+    case 984:
+    case 983:
+    case 982:
+    case 981:
+    case 980:
+    case 979:
+    case 978:
+    case 975:
+    case 974:
+    case 972:
+    case 969:
+    case 968:
+    case 963:
+    case 961:
+    case 960:
+    case 959:
+    case 956:
+    case 955:
+    case 951:
+    case 950:
+    case 947:
+    case 938:
+    case 937:
+    case 889:
+    case 888:
+    case 887:
+    case 886:
+    case 885:
+    case 884:
+    case 883:
+    case 882:
+    case 881:
+    case 880:
+    case 879:
+    case 878:
+    case 877:
+    case 876:
+    case 875:
+    case 874:
+    case 873:
+    case 872:
+    case 871:
+    case 870:
+    case 869:
+    case 868:
+    case 860:
+    case 859:
+    case 858:
+    case 857:
+    case 856:
     case 855:
     case 854:
     case 853:
     case 852:
     case 851:
     case 850:
-    case 587:
+    case 849:
+    case 848:
+    case 847:
+    case 846:
+    case 845:
+    case 844:
+    case 843:
+    case 842:
+    case 839:
+    case 838:
+    case 837:
+    case 836:
+    case 835:
+    case 834:
+    case 833:
+    case 832:
+    case 831:
+    case 830:
+    case 829:
+    case 828:
+    case 827:
+    case 820:
+    case 819:
+    case 818:
+    case 817:
+    case 816:
+    case 815:
+    case 814:
+    case 813:
+    case 812:
+    case 811:
+    case 810:
+    case 809:
+    case 808:
+    case 807:
+    case 806:
+    case 805:
+    case 803:
+    case 802:
+    case 801:
+    case 800:
+    case 799:
+    case 782:
+    case 781:
+    case 780:
+    case 779:
+    case 778:
+    case 777:
+    case 776:
+    case 775:
+    case 774:
+    case 773:
+    case 772:
+    case 771:
+    case 768:
+    case 767:
+    case 766:
+    case 765:
+    case 764:
+    case 763:
+    case 762:
+    case 761:
+    case 760:
+    case 759:
+    case 758:
+    case 757:
+    case 756:
+    case 755:
+    case 754:
+    case 753:
+    case 752:
+    case 751:
+    case 750:
+    case 749:
+    case 748:
+    case 747:
+    case 746:
+    case 745:
+    case 744:
+    case 743:
+    case 742:
+    case 741:
+    case 740:
+    case 739:
+    case 738:
+    case 737:
+    case 736:
+    case 727:
+    case 726:
+    case 725:
+    case 724:
+    case 723:
+    case 722:
+    case 720:
+    case 719:
+    case 718:
+    case 717:
+    case 716:
+    case 715:
+    case 714:
+    case 713:
+    case 712:
+    case 711:
+    case 710:
+    case 709:
+    case 708:
+    case 707:
+    case 706:
+    case 705:
+    case 704:
+    case 703:
+    case 702:
+    case 701:
+    case 672:
+    case 671:
+    case 670:
+    case 669:
+    case 668:
+    case 667:
+    case 663:
+    case 662:
+    case 661:
+    case 660:
+    case 659:
+    case 658:
+    case 657:
+    case 656:
+    case 655:
+    case 654:
+    case 653:
+    case 652:
+    case 647:
+    case 646:
+    case 635:
+    case 634:
+    case 633:
+    case 632:
+    case 631:
+    case 630:
+    case 629:
+    case 628:
+    case 581:
+    case 580:
+    case 579:
+    case 578:
+    case 577:
     case 576:
     case 575:
     case 574:
@@ -85297,536 +80212,34 @@ added_clobbers_hard_reg_p (int insn_code_number)
     case 565:
     case 564:
     case 563:
-    case 586:
-    case 585:
-    case 584:
-    case 583:
-    case 582:
-    case 581:
-    case 580:
-    case 579:
-    case 578:
-    case 577:
-    case 562:
-    case 561:
     case 560:
     case 559:
     case 558:
     case 557:
     case 556:
     case 555:
-    case 550:
-    case 549:
-    case 546:
-    case 545:
-    case 1179:
     case 554:
     case 553:
     case 552:
     case 551:
+    case 550:
+    case 549:
     case 548:
     case 547:
+    case 546:
+    case 545:
     case 544:
     case 543:
-    case 1039:
-    case 1037:
-    case 175:
-    case 1038:
-    case 1036:
-    case 174:
-    case 9507:
-    case 9506:
-    case 9505:
-    case 9504:
-    case 9503:
-    case 9502:
-    case 9501:
-    case 9500:
-    case 9499:
-    case 9498:
-    case 9497:
-    case 9496:
-    case 9495:
-    case 9494:
-    case 9493:
-    case 9492:
-    case 9491:
-    case 9490:
-    case 9489:
-    case 9488:
-    case 9451:
-    case 9401:
-    case 1916:
-    case 1915:
-    case 1914:
-    case 1913:
-    case 1912:
-    case 1911:
-    case 1910:
-    case 1909:
-    case 1908:
-    case 1898:
-    case 1897:
-    case 1896:
-    case 1841:
-    case 1840:
-    case 1839:
-    case 1765:
-    case 1764:
-    case 1751:
-    case 1512:
-    case 1511:
-    case 1508:
-    case 1507:
-    case 1506:
-    case 1505:
-    case 1500:
-    case 1499:
-    case 1498:
-    case 1497:
-    case 1496:
-    case 1495:
-    case 1494:
-    case 1493:
-    case 1492:
-    case 1491:
-    case 1490:
-    case 1489:
-    case 1488:
-    case 1487:
-    case 1486:
-    case 1485:
-    case 1484:
-    case 1483:
-    case 1482:
-    case 1481:
-    case 1480:
-    case 1479:
-    case 1478:
-    case 1477:
-    case 1448:
-    case 1447:
-    case 1446:
-    case 1445:
-    case 1444:
-    case 1443:
-    case 1442:
-    case 1441:
-    case 1395:
-    case 1394:
-    case 1393:
-    case 1392:
-    case 1391:
-    case 1390:
-    case 1385:
-    case 1384:
-    case 1383:
-    case 1382:
-    case 1318:
-    case 1317:
-    case 1316:
-    case 1315:
-    case 1312:
-    case 1311:
-    case 1309:
-    case 1308:
-    case 1307:
-    case 1292:
-    case 1286:
-    case 1285:
-    case 1284:
-    case 1282:
-    case 1280:
-    case 1277:
-    case 1276:
-    case 1275:
-    case 1274:
-    case 1273:
-    case 1272:
-    case 1271:
-    case 1270:
-    case 1269:
-    case 1268:
-    case 1267:
-    case 1266:
-    case 1265:
-    case 1264:
-    case 1263:
-    case 1262:
-    case 1261:
-    case 1260:
-    case 1259:
-    case 1258:
-    case 1257:
-    case 1256:
-    case 1251:
-    case 1250:
-    case 1249:
-    case 1248:
-    case 1247:
-    case 1246:
-    case 1243:
-    case 1242:
-    case 1237:
-    case 1236:
-    case 1235:
-    case 1234:
-    case 1229:
-    case 1228:
-    case 1225:
-    case 1224:
-    case 1223:
-    case 1222:
-    case 1217:
-    case 1216:
-    case 1215:
-    case 1214:
-    case 1211:
-    case 1208:
-    case 1205:
-    case 1204:
-    case 1203:
-    case 1202:
-    case 1201:
-    case 1200:
-    case 1198:
-    case 1197:
-    case 1193:
-    case 1192:
-    case 1190:
-    case 1187:
-    case 1186:
-    case 1171:
-    case 1170:
-    case 1122:
-    case 1121:
-    case 1119:
-    case 1118:
-    case 1117:
-    case 1116:
-    case 1115:
-    case 1114:
-    case 1113:
-    case 1112:
-    case 1111:
-    case 1110:
-    case 1109:
-    case 1108:
-    case 1107:
-    case 1106:
-    case 1105:
-    case 1104:
-    case 1103:
-    case 1102:
-    case 1101:
-    case 1100:
-    case 1091:
-    case 1090:
-    case 1089:
-    case 1088:
-    case 1087:
-    case 1086:
-    case 1085:
-    case 1084:
-    case 1083:
-    case 1082:
-    case 1081:
-    case 1080:
-    case 1079:
-    case 1078:
-    case 1077:
-    case 1076:
-    case 1075:
-    case 1074:
-    case 1073:
-    case 1072:
-    case 1071:
-    case 1070:
-    case 1069:
-    case 1068:
-    case 1067:
-    case 1062:
-    case 1061:
-    case 1060:
-    case 1059:
-    case 1058:
-    case 1057:
-    case 1056:
-    case 1055:
-    case 1054:
-    case 1053:
-    case 1052:
-    case 1051:
-    case 1049:
-    case 1048:
-    case 1047:
-    case 1046:
-    case 1035:
-    case 1034:
-    case 1033:
-    case 1032:
-    case 1031:
-    case 1030:
-    case 1029:
-    case 1028:
-    case 1027:
-    case 1026:
-    case 1025:
-    case 1024:
-    case 1023:
-    case 1022:
-    case 1021:
-    case 1020:
-    case 1018:
-    case 1017:
-    case 1016:
-    case 1015:
-    case 1014:
-    case 1013:
-    case 1012:
-    case 1011:
-    case 992:
-    case 991:
-    case 990:
-    case 989:
-    case 988:
-    case 987:
-    case 986:
-    case 985:
-    case 984:
-    case 983:
-    case 980:
-    case 979:
-    case 978:
-    case 977:
-    case 976:
-    case 971:
-    case 970:
-    case 969:
-    case 968:
-    case 967:
-    case 966:
-    case 965:
-    case 964:
-    case 963:
-    case 962:
-    case 961:
-    case 960:
-    case 959:
-    case 958:
-    case 957:
-    case 956:
-    case 955:
-    case 954:
-    case 953:
-    case 952:
-    case 951:
-    case 950:
-    case 949:
-    case 948:
-    case 947:
-    case 946:
-    case 945:
-    case 944:
-    case 943:
-    case 942:
-    case 941:
-    case 940:
-    case 939:
-    case 938:
-    case 937:
-    case 936:
-    case 935:
-    case 934:
-    case 933:
-    case 932:
-    case 931:
-    case 930:
-    case 929:
-    case 928:
-    case 918:
-    case 917:
-    case 916:
-    case 915:
-    case 914:
-    case 912:
-    case 911:
-    case 908:
-    case 907:
-    case 906:
-    case 905:
-    case 904:
-    case 903:
-    case 902:
-    case 901:
-    case 900:
-    case 899:
-    case 898:
-    case 897:
-    case 896:
-    case 895:
-    case 894:
-    case 893:
-    case 892:
-    case 891:
-    case 890:
-    case 889:
-    case 888:
-    case 887:
-    case 886:
-    case 885:
-    case 884:
-    case 883:
-    case 882:
-    case 881:
-    case 849:
-    case 848:
-    case 847:
-    case 846:
-    case 845:
-    case 844:
-    case 840:
-    case 839:
-    case 838:
-    case 837:
-    case 836:
-    case 835:
-    case 834:
-    case 833:
-    case 832:
-    case 831:
-    case 830:
-    case 829:
-    case 824:
-    case 823:
-    case 822:
-    case 808:
-    case 807:
-    case 806:
-    case 805:
-    case 804:
-    case 803:
-    case 802:
-    case 801:
-    case 800:
-    case 737:
-    case 736:
-    case 735:
-    case 734:
-    case 733:
-    case 732:
-    case 731:
-    case 730:
-    case 729:
-    case 728:
-    case 727:
-    case 726:
-    case 725:
-    case 724:
-    case 723:
-    case 722:
-    case 721:
-    case 720:
-    case 719:
-    case 718:
-    case 717:
-    case 716:
-    case 715:
-    case 714:
-    case 713:
-    case 710:
-    case 709:
-    case 708:
-    case 707:
-    case 706:
-    case 705:
-    case 704:
-    case 703:
-    case 702:
-    case 701:
-    case 700:
-    case 699:
-    case 698:
-    case 697:
-    case 696:
-    case 695:
-    case 694:
-    case 693:
-    case 692:
-    case 691:
-    case 690:
-    case 689:
-    case 688:
-    case 687:
-    case 686:
-    case 685:
-    case 675:
-    case 674:
-    case 673:
-    case 672:
-    case 671:
-    case 670:
-    case 669:
-    case 668:
-    case 667:
-    case 666:
-    case 665:
-    case 664:
-    case 663:
-    case 662:
-    case 661:
-    case 660:
-    case 659:
-    case 658:
-    case 657:
-    case 656:
-    case 655:
-    case 654:
-    case 653:
-    case 652:
-    case 651:
-    case 650:
-    case 649:
-    case 642:
-    case 641:
-    case 640:
-    case 639:
-    case 638:
-    case 637:
-    case 636:
-    case 635:
-    case 634:
-    case 633:
-    case 632:
-    case 631:
-    case 630:
-    case 629:
-    case 628:
-    case 627:
-    case 626:
-    case 625:
-    case 624:
-    case 623:
-    case 622:
-    case 621:
-    case 620:
-    case 619:
-    case 618:
-    case 617:
-    case 616:
-    case 615:
-    case 614:
-    case 613:
-    case 612:
-    case 611:
-    case 589:
-    case 588:
-    case 542:
-    case 541:
-    case 540:
-    case 539:
-    case 538:
-    case 537:
+    case 533:
+    case 532:
+    case 531:
+    case 530:
+    case 529:
+    case 528:
+    case 527:
+    case 526:
+    case 525:
+    case 524:
     case 523:
     case 522:
     case 521:
@@ -85835,10 +80248,6 @@ added_clobbers_hard_reg_p (int insn_code_number)
     case 518:
     case 517:
     case 516:
-    case 515:
-    case 514:
-    case 513:
-    case 512:
     case 511:
     case 510:
     case 509:
@@ -85868,21 +80277,15 @@ added_clobbers_hard_reg_p (int insn_code_number)
     case 485:
     case 484:
     case 483:
-    case 447:
-    case 446:
-    case 445:
+    case 463:
+    case 462:
     case 444:
     case 443:
     case 442:
     case 441:
-    case 440:
-    case 439:
-    case 438:
-    case 437:
-    case 436:
-    case 435:
-    case 434:
-    case 433:
+    case 431:
+    case 430:
+    case 429:
     case 428:
     case 427:
     case 426:
@@ -85898,25 +80301,27 @@ added_clobbers_hard_reg_p (int insn_code_number)
     case 416:
     case 415:
     case 414:
+    case 413:
     case 412:
     case 411:
     case 410:
-    case 385:
-    case 384:
-    case 383:
-    case 382:
-    case 381:
-    case 380:
-    case 379:
-    case 378:
-    case 377:
-    case 371:
-    case 370:
-    case 369:
-    case 368:
-    case 367:
-    case 366:
-    case 365:
+    case 409:
+    case 408:
+    case 407:
+    case 406:
+    case 405:
+    case 404:
+    case 403:
+    case 402:
+    case 401:
+    case 400:
+    case 399:
+    case 398:
+    case 397:
+    case 396:
+    case 395:
+    case 394:
+    case 393:
     case 364:
     case 363:
     case 362:
@@ -85927,68 +80332,90 @@ added_clobbers_hard_reg_p (int insn_code_number)
     case 357:
     case 356:
     case 355:
-    case 316:
-    case 315:
-    case 314:
-    case 313:
-    case 312:
-    case 311:
+    case 354:
+    case 353:
+    case 348:
+    case 347:
+    case 346:
+    case 345:
+    case 344:
+    case 343:
+    case 342:
+    case 341:
+    case 340:
+    case 339:
+    case 338:
+    case 337:
+    case 336:
+    case 335:
     case 310:
     case 309:
     case 308:
     case 307:
     case 306:
     case 305:
-    case 304:
-    case 303:
-    case 302:
-    case 283:
-    case 282:
-    case 281:
-    case 280:
-    case 279:
-    case 278:
-    case 277:
-    case 276:
-    case 275:
-    case 274:
-    case 273:
-    case 272:
-    case 271:
-    case 270:
-    case 269:
-    case 268:
-    case 267:
-    case 266:
-    case 265:
-    case 264:
-    case 263:
-    case 262:
-    case 261:
-    case 260:
-    case 259:
-    case 258:
-    case 257:
-    case 256:
-    case 255:
+    case 300:
+    case 299:
+    case 298:
+    case 297:
+    case 296:
+    case 295:
+    case 294:
+    case 293:
+    case 292:
+    case 291:
+    case 290:
+    case 289:
+    case 288:
+    case 287:
+    case 286:
+    case 285:
+    case 248:
+    case 247:
+    case 246:
+    case 245:
+    case 244:
+    case 243:
+    case 242:
+    case 241:
+    case 240:
+    case 239:
     case 223:
     case 222:
     case 221:
-    case 171:
-    case 168:
-    case 167:
-    case 110:
-    case 109:
-    case 103:
-    case 102:
-    case 80:
-    case 79:
-    case 78:
-    case 77:
-    case 76:
-    case 75:
-    case 74:
-    case 73:
+    case 220:
+    case 219:
+    case 218:
+    case 217:
+    case 216:
+    case 215:
+    case 214:
+    case 213:
+    case 212:
+    case 211:
+    case 210:
+    case 209:
+    case 208:
+    case 207:
+    case 206:
+    case 205:
+    case 204:
+    case 203:
+    case 202:
+    case 176:
+    case 175:
+    case 174:
+    case 141:
+    case 138:
+    case 137:
+    case 100:
+    case 94:
+    case 93:
+    case 72:
+    case 71:
+    case 70:
+    case 69:
+    case 68:
       return true;
 
     default:
