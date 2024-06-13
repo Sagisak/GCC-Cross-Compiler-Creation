@@ -3,3 +3,4 @@
 /cross/bin/i686-elf-gdb filter=lfs diff=lfs merge=lfs -text
 gcc-dependencies/src/build-gdb/gdb/gdb filter=lfs diff=lfs merge=lfs -text
 gcc-dependencies/src/build-gcc/gcc/cc1 filter=lfs diff=lfs merge=lfs -text
+gcc-dependencies/src/build-gcc/gcc/cc1plus filter=lfs diff=lfs merge=lfs -text
