@@ -8,3 +8,10 @@ https://wiki.osdev.org/Expanded_Main_Page
 Some help understanding of terminologies are by searching the internet or asking high-tech AI, like chatGPT, for extra explanation of the
 creation.
 
+## Setup
+
+To set up the environment for using the cross-compiler, run the following command:
+
+```sh
+source ./setup-environment.sh
+
