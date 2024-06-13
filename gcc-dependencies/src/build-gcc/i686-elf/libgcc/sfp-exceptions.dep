@@ -1,0 +1,5 @@
+sfp-exceptions.o: ../../gcc-14.1.0/libgcc/config/i386/sfp-exceptions.c \
+ ../../gcc-14.1.0/libgcc/config/i386/sfp-machine.h \
+ ../../gcc-14.1.0/libgcc/config/i386/32/sfp-machine.h
+../../gcc-14.1.0/libgcc/config/i386/sfp-machine.h:
+../../gcc-14.1.0/libgcc/config/i386/32/sfp-machine.h:

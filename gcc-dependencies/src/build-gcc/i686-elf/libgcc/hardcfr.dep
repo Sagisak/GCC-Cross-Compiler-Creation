@@ -1,0 +1,5 @@
+hardcfr.o: ../../gcc-14.1.0/libgcc/hardcfr.c \
+ /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/gcc-dependencies/src/build-gcc/gcc/include/stddef.h \
+ /home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/gcc-dependencies/src/build-gcc/gcc/include/stdbool.h
+/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/gcc-dependencies/src/build-gcc/gcc/include/stddef.h:
+/home/leonardo/Documents/GitHub/GCC-Cross-Compiler-Creation/gcc-dependencies/src/build-gcc/gcc/include/stdbool.h:

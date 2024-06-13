@@ -1,0 +1,20 @@
+divtf3.o: ../../gcc-14.1.0/libgcc/soft-fp/divtf3.c \
+ ../../gcc-14.1.0/libgcc/soft-fp/soft-fp.h sfp-machine.h \
+ ../../gcc-14.1.0/libgcc/config/i386/32/sfp-machine.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/op-1.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/op-2.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/op-4.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/op-8.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/op-common.h \
+ ../../gcc-14.1.0/libgcc/../include/longlong.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/quad.h
+../../gcc-14.1.0/libgcc/soft-fp/soft-fp.h:
+sfp-machine.h:
+../../gcc-14.1.0/libgcc/config/i386/32/sfp-machine.h:
+../../gcc-14.1.0/libgcc/soft-fp/op-1.h:
+../../gcc-14.1.0/libgcc/soft-fp/op-2.h:
+../../gcc-14.1.0/libgcc/soft-fp/op-4.h:
+../../gcc-14.1.0/libgcc/soft-fp/op-8.h:
+../../gcc-14.1.0/libgcc/soft-fp/op-common.h:
+../../gcc-14.1.0/libgcc/../include/longlong.h:
+../../gcc-14.1.0/libgcc/soft-fp/quad.h:

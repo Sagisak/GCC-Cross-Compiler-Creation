@@ -1,0 +1,22 @@
+truncxfbf2.o: ../../gcc-14.1.0/libgcc/soft-fp/truncxfbf2.c \
+ ../../gcc-14.1.0/libgcc/soft-fp/soft-fp.h sfp-machine.h \
+ ../../gcc-14.1.0/libgcc/config/i386/32/sfp-machine.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/op-1.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/op-2.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/op-4.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/op-8.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/op-common.h \
+ ../../gcc-14.1.0/libgcc/../include/longlong.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/brain.h \
+ ../../gcc-14.1.0/libgcc/soft-fp/extended.h
+../../gcc-14.1.0/libgcc/soft-fp/soft-fp.h:
+sfp-machine.h:
+../../gcc-14.1.0/libgcc/config/i386/32/sfp-machine.h:
+../../gcc-14.1.0/libgcc/soft-fp/op-1.h:
+../../gcc-14.1.0/libgcc/soft-fp/op-2.h:
+../../gcc-14.1.0/libgcc/soft-fp/op-4.h:
+../../gcc-14.1.0/libgcc/soft-fp/op-8.h:
+../../gcc-14.1.0/libgcc/soft-fp/op-common.h:
+../../gcc-14.1.0/libgcc/../include/longlong.h:
+../../gcc-14.1.0/libgcc/soft-fp/brain.h:
+../../gcc-14.1.0/libgcc/soft-fp/extended.h:
