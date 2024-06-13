@@ -1,0 +1,36 @@
+charset.o: ../gcc-14.1.0/libcpp/charset.cc config.h \
+ ../gcc-14.1.0/libcpp/system.h \
+ ../gcc-14.1.0/libcpp/../include/filenames.h \
+ ../gcc-14.1.0/libcpp/../include/hashtab.h \
+ ../gcc-14.1.0/libcpp/../include/ansidecl.h \
+ ../gcc-14.1.0/libcpp/../include/libiberty.h \
+ ../gcc-14.1.0/libcpp/../include/safe-ctype.h \
+ ../gcc-14.1.0/libcpp/include/cpplib.h \
+ ../gcc-14.1.0/libcpp/include/symtab.h \
+ ../gcc-14.1.0/libcpp/../include/obstack.h \
+ ../gcc-14.1.0/libcpp/include/line-map.h ../gcc-14.1.0/libcpp/internal.h \
+ ../gcc-14.1.0/libcpp/include/symtab.h \
+ ../gcc-14.1.0/libcpp/include/rich-location.h \
+ ../gcc-14.1.0/libcpp/ucnid.h ../gcc-14.1.0/libcpp/uname2c.h \
+ ../gcc-14.1.0/libcpp/generated_cpp_wcwidth.h \
+ ../gcc-14.1.0/libcpp/combining-chars.inc \
+ ../gcc-14.1.0/libcpp/printable-chars.inc
+config.h:
+../gcc-14.1.0/libcpp/system.h:
+../gcc-14.1.0/libcpp/../include/filenames.h:
+../gcc-14.1.0/libcpp/../include/hashtab.h:
+../gcc-14.1.0/libcpp/../include/ansidecl.h:
+../gcc-14.1.0/libcpp/../include/libiberty.h:
+../gcc-14.1.0/libcpp/../include/safe-ctype.h:
+../gcc-14.1.0/libcpp/include/cpplib.h:
+../gcc-14.1.0/libcpp/include/symtab.h:
+../gcc-14.1.0/libcpp/../include/obstack.h:
+../gcc-14.1.0/libcpp/include/line-map.h:
+../gcc-14.1.0/libcpp/internal.h:
+../gcc-14.1.0/libcpp/include/symtab.h:
+../gcc-14.1.0/libcpp/include/rich-location.h:
+../gcc-14.1.0/libcpp/ucnid.h:
+../gcc-14.1.0/libcpp/uname2c.h:
+../gcc-14.1.0/libcpp/generated_cpp_wcwidth.h:
+../gcc-14.1.0/libcpp/combining-chars.inc:
+../gcc-14.1.0/libcpp/printable-chars.inc:
