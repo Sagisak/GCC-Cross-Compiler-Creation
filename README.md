@@ -8,6 +8,8 @@ https://wiki.osdev.org/Expanded_Main_Page
 Some help understanding of terminologies are by searching the internet or asking high-tech AI, like chatGPT, for extra explanation of the
 creation.
 
+The goal of this is to make a GCC cross compiler that is portable and only need to be setup just by file script only.
+
 ## Setup
 
 To set up the environment for using the cross-compiler, run the following command:
