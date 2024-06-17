@@ -1,0 +1,122 @@
+# Ignore build directories
+build/
+output/
+bin/
+lib/
+libexec/
+share/
+include/
+man/
+info/
+
+# Ignore object files and binaries
+*.o
+*.a
+*.so
+*.lo
+*.la
+*.out
+*.dylib
+*.exe
+
+# Ignore logs and debug files
+*.log
+*.dbg
+*.dSYM/
+*.stackdump
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Ignore generated documentation
+*.html
+*.pdf
+*.ps
+*.dvi
+
+# Ignore config files and caches
+config.cache
+config.log
+config.status
+autom4te.cache/
+*.spec
+*.pc
+
+# Ignore IDE-specific files
+.idea/
+.vscode/
+*.iml
+
+# Ignore generated makefiles and build scripts
+Makefile
+Makefile.in
+configure
+configure.scan
+aclocal.m4
+ltmain.sh
+compile
+depcomp
+install-sh
+missing
+mkinstalldirs
+config.guess
+config.sub
+
+# Ignore build tools output
+*.s
+*.S
+*.d
+*.mod
+*.mod.c
+*.ii
+*.bb
+*.bbg
+*.da
+*.gcno
+*.gcda
+*.gcov
+*.gcda
+*.gcno
+*.gcda
+*.gcda
+*.gcno
+*.gcda
+
+# Ignore patches and archives
+*.patch
+*.tar
+*.tar.gz
+*.tar.bz2
+*.zip
+*.7z
+
+# Ignore miscellaneous files
+tags
+cscope.*
+*.bak
+*.swp
+*.class
+*.pyc
+*.pyo
+*.jar
+*.class
+*.dll
+*.dylib
+*.jnilib
+*.so
+*.o
+*.a
+*.out
+*.ko
+*.mod
+*.cmd
+*.mod.c
+*.symvers
+*.order
+*.marker
+*.backup
+*.orig
+*.rej
